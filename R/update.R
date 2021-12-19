@@ -66,8 +66,11 @@ sportsdataverse_sitrep <- function() {
 #'
 #' @param recursive If \code{TRUE}, will also list all dependencies of
 #'   sportsdataverse packages.
+#' @param pkg_list The list of the package names to check (including the `sportsdataverse` package itself)
+#'   Defaults to \code{getOptions("repos")}.
 #' @param repos The repositories to use to check for updates.
 #'   Defaults to \code{getOptions("repos")}.
+#' @importFrom rlang .data
 #' @export
 sportsdataverse_deps <- function(recursive = TRUE,
                                  pkg_list = c("cfbfastR", "fastRhockey",
