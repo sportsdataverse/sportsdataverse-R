@@ -39,6 +39,7 @@ pre, code {
 
 .navbar-default {
     border-color: #eee;
+    background-color: #014F84;
 }
 
 .label-default{
@@ -103,7 +104,7 @@ pre, code {
   display: none;
 }
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
-  
+
   background-color: #587193;
 }
 
