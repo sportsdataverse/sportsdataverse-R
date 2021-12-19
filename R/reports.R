@@ -1,6 +1,6 @@
-#' List all packages in the nflverse
+#' List all packages in the sportsdataverse
 #'
-#' @param include_self Include nflverse in the list?
+#' @param include_self Include sportsdataverse in the list?
 #' @export
 #' @examples
 #' sportsdataverse_packages()

@@ -2,15 +2,15 @@
 % Please edit documentation in R/reports.R
 \name{sportsdataverse_packages}
 \alias{sportsdataverse_packages}
-\title{List all packages in the nflverse}
+\title{List all packages in the sportsdataverse}
 \usage{
 sportsdataverse_packages(include_self = TRUE)
 }
 \arguments{
-\item{include_self}{Include nflverse in the list?}
+\item{include_self}{Include sportsdataverse in the list?}
 }
 \description{
-List all packages in the nflverse
+List all packages in the sportsdataverse
 }
 \examples{
 sportsdataverse_packages()
