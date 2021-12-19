@@ -4,7 +4,7 @@ title: sportsdataverse
 description: "The Set of R Packages for Sports Data"
 template:
   params:
-    bootswatch: cosmo
+    bootswatch: flatly
   opengraph:
     image:
       src: "https://github.com/saiemgilani/sportsdataverse-R/blob/main/data-raw/sdv-gh.png?raw=true"
