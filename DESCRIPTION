@@ -12,7 +12,7 @@ Description: The 'sportsdataverse' is a set of sports data packages that work in
     multiple 'sportsdataverse' packages in a single step. Learn more about the
     'sportsdataverse' at <https://sportsdataverse.org>.
 License: MIT + file LICENSE
-URL: https://saiemgilani.github.io/sportsdataverse-R,
+URL: https://saiemgilani.github.io/sportsdataverse-R/,
     https://sportsdataverse.org,
     https://github.com/saiemgilani/sportsdataverse
 BugReports: https://github.com/saiemgilani/sportsdataverse-R/issues
