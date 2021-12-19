@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# sportsdataverse <a href='https://saiemgilani.github.io/sportsdataverse-R/'><img src="https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/logo.png" align="right" height="139"/></a>
+# sportsdataverse <a href='https://saiemgilani.github.io/sportsdataverse-R/'><img src="https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/logo.png" align="right" width="20%" min-width="100px"/></a>
 
 <!-- badges: start -->
 
@@ -91,11 +91,11 @@ BibTex Citation
 
 ## **R Packages in the SportsDataverse**
 
-<a href='https://saiemgilani.github.io/cfbfastR/'><img src='https://raw.githubusercontent.com/saiemgilani/cfbfastR/master/man/figures/logo.png' height="139" /></a>
-<a href='https://hoopr.sportsdataverse.org/'><img src="https://hoopr.sportsdataverse.org/img/logo.png" height="139"/></a>
-<a href='https://wehoop.sportsdataverse.org'><img src="https://wehoop.sportsdataverse.org/img/logo.png" height="139"/></a>
-<a href='https://benhowell71.github.io/fastRhockey/'><img src='https://raw.githubusercontent.com/benhowell71/fastRhockey/main/man/figures/logo.png' height="139" /></a>
-<a href='https://jaseziv.github.io/worldfootballR/'><img src='https://raw.githubusercontent.com/jaseziv/worldfootballR/master/man/figures/logo.png' height="139" /></a>
+<a href='https://saiemgilani.github.io/cfbfastR/'><img src='https://raw.githubusercontent.com/saiemgilani/cfbfastR/master/man/figures/logo.png' width="18%" min-width="100px" /></a>
+<a href='https://hoopr.sportsdataverse.org/'><img src="https://hoopr.sportsdataverse.org/img/logo.png" width="18%" min-width="100px"/></a>
+<a href='https://wehoop.sportsdataverse.org'><img src="https://wehoop.sportsdataverse.org/img/logo.png" width="18%" min-width="100px"/></a>
+<a href='https://benhowell71.github.io/fastRhockey/'><img src='https://raw.githubusercontent.com/benhowell71/fastRhockey/main/man/figures/logo.png' width="18%" min-width="100px" /></a>
+<a href='https://jaseziv.github.io/worldfootballR/'><img src='https://raw.githubusercontent.com/jaseziv/worldfootballR/master/man/figures/logo.png' width="18%" min-width="100px" /></a>
 
 ### [**`cfbfastR`**](https://saiemgilani.github.io/cfbfastR/)
 
