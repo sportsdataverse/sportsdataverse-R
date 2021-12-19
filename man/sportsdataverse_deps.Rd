@@ -4,7 +4,12 @@
 \alias{sportsdataverse_deps}
 \title{List all sportsdataverse dependencies}
 \usage{
-sportsdataverse_deps(recursive = FALSE, repos = getOption("repos"))
+sportsdataverse_deps(
+  recursive = TRUE,
+  pkg_list = c("cfbfastR", "fastRhockey", "hoopR", "sportsdataverse", "wehoop",
+    "worldfootballR"),
+  repos = get_repos()
+)
 }
 \arguments{
 \item{recursive}{If \code{TRUE}, will also list all dependencies of

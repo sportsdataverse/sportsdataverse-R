@@ -69,9 +69,16 @@ sportsdataverse_sitrep <- function() {
 #' @param repos The repositories to use to check for updates.
 #'   Defaults to \code{getOptions("repos")}.
 #' @export
-sportsdataverse_deps <- function(recursive = FALSE, repos = getOption("repos")) {
-  pkgs <- utils::available.packages(repos = repos)
-  deps <- tools::package_dependencies("sportsdataverse", pkgs, recursive = recursive)
+sportsdataverse_deps <- function(recursive = TRUE,
+                                 pkg_list = c("cfbfastR", "fastRhockey",
+                                              "hoopR","sportsdataverse", "wehoop","worldfootballR"),
+                                 repos = get_repos()) {
+  pkgs <- utils::available.packages()
+  pkgs_in_sdv <- pkgs  %>%
+    as.data.frame() %>%
+    dplyr::filter(.data$Package %in% pkg_list)
+
+  deps <- tools::package_dependencies(pkg_list, pkgs_in_sdv, recursive = recursive)
 
   pkg_deps <- unique(sort(unlist(deps)))
 
