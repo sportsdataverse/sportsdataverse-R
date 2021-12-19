@@ -48,7 +48,7 @@ devtools::install_github(repo = "saiemgilani/sportsdataverse-R")
 sportsdataverse::sportsdataverse_logo()
 ```
 <center>
-<img src='https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/data-raw/sportsdataverse-ascii-logo.png' align="center" width="70%" />
+<img src='https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/data-raw/sportsdataverse-unicode-logo.png' align="center" width="50%" />
 
 
 </center>

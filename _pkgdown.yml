@@ -19,7 +19,7 @@ authors:
   Saiem Gilani:
     href: https://twitter.com/saiemgilani
 home:
-  title: sportsdataverse
+  title: R Pkgs for Sports Data
   description: The Set of R Packages for Sports Data
   icon: fa-home
   href: index.html
@@ -34,6 +34,16 @@ navbar:
     left:  [home, reference, news, network, data, games, repo]
     right: [twitter, github]
   components:
+    home:
+      title: sportsdataverse
+      description: The Set of R Packages for Sports Data
+      icon: fa-home
+      href: index.html
+      links:
+      - text: SportsDataverse.org
+        href: https://sportsdataverse.org
+      - text: SportsDataverse stats landing page
+        href: https://gameonpaper.com/cfb/
     twitter:
       icon: "fab fa-twitter fa-lg"
       href: http://twitter.com/sportsdataverse
