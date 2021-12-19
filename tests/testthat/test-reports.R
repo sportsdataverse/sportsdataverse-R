@@ -3,7 +3,7 @@ test_that("sportsdataverse_packages() works", {
   expect_identical(
     sportsdataverse_packages(include_self = TRUE),
     c("cfbfastR", "fastRhockey",
-      "hoopR","wehoop","worldfootballR","sportsdataverse")
+      "hoopR","sportsdataverse", "wehoop","worldfootballR")
   )
   expect_identical(
     sportsdataverse_packages(include_self = FALSE),
