@@ -45,19 +45,13 @@ devtools::install_github(repo = "saiemgilani/sportsdataverse-R")
 
 ``` r
 sportsdataverse::sportsdataverse_logo()
-#>                           __      
-#>    _________  ____  _____/ /______
-#>   / ___/ __ \/ __ \/ ___/ __/ ___/
-#>  (__  / /_/ / /_/ / /  / /_(__  ) 
-#> /____/ ____/\____/_/   \__/____/ 
-#>     /_/_/ /___ _/ /_____ _ 
-#>    / __  / __ `/ __/ __ `/
-#>   / /_/ / /_/ / /_/ /_/ /
-#>  _\_____\_____\___\_____\ 
-#> | | / / _  /`__/ ___/ _ \ 
-#> | |/ /  __/ / (__  /  __/
-#> |___/\___/_/ /____/\___/
 ```
+
+<center>
+
+<img src='https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/data-raw/sportsdataverse-ascii-logo.png' align="center" width="70%" />
+
+</center>
 
 ## Follow [**`sportsdataverse`**](https://twitter.com/sportsdataverse) on Twitter and star this repo
 

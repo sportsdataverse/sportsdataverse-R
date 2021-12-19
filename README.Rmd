@@ -44,9 +44,14 @@ if (!requireNamespace('devtools', quietly = TRUE)){
 devtools::install_github(repo = "saiemgilani/sportsdataverse-R")
 ```
 
-```{r sdv-ascii-logo, eval=TRUE}
+```{r sdv-ascii-logo, eval=FALSE}
 sportsdataverse::sportsdataverse_logo()
 ```
+<center>
+<img src='https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/data-raw/sportsdataverse-ascii-logo.png' align="center" width="70%" />
+
+
+</center>
 
 ## Follow [**`sportsdataverse`**](https://twitter.com/sportsdataverse) on Twitter and star this repo
 
