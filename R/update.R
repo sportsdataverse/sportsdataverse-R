@@ -72,11 +72,12 @@ sportsdataverse_sitrep <- function() {
 #'   Defaults to \code{getOptions("repos")}.
 #' @importFrom rlang .data
 #' @export
+
 sportsdataverse_deps <- function(recursive = TRUE,
                                  pkg_list = c("cfbfastR", "fastRhockey",
                                               "hoopR","sportsdataverse", "wehoop","worldfootballR"),
-                                 repos = get_repos()) {
-  pkgs <- utils::available.packages()
+                                 repos = getOption("repos")) {
+  pkgs <- utils::available.packages(repos = repos)
   pkgs_in_sdv <- pkgs  %>%
     as.data.frame() %>%
     dplyr::filter(.data$Package %in% pkg_list)

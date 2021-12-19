@@ -8,7 +8,7 @@ sportsdataverse_deps(
   recursive = TRUE,
   pkg_list = c("cfbfastR", "fastRhockey", "hoopR", "sportsdataverse", "wehoop",
     "worldfootballR"),
-  repos = get_repos()
+  repos = getOption("repos")
 )
 }
 \arguments{
