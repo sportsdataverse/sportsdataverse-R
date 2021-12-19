@@ -6,10 +6,10 @@
   crayon::num_colors(TRUE)
   sportsdataverse_attach()
 
-  if (!"package:conflicted" %in% search()) {
-    x <- sportsdataverse_conflicts()
-    msg(sportsdataverse_conflict_message(x), startup = TRUE)
-  }
+#   if (!"package:conflicted" %in% search()) {
+#     x <- sportsdataverse_conflicts()
+#     msg(sportsdataverse_conflict_message(x), startup = TRUE)
+#   }
 
 }
 

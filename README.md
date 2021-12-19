@@ -53,7 +53,7 @@ stars](https://img.shields.io/github/stars/saiemgilani/sportsdataverse-R.svg?col
 
 # **Our Authors**
 
-  - [Saiem Gilani](https://twitter.com/saiemgilani)  
+-   [Saiem Gilani](https://twitter.com/saiemgilani)  
     <a href="https://twitter.com/saiemgilani" target="blank"><img src="https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=twitter&style=for-the-badge" alt="@saiemgilani" /></a>
     <a href="https://github.com/saiemgilani" target="blank"><img src="https://img.shields.io/github/followers/saiemgilani?color=eee&logo=Github&style=for-the-badge" alt="@saiemgilani" /></a>
 
@@ -67,7 +67,7 @@ BibTex Citation
 ``` bibtex
 @misc{saiemgilani2021sdv,
   author = {Gilani, Saiem},
-  title = {Sportsdataverse: The R Package for Sports Data.},
+  title = {Sportsdataverse: The Set of R Packages for Sports Data.},
   url = {https://sportsdataverse.org},
   year = {2021}
 }

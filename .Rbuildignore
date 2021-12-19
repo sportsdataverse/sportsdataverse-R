@@ -1,5 +1,12 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^README\.Rmd$
 ^LICENSE\.md$
+^cran-comments\.md$
+^README\.Rmd$
+^data-raw$
 ^\.github$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^logo.png
+^README\.Rmd$

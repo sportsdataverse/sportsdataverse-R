@@ -1,0 +1,102 @@
+url: http://saiemgilani.github.io/sportsdataverse-R
+
+title: sportsdataverse
+description: "The Set of R Packages for Sports Data"
+template:
+  params:
+    bootswatch: cosmo
+  opengraph:
+    image:
+      src: "https://github.com/saiemgilani/sportsdataverse-R/blob/main/data-raw/sdv-gh.png?raw=true"
+    twitter:
+      site: "@sportsdataverse"
+      card: summary_large_image
+
+toc:
+  depth: 3
+
+authors:
+  Saiem Gilani:
+    href: https://twitter.com/saiemgilani
+home:
+  title: The Set of R Packages for Sports Data
+  description: The Set of R Packages for Sports Data
+  icon: fa-home
+  href: index.html
+  links:
+  - text: SportsDataverse.org
+    href: https://sportsdataverse.org
+  - text: SportsDataverse stats landing page
+    href: https://gameonpaper.com/cfb/
+
+navbar:
+  structure:
+    left:  [home, reference, news, games, network, repo]
+    right: [twitter, github]
+  components:
+    twitter:
+      icon: "fab fa-twitter fa-lg"
+      href: http://twitter.com/sportsdataverse
+    news:
+      icon: "fas fa-newspaper"
+      text: " News"
+      href: news/index.html
+    games:
+      icon: "fas fa-football-ball"
+      text: " GP"
+      href: http://gameonpaper.com/cfb
+    reference:
+      icon: "fas fa-code"
+      text: "Funcs"
+      href: reference/index.html
+    network:
+      icon: "fas fa-project-diagram"
+      text: SDV
+      menu:
+      - text: SportsDataverse
+        href: https://sportsdataverse.org/
+      - text: --------------------------------
+      - text: R Packages
+      - text: cfbfastR
+        href: https://saiemgilani.github.io/cfbfastR/
+      - text: hoopR
+        href: https://hoopR.sportsdataverse.org/
+      - text: wehoop
+        href: https://wehoop.sportsdataverse.org/
+      - text: worldfootballR
+        href: https://jaseziv.github.io/worldfootballR/
+      - text: fastRhockey
+        href: https://BenHowell71.github.io/fastRhockey/
+      - text: hockeyR
+        href: https://hockeyr.netlify.app/
+      - text: baseballr
+        href: https://BillPetti.github.io/baseballr/
+      - text: puntr
+        href: https://puntalytics.github.io/puntr
+      - text: gamezoneR
+        href: https://jacklich10.github.io/gamezoneR/
+      - text: cfbplotR
+        href: https://kazink36.github.io/cfbplotR/
+      - text: cfb4th
+        href: https://kazink36.github.io/cfb4th/
+      - text: recruitR
+        href: https://saiemgilani.github.io/recruitR/
+      - text: --------------------------------
+      - text: Python Packages
+      - text: sportsdataverse-py
+        href: https://py.sportsdataverse.org/
+      - text: --------------------------------
+      - text: Node.js Packages
+      - text: sportsdataverse.js
+        href: https://saiemgilani.github.io/sportsdataverse/
+      - text: nfl-nerd
+        href: https://github.com/nntrn/nfl-nerd/
+    github:
+      icon: "fab fa-github fa-lg"
+      href: https://github.com/saiemgilani/sportsdataverse-R/
+    repo:
+      url: https://github.com/saiemgilani/sportsdataverse-R/
+      home: https://github.com/saiemgilani/sportsdataverse-R/
+      source: https://github.com/saiemgilani/sportsdataverse-R/blob/main/
+      issue: https://github.com/saiemgilani/sportsdataverse-R/issues/
+      user: https://github.com/saiemgilani/

@@ -68,7 +68,7 @@ BibTex Citation
 ```bibtex
 @misc{saiemgilani2021sdv,
   author = {Gilani, Saiem},
-  title = {Sportsdataverse: The R Package for Sports Data.},
+  title = {Sportsdataverse: The Set of R Packages for Sports Data.},
   url = {https://sportsdataverse.org},
   year = {2021}
 }
