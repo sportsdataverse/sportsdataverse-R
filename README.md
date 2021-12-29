@@ -1,6 +1,4 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # sportsdataverse <a href='https://saiemgilani.github.io/sportsdataverse-R/'><img src="https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/logo.png" align="right" width="20%" min-width="100px"/></a>
 
 <!-- badges: start -->
