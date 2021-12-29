@@ -11,7 +11,7 @@ Follow](https://img.shields.io/twitter/follow/sportsdataverse?color=blue&label=%
 [![Contributors](https://img.shields.io/github/contributors/saiemgilani/sportsdataverse-R?style=for-the-badge)](https://github.com/saiemgilani/sportsdataverse-R/graphs/contributors)
 <!-- badges: end -->
 
-The [**`sportsdataverse`**](https://sportsdataverse.org) is a set of
+The [**`sportsdataverse`**](https://r.sportsdataverse.org) is a set of
 sports data packages that work in harmony because they share common data
 representations and API design. This package is designed to make it easy
 to install and load multiple **`sportsdataverse`** packages in a single
@@ -21,7 +21,7 @@ step. Learn more about the **`sportsdataverse`** at
 ## Installation
 
 You can install the released version of
-[**`sportsdataverse`**](https://sportsdataverse.org) from
+[**`sportsdataverse`**](https://r.sportsdataverse.org) from
 [GitHub](https://github.com/saiemgilani/sportsdataverse-R) with:
 
 ``` r
@@ -33,11 +33,10 @@ pacman::p_load_current_gh("saiemgilani/sportsdataverse-R")
 ```
 
 ``` r
-# if you would prefer devtools installation
+# Alternatively, using the devtools package:
 if (!requireNamespace('devtools', quietly = TRUE)){
   install.packages('devtools')
 }
-# Alternatively, using the devtools package:
 devtools::install_github(repo = "saiemgilani/sportsdataverse-R")
 ```
 
