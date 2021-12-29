@@ -83,13 +83,13 @@ BibTex Citation
 
 ## **R Packages in the SportsDataverse**
 
-<a href='https://saiemgilani.github.io/cfbfastR/'><img src='https://raw.githubusercontent.com/saiemgilani/cfbfastR/master/logo.png' width="18%" min-width="100px" /></a>
-<a href='https://hoopr.sportsdataverse.org/'><img src="https://hoopr.sportsdataverse.org/img/logo.png" width="18%" min-width="100px"/></a>
-<a href='https://wehoop.sportsdataverse.org'><img src="https://wehoop.sportsdataverse.org/img/logo.png" width="18%" min-width="100px"/></a>
-<a href='https://benhowell71.github.io/fastRhockey/'><img src='https://raw.githubusercontent.com/benhowell71/fastRhockey/main/logo.png' width="18%" min-width="100px" /></a>
+<a href='https://cfbfastR.sportsdataverse.org/'><img src='https://raw.githubusercontent.com/saiemgilani/cfbfastR/master/logo.png' width="18%" min-width="100px" /></a>
+<a href='https://hoopR.sportsdataverse.org/'><img src="https://raw.githubusercontent.com/saiemgilani/hoopR/master/logo.png" width="18%" min-width="100px"/></a>
+<a href='https://wehoop.sportsdataverse.org'><img src="https://raw.githubusercontent.com/saiemgilani/wehoop/master/logo.png" width="18%" min-width="100px"/></a>
+<a href='https://fastRhockey.sportsdataverse.org/'><img src='https://raw.githubusercontent.com/benhowell71/fastRhockey/main/logo.png' width="18%" min-width="100px" /></a>
 <a href='https://jaseziv.github.io/worldfootballR/'><img src='https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/data-raw/worldfootballR-logo.png' width="18%" min-width="100px" /></a>
 
-### [**`cfbfastR`**](https://saiemgilani.github.io/cfbfastR/)
+### [**`cfbfastR`**](https://cfbfastR.sportsdataverse.org/)
 
 [![Version-Number](https://img.shields.io/github/r-package/v/saiemgilani/cfbfastR?label=cfbfastR&logo=R&style=for-the-badge)](https://github.com/saiemgilani/cfbfastR)
 [![R-CMD-check](https://img.shields.io/github/workflow/status/saiemgilani/cfbfastR/R-CMD-check?label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/saiemgilani/cfbfastR/actions/workflows/R-CMD-check.yaml)
@@ -116,7 +116,7 @@ status](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=succ
 [![CRAN
 downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2Fwehoop)](https://CRAN.R-project.org/package=wehoop)
 
-### [**`fastRhockey`**](https://benhowell71.github.io/fastRhockey/)
+### [**`fastRhockey`**](https://fastRhockey.sportsdataverse.org/)
 
 [![Version-Number](https://img.shields.io/github/r-package/v/benhowell71/fastRhockey?label=fastRhockey&logo=R&style=for-the-badge)](https://github.com/benhowell71/fastRhockey)
 [![R-CMD-check](https://img.shields.io/github/workflow/status/benhowell71/fastRhockey/R-CMD-check?label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/benhowell71/fastRhockey/actions/workflows/R-CMD-check.yaml)
