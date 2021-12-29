@@ -1,5 +1,5 @@
 
-# sportsdataverse <a href='https://saiemgilani.github.io/sportsdataverse-R/'><img src="https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/logo.png" align="right" width="20%" min-width="100px"/></a>
+# sportsdataverse <a href='https://r.sportsdataverse.org/'><img src="https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/logo.png" align="right" width="20%" min-width="100px"/></a>
 
 <!-- badges: start -->
 
@@ -67,7 +67,7 @@ stars](https://img.shields.io/github/stars/saiemgilani/sportsdataverse-R.svg?col
 
 ## **Citations**
 
-To cite the [**`sportsdataverse`**](https://sportsdataverse.org) R
+To cite the [**`sportsdataverse`**](https://r.sportsdataverse.org) R
 package in publications, use:
 
 BibTex Citation
@@ -75,8 +75,8 @@ BibTex Citation
 ``` bibtex
 @misc{saiemgilani2021sdv,
   author = {Gilani, Saiem},
-  title = {Sportsdataverse: The Set of R Packages for Sports Data.},
-  url = {https://sportsdataverse.org},
+  title = {sportsdataverse: The Set of R Packages for Sports Data.},
+  url = {https://r.sportsdataverse.org},
   year = {2021}
 }
 ```
