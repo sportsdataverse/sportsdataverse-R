@@ -27,10 +27,6 @@ authors:
   Saiem Gilani:
     href: https://twitter.com/saiemgilani
 home:
-  title: R Pkgs for Sports Data
-  description: The Set of R Packages for Sports Data
-  icon: fa-home
-  href: index.html
   links:
   - text: SportsDataverse.org
     href: https://sportsdataverse.org
@@ -44,18 +40,13 @@ navbar:
   title: "sportsdataverse"
   components:
     home:
-      title: The Set of R Packages for Sports Data
+      title: R Pkgs for Sports Data
       description: The Set of R Packages for Sports Data
       icon: fa-home
       href: index.html
-      links:
-      - text: SportsDataverse.org
-        href: https://sportsdataverse.org
-      - text: SportsDataverse stats landing page
-        href: https://gameonpaper.com/cfb/
     twitter:
       icon: "fab fa-twitter fa-lg"
-      href: http://twitter.com/sportsdataverse
+      href: https://twitter.com/sportsdataverse
     news:
       icon: "fas fa-newspaper"
       text: " News"
@@ -131,9 +122,9 @@ navbar:
     github:
       icon: "fab fa-github fa-lg"
       href: https://github.com/saiemgilani/sportsdataverse-R/
-    repo:
-      url: https://github.com/saiemgilani/sportsdataverse-R/
-      home: https://github.com/saiemgilani/sportsdataverse-R/
-      source: https://github.com/saiemgilani/sportsdataverse-R/blob/main/
-      issue: https://github.com/saiemgilani/sportsdataverse-R/issues/
-      user: https://github.com/saiemgilani/
+repo:
+  url: https://github.com/saiemgilani/sportsdataverse-R/
+  home: https://github.com/saiemgilani/sportsdataverse-R/
+  source: https://github.com/saiemgilani/sportsdataverse-R/blob/main/
+  issue: https://github.com/saiemgilani/sportsdataverse-R/issues/
+  user: https://github.com/saiemgilani/

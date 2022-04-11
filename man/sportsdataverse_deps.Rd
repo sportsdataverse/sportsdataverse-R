@@ -6,8 +6,8 @@
 \usage{
 sportsdataverse_deps(
   recursive = TRUE,
-  pkg_list = c("cfbfastR", "fastRhockey", "hoopR", "sportsdataverse", "wehoop",
-    "worldfootballR"),
+  pkg_list = c("baseballr", "cfbfastR", "chessR", "fastRhockey", "hoopR",
+    "sportsdataverse", "wehoop", "worldfootballR"),
   repos = getOption("repos")
 )
 }
