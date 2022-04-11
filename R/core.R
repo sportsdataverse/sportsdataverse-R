@@ -1,5 +1,7 @@
 core <- c(
+  "baseballr",
   "cfbfastR",
+  "chessR",
   "fastRhockey",
   "hoopR",
   "wehoop",
@@ -8,7 +10,9 @@ core <- c(
 
 get_repos <- function(){
   repo_urls <- c(
+    "https://github.com/BillPetti/baseballr",
     "https://github.com/saiemgilani/cfbfastR",
+    "https://github.com/JaseZiv/chessR",
     "https://github.com/benhowell71/fastRhockey",
     "https://github.com/saiemgilani/hoopR",
     "https://github.com/saiemgilani/wehoop",

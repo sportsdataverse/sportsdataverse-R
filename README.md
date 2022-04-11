@@ -87,6 +87,8 @@ BibTex Citation
 <a href='https://wehoop.sportsdataverse.org'><img src="https://raw.githubusercontent.com/saiemgilani/wehoop/master/logo.png" width="18%" min-width="100px"/></a>
 <a href='https://fastRhockey.sportsdataverse.org/'><img src='https://raw.githubusercontent.com/benhowell71/fastRhockey/main/logo.png' width="18%" min-width="100px" /></a>
 <a href='https://jaseziv.github.io/worldfootballR/'><img src='https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/data-raw/worldfootballR-logo.png' width="18%" min-width="100px" /></a>
+<a href='https://jaseziv.github.io/chessR/'><img src='https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/data-raw/chessR-logo.png' width="18%" min-width="100px" /></a>
+<a href='https://BillPetti.github.io/baseballr/'><img src='https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/data-raw/baseballr-logo.png' width="18%" min-width="100px" /></a>
 
 ### [**`cfbfastR`**](https://cfbfastR.sportsdataverse.org/)
 
@@ -124,6 +126,15 @@ version](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=suc
 [![CRAN
 downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FfastRhockey)](https://CRAN.R-project.org/package=fastRhockey)
 
+### [**`baseballr`**](https://BillPetti.github.io/baseballr/)
+
+[![Version-Number](https://img.shields.io/github/r-package/v/BillPetti/baseballr?label=baseballr&logo=R&style=for-the-badge)](https://github.com/BillPetti/baseballr)
+[![R-CMD-check](https://img.shields.io/github/workflow/status/BillPetti/baseballr/R-CMD-check?label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/BillPetti/baseballr/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+status](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=CRAN%20version&prefix=v&query=%24.Version&url=https%3A%2F%2Fcrandb.r-pkg.org%2Fbaseballr)](https://CRAN.R-project.org/package=baseballr)
+[![CRAN
+downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2Fbaseballr)](https://CRAN.R-project.org/package=baseballr)
+
 ### [**`worldfootballR`**](https://jaseziv.github.io/worldfootballR/)
 
 [![Version-Number](https://img.shields.io/github/r-package/v/jaseziv/worldfootballR?label=worldfootballR&logo=R&style=for-the-badge)](https://github.com/jaseziv/worldfootballR)
@@ -132,3 +143,12 @@ downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=s
 status](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=CRAN%20version&prefix=v&query=%24.Version&url=https%3A%2F%2Fcrandb.r-pkg.org%2FworldfootballR)](https://CRAN.R-project.org/package=worldfootballR)
 [![CRAN
 downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FworldfootballR)](https://CRAN.R-project.org/package=worldfootballR)
+
+### [**`chessR`**](https://jaseziv.github.io/chessR/)
+
+[![Version-Number](https://img.shields.io/github/r-package/v/jaseziv/chessR?label=chessR&logo=R&style=for-the-badge)](https://github.com/jaseziv/chessR)
+[![R-CMD-check](https://img.shields.io/github/workflow/status/jaseziv/chessR/R-CMD-check?label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/jaseziv/chessR/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+status](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=CRAN%20version&prefix=v&query=%24.Version&url=https%3A%2F%2Fcrandb.r-pkg.org%2FchessR)](https://CRAN.R-project.org/package=chessR)
+[![CRAN
+downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FchessR)](https://CRAN.R-project.org/package=chessR)

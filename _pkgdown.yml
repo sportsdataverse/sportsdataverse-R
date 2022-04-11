@@ -2,14 +2,22 @@ url: https://r.sportsdataverse.org/
 
 title: sportsdataverse
 description: "The Set of R Packages for Sports Data"
+
 template:
-  params:
-    bootswatch: flatly
+  bootstrap: 5
+  bootswatch: flatly
+  bslib:
+    primary: "#024F84"
+    secondary: "#0580AD"
+    border-radius: 0.5rem
+    btn-border-radius: 0.25rem
   opengraph:
     image:
       src: "https://github.com/saiemgilani/sportsdataverse-R/blob/main/data-raw/sdv-gh.png?raw=true"
     twitter:
       site: "@sportsdataverse"
+      creator: "@sportsdataverse"
+      href: https://twitter.com/sportsdataverse
       card: summary_large_image
 
 toc:
@@ -33,9 +41,10 @@ navbar:
   structure:
     left:  [home, reference, news, network, data, games, repo]
     right: [twitter, github]
+  title: "sportsdataverse"
   components:
     home:
-      title: sportsdataverse
+      title: The Set of R Packages for Sports Data
       description: The Set of R Packages for Sports Data
       icon: fa-home
       href: index.html
@@ -91,6 +100,8 @@ navbar:
         href: https://fastRhockey.sportsdataverse.org/
       - text: worldfootballR
         href: https://jaseziv.github.io/worldfootballR/
+      - text: chessR
+        href: https://jaseziv.github.io/chessR/
       - text: baseballr
         href: https://BillPetti.github.io/baseballr/
       - text: cfbplotR
