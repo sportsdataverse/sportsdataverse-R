@@ -74,8 +74,7 @@ sportsdataverse_sitrep <- function() {
 #' @export
 
 sportsdataverse_deps <- function(recursive = TRUE,
-                                 pkg_list = c("baseballr","cfbfastR","chessR", "fastRhockey",
-                                              "hoopR","sportsdataverse", "wehoop","worldfootballR"),
+                                 pkg_list = get_core_functions(),
                                  repos = getOption("repos")) {
   pkgs <- utils::available.packages(repos = repos)
   pkgs_in_sdv <- pkgs  %>%

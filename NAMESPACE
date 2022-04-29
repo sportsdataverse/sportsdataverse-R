@@ -2,6 +2,7 @@
 
 S3method(print,sportsdataverse_logo)
 export("%>%")
+export(get_core_functions)
 export(sportsdataverse_deps)
 export(sportsdataverse_logo)
 export(sportsdataverse_packages)

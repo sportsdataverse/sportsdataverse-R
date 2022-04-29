@@ -20,3 +20,19 @@ get_repos <- function(){
   )
   return(repo_urls)
 }
+
+#' @title List of all packages in the SportsDataverse
+#' @return Returns a vector of the CRAN packages in the SportsDataverse
+#' @export
+get_core_functions <- function() {
+  core <- c(
+    "baseballr",
+    "cfbfastR",
+    "chessR",
+    "fastRhockey",
+    "hoopR",
+    "toRvik",
+    "wehoop"
+  )
+  return(core)
+}
