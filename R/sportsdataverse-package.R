@@ -8,7 +8,7 @@
 #' @importFrom fastRhockey most_recent_nhl_season
 #' @importFrom hoopR login
 #' @importFrom toRvik current_season
-#' @importFrom wehoop most_recent_wnba_season
+#' @importFrom wehoop load_wbb_pbp
 NULL
 
 # The following block is used by usethis to automatically manage
