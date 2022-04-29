@@ -1,7 +1,5 @@
-url: https://r.sportsdataverse.org/
+url: ~
 
-title: sportsdataverse
-description: "The Set of R Packages for Sports Data"
 
 template:
   bootstrap: 5
@@ -26,11 +24,18 @@ toc:
 authors:
   Saiem Gilani:
     href: https://twitter.com/saiemgilani
+
+code:
+  width: 72
+
+development:
+  mode: auto
+
 home:
   links:
-  - text: SportsDataverse.org
+  - text: "SportsDataverse.org"
     href: https://sportsdataverse.org
-  - text: SportsDataverse stats landing page
+  - text: "SportsDataverse stats landing page"
     href: https://gameonpaper.com/cfb/
 
 navbar:
@@ -69,7 +74,7 @@ navbar:
         href: https://github.com/JaseZiv/worldfootballR_data
     reference:
       icon: "fas fa-code"
-      text: "Funcs"
+      text: " Funcs"
       href: reference/index.html
     network:
       icon: "fas fa-project-diagram"

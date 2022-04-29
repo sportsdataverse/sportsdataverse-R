@@ -84,7 +84,7 @@ BibTex Citation
 
 ## **R Packages in the SportsDataverse**
 
-<a href='https://R.sportsdataverse.org/'><img src='https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/sdv-wall.png' width="90%" min-width="100px" /></a>
+<a href='https://R.sportsdataverse.org/'><img src='https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/man/figures/sdv-wall.png' width="90%" min-width="100px" /></a>
 
 ### [**`cfbfastR`**](https://cfbfastR.sportsdataverse.org/)
 
