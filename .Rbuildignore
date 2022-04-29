@@ -13,3 +13,4 @@
 ^core$
 ^extended$
 ^sdv-wall.png
+^\.pre-commit-config\.yaml$
