@@ -1,7 +1,7 @@
 Package: sportsdataverse
 Title: Easily Install and Load the 'SportsDataverse'
 Version: 0.1.0
-Authors@R:  c(
+Authors@R: c(
     person(given = "Saiem", family = "Gilani", role = c("aut", "cre"), email = "saiem.gilani@gmail.com")
   )
 Description: The 'sportsdataverse' is a set of sports data packages that work in
@@ -10,8 +10,7 @@ Description: The 'sportsdataverse' is a set of sports data packages that work in
     multiple 'sportsdataverse' packages in a single step. Learn more about the
     'sportsdataverse' at <https://sportsdataverse.org>.
 License: MIT + file LICENSE
-URL: https://r.sportsdataverse.org,
-    https://github.com/saiemgilani/sportsdataverse
+URL: https://github.com/saiemgilani/sportsdataverse-R
 BugReports: https://github.com/saiemgilani/sportsdataverse-R/issues
 Depends: 
     R (>= 4.0)
