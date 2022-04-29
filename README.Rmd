@@ -3,14 +3,6 @@ output: github_document
 ---
 
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
 
 # sportsdataverse <a href='https://r.sportsdataverse.org/'><img src="https://raw.githubusercontent.com/saiemgilani/sportsdataverse-R/main/logo.png" align="right" width="20%" min-width="100px"/></a>
 

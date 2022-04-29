@@ -6,13 +6,15 @@
 \alias{sportsdataverse-package}
 \title{sportsdataverse: Easily Install and Load the 'SportsDataverse'}
 \description{
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
 The 'sportsdataverse' is a set of sports data packages that work in harmony because they share common data representations and 'API' design. This package is designed to make it easy to install and load multiple 'sportsdataverse' packages in a single step. Learn more about the 'sportsdataverse' at <https://sportsdataverse.org>.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://r.sportsdataverse.org}
-  \item \url{https://github.com/saiemgilani/sportsdataverse}
+  \item \url{https://r.sportsdataverse.org (docs)}
+  \item \url{https://github.com/saiemgilani/sportsdataverse (repo)}
   \item Report bugs at \url{https://github.com/saiemgilani/sportsdataverse-R/issues}
 }
 
