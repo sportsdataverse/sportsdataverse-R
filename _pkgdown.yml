@@ -1,6 +1,4 @@
 url: ~
-
-
 template:
   bootstrap: 5
   bootswatch: flatly
@@ -13,68 +11,32 @@ template:
     image:
       src: "https://github.com/saiemgilani/sportsdataverse-R/blob/main/data-raw/sdv-gh.png?raw=true"
     twitter:
+      creator: "@saiemgilani"
       site: "@sportsdataverse"
-      creator: "@sportsdataverse"
-      href: https://twitter.com/sportsdataverse
       card: summary_large_image
+home:
+  title: sportsdataverse • Data and Tools for Sports Data Analytics
+  description: >
+    A collection of data and R packages designed for sports data analytics!
 
-toc:
-  depth: 3
 
-authors:
+author:
   Saiem Gilani:
     href: https://twitter.com/saiemgilani
 
-code:
-  width: 72
-
-development:
-  mode: auto
-
-home:
-  links:
-  - text: "SportsDataverse.org"
-    href: https://sportsdataverse.org
-  - text: "SportsDataverse stats landing page"
-    href: https://gameonpaper.com/cfb/
 
 navbar:
   structure:
-    left:  [home, reference, news, network, data, games, repo]
+    left:  [home, reference, news, network]
     right: [twitter, github]
-  title: "sportsdataverse"
   components:
-    home:
-      title: R Pkgs for Sports Data
-      description: The Set of R Packages for Sports Data
-      icon: fa-home
-      href: index.html
-    twitter:
-      icon: "fab fa-twitter fa-lg"
-      href: https://twitter.com/sportsdataverse
     news:
       icon: "fas fa-newspaper"
       text: " News"
       href: news/index.html
-    data:
-      icon: "fas fa-database"
-      text: " Data"
-      menu:
-      - text: "cfbfastR Data Repository"
-        href: https://github.com/saiemgilani/cfbfastR-data
-      - text: "cfbfastR Raw Data Repository"
-        href: https://github.com/saiemgilani/cfbfastR-raw
-      - text: "hoopR Data Repository"
-        href: https://github.com/saiemgilani/hoopR-data
-      - text: "wehoop Data Repository"
-        href: https://github.com/saiemgilani/wehoop-data
-      - text: "fastRhockey Data Repository"
-        href: https://github.com/saiemgilani/fastRhockey-data
-      - text: "worldfootballR Data Repository"
-        href: https://github.com/JaseZiv/worldfootballR_data
     reference:
       icon: "fas fa-code"
-      text: " Funcs"
+      text: "Functions"
       href: reference/index.html
     network:
       icon: "fas fa-project-diagram"
@@ -83,7 +45,7 @@ navbar:
       - text: SportsDataverse
         href: https://sportsdataverse.org/
       - text: --------------------------------
-      - text: R Packages
+      - text: "R Packages"
       - text: sportsdataverse-R
         href: https://r.sportsdataverse.org/
       - text: cfbfastR
@@ -113,11 +75,11 @@ navbar:
       - text: puntr
         href: https://puntalytics.github.io/puntr/
       - text: --------------------------------
-      - text: Python Packages
+      - text: "Python Packages"
       - text: sportsdataverse-py
         href: https://py.sportsdataverse.org/
       - text: --------------------------------
-      - text: Node.js Packages
+      - text: "Node.js Packages"
       - text: sportsdataverse.js
         href: https://js.sportsdataverse.org/
       - text: nfl-nerd
@@ -129,9 +91,6 @@ navbar:
     github:
       icon: "fab fa-github fa-lg"
       href: https://github.com/saiemgilani/sportsdataverse-R/
-repo:
-  url: https://github.com/saiemgilani/sportsdataverse-R/
-  home: https://github.com/saiemgilani/sportsdataverse-R/
-  source: https://github.com/saiemgilani/sportsdataverse-R/blob/main/
-  issue: https://github.com/saiemgilani/sportsdataverse-R/issues/
-  user: https://github.com/saiemgilani/
+    twitter:
+      icon: "fab fa-twitter fa-lg"
+      href: https://twitter.com/sportsdataverse

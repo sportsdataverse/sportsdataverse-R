@@ -133,6 +133,17 @@ pre, code {
   font-size: 14px;
   animation: glow 2.5s ease-in-out infinite alternate;
 }
+
+.dropdown-item {
+
+  color: #F3F3F3;
+  font-family: "Fira Mono";
+
+}
+.navbar-dark .navbar-nav .nav-link {
+  font-family: "Fira Mono";
+
+}
 .navbar-default .navbar-link {
     font-family: "Bungee";
     font-size: 16px;
@@ -140,3 +151,9 @@ pre, code {
     animation: glow 3s ease-in-out infinite alternate;
 }
 
+.navbar-dark .navbar-brand {
+    font-family: "Bungee";
+    font-size: 16px;
+    color: #FDFDFD;
+    animation: glow 3s ease-in-out infinite alternate;
+}
