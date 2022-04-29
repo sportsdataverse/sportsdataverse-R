@@ -1,0 +1,38 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+# hexwall
+
+The `hexwall.R` file contains one function `hexwall()`, which can be used to generate an image that neatly arranges a folder of hexagons. It makes use of the [ImageMagick](https://www.imagemagick.org/) library via the ROpenSci package [magick](https://github.com/ropensci/magick) to arrange the images.
+
+There are several arguments allowing some control over the function's operation.
+
+* path:             The path to a folder of hexagon stickers (png files are recommended)
+* sticker_row_size: The number of stickers in the longest row
+* sticker_width:    The width of each sticker in pixels
+* remove_small:     Should hexagons smaller than the sticker_width be removed?
+* remove_size:      Should hexagons of an abnormal size be removed?
+* coords:           A data.frame of coordinates defining the placement of hexagons
+* scale_coords:     Should the coordinates be scaled to the hexagon size?
+* sort_mode:        How should the files be sorted?
+
+```{r example}
+source("hexwall.R")
+hexwall("samplehex", sticker_row_size = 3, sticker_width = 200)
+```
+
+# Usage
+
+1. [Download the repository](https://github.com/mitchelloharawild/hexwall/archive/master.zip)
+2. Unzip and open the R project (`hexwall.Rproj`)
+3. Run `source("hexwall.R")`
+4. Ready to go, use the `hexwall()` function to make your hexagon wall.

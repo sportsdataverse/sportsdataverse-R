@@ -29,8 +29,8 @@ Imports:
     rlang,
     rstudioapi,
     tibble (>= 3.0),
-    wehoop (>= 1.2.1),
-    worldfootballR (>= 0.5.1)
+    toRvik (>= 1.0.2),
+    wehoop (>= 1.2.1)
 Roxygen: list(markdown = TRUE)
 Suggests: 
     knitr,

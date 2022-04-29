@@ -10,3 +10,6 @@
 ^pkgdown$
 ^logo.png
 ^README\.Rmd$
+^core$
+^extended$
+^sdv-wall.png
