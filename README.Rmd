@@ -62,7 +62,7 @@ sportsdataverse::sportsdataverse_logo()
 To cite the [**`sportsdataverse`**](https://r.sportsdataverse.org) R package in publications, use:
 
 BibTex Citation
-```bibtex
+``` bibtex
 @misc{saiemgilani2021sdv,
   author = {Gilani, Saiem},
   title = {sportsdataverse: The Set of R Packages for Sports Data.},
