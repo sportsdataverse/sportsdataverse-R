@@ -23,3 +23,7 @@ Defaults to \code{getOptions("repos")}.}
 \description{
 List all sportsdataverse dependencies
 }
+\examples{
+  try(sportsdataverse_deps() \%>\% knitr::kable())
+
+}

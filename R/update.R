@@ -72,6 +72,9 @@ sportsdataverse_sitrep <- function() {
 #'   Defaults to \code{getOptions("repos")}.
 #' @importFrom rlang .data
 #' @export
+#' @examples
+#'   try(sportsdataverse_deps() %>% knitr::kable())
+#'
 
 sportsdataverse_deps <- function(recursive = TRUE,
                                  pkg_list = get_core_functions(),
