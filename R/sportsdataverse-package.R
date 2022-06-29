@@ -9,4 +9,5 @@
 #' @importFrom hoopR login
 #' @importFrom toRvik current_season
 #' @importFrom wehoop load_wbb_pbp
+#' @importFrom sportyR geom_basketball
 NULL
