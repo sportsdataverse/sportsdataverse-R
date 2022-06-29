@@ -10,4 +10,6 @@
 #' @importFrom toRvik current_season
 #' @importFrom wehoop load_wbb_pbp
 #' @importFrom sportyR geom_basketball
+#' @importFrom oddsapiR toa_sports
+#' @importFrom worldfootballR load_match_results
 NULL

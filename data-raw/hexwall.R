@@ -16,7 +16,7 @@ hexwall <- function(path="data-raw/samplehex",
                     sticker_row_size = 4,
                     sticker_width = 500,
                     remove_small = TRUE,
-                    total_stickers = 12,
+                    total_stickers = 14,
                     remove_size = TRUE,
                     coords = NULL,
                     scale_coords = TRUE,
@@ -148,4 +148,5 @@ hexwall <- function(path="data-raw/samplehex",
             .init = canvas)
   }
 }
-hexwall()
+png <- hexwall()
+magick::image_write(magick::image_scale(png,geometry="1000"), path = "man/figures/sdv-wall.png", format = "png")

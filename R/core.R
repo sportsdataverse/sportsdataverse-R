@@ -4,21 +4,25 @@ core <- c(
   "chessR",
   "fastRhockey",
   "hoopR",
+  "oddsapiR",
   "sportyR",
   "toRvik",
-  "wehoop"
+  "wehoop",
+  "worldfootballR"
 )
 
 get_repos <- function(){
   repo_urls <- c(
     "https://github.com/BillPetti/baseballr",
-    "https://github.com/saiemgilani/cfbfastR",
+    "https://github.com/sportsdataverse/cfbfastR",
     "https://github.com/JaseZiv/chessR",
-    "https://github.com/benhowell71/fastRhockey",
-    "https://github.com/saiemgilani/hoopR",
-    "https://github.com/rossdrucker/sportyR",
+    "https://github.com/sportsdataverse/fastRhockey",
+    "https://github.com/sportsdataverse/hoopR",
+    "https://github.com/sportsdataverse/oddsapiR",
+    "https://github.com/sportsdataverse/sportyR",
     "https://github.com/andreweatherman/toRvik",
-    "https://github.com/saiemgilani/wehoop"
+    "https://github.com/sportsdataverse/wehoop",
+    "https://github.com/JaseZiv/worldfootballR"
   )
   return(repo_urls)
 }
@@ -33,9 +37,11 @@ get_core_functions <- function() {
     "chessR",
     "fastRhockey",
     "hoopR",
+    "oddsapiR",
     "sportyR",
     "toRvik",
-    "wehoop"
+    "wehoop",
+    "worldfootballR"
   )
   return(core)
 }
