@@ -64,8 +64,12 @@ navbar:
         href: https://jaseziv.github.io/worldfootballR/
       - text: chessR
         href: https://jaseziv.github.io/chessR/
+      - text: sportyR
+        href: https://sportyR.sportsdataverse.org/
       - text: cfbplotR
         href: https://kazink36.github.io/cfbplotR/
+      - text: mlbplotR
+        href: https://github.com/camdenk/mlbplotR
       - text: cfb4th
         href: https://kazink36.github.io/cfb4th/
       - text: recruitR
