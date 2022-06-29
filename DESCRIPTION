@@ -28,7 +28,8 @@ Imports:
     rstudioapi,
     tibble (>= 3.0),
     toRvik (>= 1.0.2),
-    wehoop (>= 1.2.1)
+    wehoop (>= 1.2.1),
+    sportyR (>= 1.0.1)
 Roxygen: list(markdown = TRUE)
 Suggests: 
     knitr,
