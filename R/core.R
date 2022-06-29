@@ -4,6 +4,7 @@ core <- c(
   "chessR",
   "fastRhockey",
   "hoopR",
+  "sportyR",
   "toRvik",
   "wehoop"
 )
@@ -15,6 +16,7 @@ get_repos <- function(){
     "https://github.com/JaseZiv/chessR",
     "https://github.com/benhowell71/fastRhockey",
     "https://github.com/saiemgilani/hoopR",
+    "https://github.com/rossdrucker/sportyR",
     "https://github.com/andreweatherman/toRvik",
     "https://github.com/saiemgilani/wehoop"
   )
@@ -31,6 +33,7 @@ get_core_functions <- function() {
     "chessR",
     "fastRhockey",
     "hoopR",
+    "sportyR",
     "toRvik",
     "wehoop"
   )
