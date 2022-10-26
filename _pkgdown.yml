@@ -97,7 +97,7 @@ navbar:
       - text: recruitR-py
         href: https://github.com/sportsdataverse/recruitR-py/
       - text: collegebaseball
-        href: https://github.com/nathanblumenfeld/collegebaseball/
+        href: https://collegebaseball.readthedocs.io/en/latest/index.html
       - text: --------------------------------
       - text: "Node.js Packages"
       - text: sportsdataverse.js
