@@ -13,10 +13,10 @@ library(purrr)
 # background_color: The colour of the background canvas
 # n_stickers:       The number of hexagons to produce. Recycled in file order.
 hexwall <- function(path="data-raw/samplehex",
-                    sticker_row_size = 4,
+                    sticker_row_size = 5,
                     sticker_width = 500,
                     remove_small = TRUE,
-                    total_stickers = 14,
+                    total_stickers = 18,
                     remove_size = TRUE,
                     coords = NULL,
                     scale_coords = TRUE,
