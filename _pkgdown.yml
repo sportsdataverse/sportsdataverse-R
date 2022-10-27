@@ -9,7 +9,7 @@ template:
     btn-border-radius: 0.25rem
   opengraph:
     image:
-      src: "https://github.com/saiemgilani/sportsdataverse-R/blob/main/data-raw/sdv-gh.png?raw=true"
+      src: "https://github.com/sportsdataverse/sportsdataverse-R/blob/main/data-raw/sdv-gh.png?raw=true"
     twitter:
       creator: "@saiemgilani"
       site: "@sportsdataverse"
