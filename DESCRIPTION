@@ -16,7 +16,7 @@ Depends:
 Imports: 
     cli (>= 1.1.0),
     crayon (>= 1.3.4),
-    baseballr (>= 1.1.0),D
+    baseballr (>= 1.1.0),
     cfbfastR (>= 1.6.4),
     dplyr,
     fastRhockey (>= 0.2.0),
