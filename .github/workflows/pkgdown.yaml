@@ -42,6 +42,7 @@ jobs:
             any::sportyR
             any::tictoc
             any::wehoop
+            any::worldfootballR
             any::zoo
             local::.
           needs: website
