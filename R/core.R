@@ -1,7 +1,7 @@
 core <- c(
   "baseballr",
   "cfbfastR",
-  "chessR",
+  # "chessR",
   "fastRhockey",
   # "hockeyR",
   "hoopR",
@@ -16,7 +16,7 @@ get_repos <- function(){
   repo_urls <- c(
     "https://github.com/BillPetti/baseballr",
     "https://github.com/sportsdataverse/cfbfastR",
-    "https://github.com/JaseZiv/chessR",
+    # "https://github.com/JaseZiv/chessR",
     "https://github.com/sportsdataverse/fastRhockey",
     # "https://github.com/danmorse314/hockeyR/",
     "https://github.com/sportsdataverse/hoopR",
@@ -36,7 +36,7 @@ get_core_functions <- function() {
   core <- c(
     "baseballr",
     "cfbfastR",
-    "chessR",
+    # "chessR",
     "fastRhockey",
     # "hockeyR",
     "hoopR",
