@@ -140,7 +140,7 @@ pre, code {
   font-family: "Fira Mono";
 
 }
-.navbar-dark .navbar-nav .nav-link {
+.navbar-nav .nav-link {
   font-family: "Fira Mono";
 
 }
@@ -151,9 +151,14 @@ pre, code {
     animation: glow 3s ease-in-out infinite alternate;
 }
 
-.navbar-dark .navbar-brand {
+.navbar-brand {
     font-family: "Bungee";
     font-size: 16px;
     color: #FDFDFD;
     animation: glow 3s ease-in-out infinite alternate;
 }
+
+/* Restore the original navbar colour (BS5 dropped the dead .navbar-default rule). */
+.navbar { background-color: #014F84 !important; }
+/* Version badge legible on the dark navbar (BS5 .text-muted otherwise wins). */
+small.nav-text.text-muted { color: #EAEBEC !important; }
