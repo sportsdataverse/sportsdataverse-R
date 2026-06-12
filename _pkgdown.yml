@@ -1,6 +1,7 @@
 url: ~
 template:
   bootstrap: 5
+  light-switch: true
   bootswatch: flatly
   bslib:
     primary: "#024F84"
@@ -28,7 +29,7 @@ authors:
 navbar:
   structure:
     left:  [home, reference, news, network]
-    right: [twitter, github]
+    right: [search, twitter, github, lightswitch]
   components:
     news:
       icon: "fas fa-newspaper"
@@ -110,7 +111,9 @@ navbar:
       href: http://gameonpaper.com/cfb
     github:
       icon: "fab fa-github fa-lg"
+      aria-label: GitHub
       href: https://github.com/sportsdataverse/sportsdataverse-R/
     twitter:
       icon: "fab fa-x-twitter fa-lg"
+      aria-label: X (Twitter)
       href: https://x.com/sportsdataverse
