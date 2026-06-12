@@ -22,7 +22,7 @@ home:
 
 authors:
   Saiem Gilani:
-    href: https://twitter.com/saiemgilani
+    href: https://x.com/saiemgilani
 
 
 navbar:
@@ -112,5 +112,5 @@ navbar:
       icon: "fab fa-github fa-lg"
       href: https://github.com/sportsdataverse/sportsdataverse-R/
     twitter:
-      icon: "fab fa-twitter fa-lg"
-      href: https://twitter.com/sportsdataverse
+      icon: "fab fa-x-twitter fa-lg"
+      href: https://x.com/sportsdataverse
