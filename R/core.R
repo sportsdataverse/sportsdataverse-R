@@ -8,8 +8,7 @@ core <- c(
   "oddsapiR",
   "sportyR",
   # "toRvik",
-  "wehoop",
-  "worldfootballR"
+  "wehoop"
 )
 
 get_repos <- function(){
@@ -23,8 +22,7 @@ get_repos <- function(){
     "https://github.com/sportsdataverse/oddsapiR",
     "https://github.com/sportsdataverse/sportyR",
     # "https://github.com/andreweatherman/toRvik",
-    "https://github.com/sportsdataverse/wehoop",
-    "https://github.com/JaseZiv/worldfootballR"
+    "https://github.com/sportsdataverse/wehoop"
   )
   return(repo_urls)
 }
@@ -43,8 +41,7 @@ get_core_functions <- function() {
     "oddsapiR",
     "sportyR",
     # "toRvik",
-    "wehoop",
-    "worldfootballR"
+    "wehoop"
   )
   return(core)
 }

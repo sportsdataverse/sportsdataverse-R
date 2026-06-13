@@ -1,6 +1,6 @@
 Package: sportsdataverse
 Title: Easily Install and Load the 'SportsDataverse'
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: 
     c(person(given = "Saiem", family = "Gilani", role = c("aut", "cre"), email = "saiem.gilani@gmail.com"))
 Description: The 'sportsdataverse' is a set of sports data packages that work in
@@ -9,32 +9,31 @@ Description: The 'sportsdataverse' is a set of sports data packages that work in
     multiple 'sportsdataverse' packages in a single step. Learn more about the
     'sportsdataverse' at <https://sportsdataverse.org>.
 License: MIT + file LICENSE
-URL: https://github.com/saiemgilani/sportsdataverse-R
-BugReports: https://github.com/saiemgilani/sportsdataverse-R/issues
-Depends: 
-    R (>= 4.0)
-Imports: 
-    cli (>= 1.1.0),
-    crayon (>= 1.3.4),
-    baseballr (>= 1.1.0),
-    cfbfastR (>= 1.6.4),
-    dplyr,
-    fastRhockey (>= 0.2.0),
-    hoopR (>= 1.5.0),
-    magrittr,
-    oddsapiR (>= 0.0.1),
-    purrr (>= 0.3.0),
-    rlang,
-    rstudioapi,
-    sportyR (>= 1.0.1),
-    tibble (>= 3.0),
-    wehoop (>= 1.2.1),
-    worldfootballR (>= 0.5.6)
+URL: https://github.com/sportsdataverse/sportsdataverse-R,
+    https://r.sportsdataverse.org
+BugReports: https://github.com/sportsdataverse/sportsdataverse-R/issues
+Depends:
+    R (>= 4.1.0)
+Imports:
+    baseballr (>= 1.6.0),
+    cfbfastR (>= 2.0.0),
+    cli (>= 3.0.0),
+    crayon (>= 1.4.0),
+    fastRhockey (>= 0.4.0),
+    hoopR (>= 3.0.0),
+    magrittr (>= 2.0.0),
+    oddsapiR (>= 0.0.3),
+    rlang (>= 0.4.10),
+    rstudioapi (>= 0.13),
+    sportyR (>= 2.2.3),
+    wehoop (>= 2.1.0)
 Roxygen: list(markdown = TRUE)
-Suggests: 
+Suggests:
     knitr,
-    rmarkdown,    
+    pak (>= 0.5.0),
+    rmarkdown,
     testthat (>= 3.0.0)
+Config/testthat/edition: 3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.3

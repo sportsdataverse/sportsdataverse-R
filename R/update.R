@@ -1,34 +1,54 @@
 #' Update sportsdataverse packages
 #'
 #' This will check to see if all sportsdataverse packages (and optionally, their
-#' dependencies) are up-to-date, and will install after an interactive
-#' confirmation.
+#' dependencies) are up-to-date, and prints the install command needed to bring
+#' any out-of-date packages current.
 #'
 #' @inheritParams sportsdataverse_deps
+#' @param devel If `TRUE`, look for prebuilt development versions on the
+#'   SportsDataverse r-universe (<https://sportsdataverse.r-universe.dev>) so it
+#'   is possible to install development versions without GitHub.
+#' @returns Returns `NULL` invisibly. Called for its side effects.
 #' @export
 #' @examples
-#' \dontrun{
-#' sportsdataverse_update()
+#' \donttest{
+#' try(sportsdataverse_update())
 #' }
-sportsdataverse_update <- function(recursive = FALSE, repos = getOption("repos")) {
+sportsdataverse_update <- function(recursive = FALSE,
+                                   repos = getOption("repos"),
+                                   devel = FALSE) {
+  if (isTRUE(devel)) {
+    repos["sportsdataverse"] <- "https://sportsdataverse.r-universe.dev"
+  }
 
-  deps <- sportsdataverse_deps(recursive, repos)
-  behind <- dplyr::filter(deps, behind)
+  deps <- sportsdataverse_deps(recursive = recursive, repos = repos)
+  behind <- deps[deps$behind %in% TRUE, , drop = FALSE]
 
   if (nrow(behind) == 0) {
-    cli::cat_line("All sportsdataverse packages up-to-date")
+    cli::cli_alert_success("All {.field sportsdataverse} packages are up-to-date!")
     return(invisible())
   }
 
-  cli::cat_line("The following packages are out of date:")
-  cli::cat_line()
-  cli::cat_bullet(format(behind$package), " (", behind$local, " -> ", behind$cran, ")")
-
-  cli::cat_line()
-  cli::cat_line("Start a clean R session then run:")
+  cli::cli_alert_info(
+    "The following {cli::qty(nrow(behind))}package{?s} {?is/are} out of date:"
+  )
+  cli::cat_bullet(
+    format(behind$package), " (", format(behind$local), " -> ", format(behind$cran), ")"
+  )
 
   pkg_str <- paste0(deparse(behind$package), collapse = "\n")
-  cli::cat_line("install.packages(", pkg_str, ")")
+  if (isTRUE(devel)) {
+    out_string <- paste0(
+      "install.packages(", pkg_str,
+      ',\n  repos = c("https://sportsdataverse.r-universe.dev", getOption("repos")))'
+    )
+  } else {
+    out_string <- paste0("install.packages(", pkg_str, ")")
+  }
+
+  cli::cli_rule(left = "Start a clean R session then run")
+  cli::cli_code(out_string)
+  cli::cli_rule()
 
   invisible()
 }
@@ -70,22 +90,20 @@ sportsdataverse_sitrep <- function() {
 #'   Defaults to \code{getOptions("repos")}.
 #' @param repos The repositories to use to check for updates.
 #'   Defaults to \code{getOptions("repos")}.
-#' @importFrom rlang .data
+#' @returns A `data.frame` with one row per dependency and columns `package`,
+#'   `cran`, `local`, and `behind`.
 #' @export
 #' @examples
-#'   try(sportsdataverse_deps() %>% knitr::kable())
+#'   try(sportsdataverse_deps())
 #'
 
 sportsdataverse_deps <- function(recursive = TRUE,
                                  pkg_list = get_core_functions(),
                                  repos = getOption("repos")) {
   pkgs <- utils::available.packages(repos = repos)
-  pkgs_in_sdv <- pkgs  %>%
-    as.data.frame() %>%
-    dplyr::filter(.data$Package %in% pkg_list)
+  available_pkgs <- intersect(pkg_list, rownames(pkgs))
 
-  deps <- tools::package_dependencies(pkg_list, pkgs_in_sdv, recursive = recursive)
-
+  deps <- tools::package_dependencies(available_pkgs, db = pkgs, recursive = recursive)
   pkg_deps <- unique(sort(unlist(deps)))
 
   base_pkgs <- c(
@@ -98,24 +116,31 @@ sportsdataverse_deps <- function(recursive = TRUE,
   tool_pkgs <- c("cli", "crayon", "rstudioapi")
   pkg_deps <- setdiff(pkg_deps, tool_pkgs)
 
-  cran_version <- lapply(pkgs[pkg_deps, "Version"], base::package_version)
-  local_version <- lapply(pkg_deps, packageVersion)
+  # keep only deps we can resolve a CRAN/r-universe version for
+  pkg_deps <- intersect(pkg_deps, rownames(pkgs))
 
-  behind <- purrr::map2_lgl(cran_version, local_version, `>`)
+  cran_version <- as.character(base::package_version(pkgs[pkg_deps, "Version"]))
+  local_version <- vapply(pkg_deps, packageVersion, FUN.VALUE = character(1))
 
-  tibble::tibble(
+  behind <- mapply(
+    function(cv, lv) utils::compareVersion(cv, lv) > 0,
+    cran_version, local_version
+  )
+
+  data.frame(
     package = pkg_deps,
-    cran = cran_version %>% purrr::map_chr(as.character),
-    local = local_version %>% purrr::map_chr(as.character),
-    behind = behind
+    cran = cran_version,
+    local = local_version,
+    behind = unname(behind),
+    stringsAsFactors = FALSE
   )
 }
 
 packageVersion <- function(pkg) {
   if (rlang::is_installed(pkg)) {
-    utils::packageVersion(pkg)
+    as.character(utils::packageVersion(pkg))
   } else {
-    0
+    "0"
   }
 }
 

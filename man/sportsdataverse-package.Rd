@@ -13,8 +13,9 @@ The 'sportsdataverse' is a set of sports data packages that work in harmony beca
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/saiemgilani/sportsdataverse-R}
-  \item Report bugs at \url{https://github.com/saiemgilani/sportsdataverse-R/issues}
+  \item \url{https://github.com/sportsdataverse/sportsdataverse-R}
+  \item \url{https://r.sportsdataverse.org}
+  \item Report bugs at \url{https://github.com/sportsdataverse/sportsdataverse-R/issues}
 }
 
 }

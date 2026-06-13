@@ -4,7 +4,11 @@
 \alias{sportsdataverse_update}
 \title{Update sportsdataverse packages}
 \usage{
-sportsdataverse_update(recursive = FALSE, repos = getOption("repos"))
+sportsdataverse_update(
+  recursive = FALSE,
+  repos = getOption("repos"),
+  devel = FALSE
+)
 }
 \arguments{
 \item{recursive}{If \code{TRUE}, will also list all dependencies of
@@ -12,14 +16,21 @@ sportsdataverse packages.}
 
 \item{repos}{The repositories to use to check for updates.
 Defaults to \code{getOptions("repos")}.}
+
+\item{devel}{If \code{TRUE}, look for prebuilt development versions on the
+SportsDataverse r-universe (\url{https://sportsdataverse.r-universe.dev}) so it
+is possible to install development versions without GitHub.}
+}
+\value{
+Returns \code{NULL} invisibly. Called for its side effects.
 }
 \description{
 This will check to see if all sportsdataverse packages (and optionally, their
-dependencies) are up-to-date, and will install after an interactive
-confirmation.
+dependencies) are up-to-date, and prints the install command needed to bring
+any out-of-date packages current.
 }
 \examples{
-\dontrun{
-sportsdataverse_update()
+\donttest{
+try(sportsdataverse_update())
 }
 }

@@ -12,8 +12,7 @@ sportsdataverse_packages <- function(include_self = TRUE) {
   if (include_self) {
     names <- c(names, "sportsdataverse")
   }
-  exclude <- c("cli", "crayon", "dplyr", "magrittr", "purrr",
-               "rlang", "rstudioapi", "tibble" )
-  names <- names[!names %in% exclude] %>% sort()
+  exclude <- c("cli", "crayon", "magrittr", "rlang", "rstudioapi")
+  names <- sort(names[!names %in% exclude])
   names
 }

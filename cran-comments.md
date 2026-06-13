@@ -1,5 +1,8 @@
 Release summary
-This is an initial release for sportsdataverse.
+This release updates the SportsDataverse package roster to match the current
+CRAN-published packages, bumps the imported-package version requirements to
+their current CRAN releases, and removes the now-archived `worldfootballR`
+dependency.
 
 R CMD check results
 0 errors | 0 warnings | 0 notes

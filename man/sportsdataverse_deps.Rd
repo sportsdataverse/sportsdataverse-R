@@ -20,10 +20,14 @@ Defaults to \code{getOptions("repos")}.}
 \item{repos}{The repositories to use to check for updates.
 Defaults to \code{getOptions("repos")}.}
 }
+\value{
+A \code{data.frame} with one row per dependency and columns \code{package},
+\code{cran}, \code{local}, and \code{behind}.
+}
 \description{
 List all sportsdataverse dependencies
 }
 \examples{
-  try(sportsdataverse_deps() \%>\% knitr::kable())
+  try(sportsdataverse_deps())
 
 }

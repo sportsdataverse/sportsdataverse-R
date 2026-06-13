@@ -11,6 +11,8 @@
 #     msg(sportsdataverse_conflict_message(x), startup = TRUE)
 #   }
 
+  msg(cli::rule(right = crayon::bold("Ready to go!")), startup = TRUE)
+
 }
 
 is_attached <- function(x) {
