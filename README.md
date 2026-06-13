@@ -1,7 +1,7 @@
 
 # 
 
-# sportsdataverse <a href='https://r.sportsdataverse.org/'><img src="https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/main/logo.png" align="right" width="20%" min-width="100px"/></a>
+# sportsdataverse <a href='https://r.sportsdataverse.org/'><img src="https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/main/logo.png" align="right" width="20%" min-width="100px" alt="sportsdataverse logo"/></a>
 
 <!-- badges: start -->
 
@@ -50,7 +50,7 @@ sportsdataverse::sportsdataverse_logo()
 
 <center>
 
-<img src='https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/main/data-raw/sportsdataverse-unicode-logo.png' align="center" width="50%" />
+<img src='https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/main/data-raw/sportsdataverse-unicode-logo.png' align="center" width="50%" alt="SportsDataverse unicode logo" />
 
 </center>
 
@@ -86,7 +86,7 @@ BibTex Citation
 
 ## **R Packages in the SportsDataverse**
 
-<a href='https://R.sportsdataverse.org/'><img src='https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/main/man/figures/sdv-wall.png' width="90%" min-width="100px" /></a>
+<a href='https://R.sportsdataverse.org/'><img src='https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/main/man/figures/sdv-wall.png' width="90%" min-width="100px" alt="SportsDataverse package wall" /></a>
 
 ### [**`cfbfastR`**](https://cfbfastR.sportsdataverse.org/)
 
