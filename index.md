@@ -38,7 +38,8 @@ devtools::install_github(repo = "sportsdataverse/sportsdataverse-R")
 sportsdataverse::sportsdataverse_logo()
 ```
 
-![](https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/main/data-raw/sportsdataverse-unicode-logo.png)
+![SportsDataverse unicode
+logo](https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/main/data-raw/sportsdataverse-unicode-logo.png)
 
 ## Follow [**`sportsdataverse`**](https://twitter.com/sportsdataverse) on Twitter and star this repo
 
@@ -72,7 +73,8 @@ BibTex Citation
 
 ## **R Packages in the SportsDataverse**
 
-[![](https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/main/man/figures/sdv-wall.png)](https://R.sportsdataverse.org/)
+[![SportsDataverse package
+wall](https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/main/man/figures/sdv-wall.png)](https://R.sportsdataverse.org/)
 
 ### [**`cfbfastR`**](https://cfbfastR.sportsdataverse.org/)
 
