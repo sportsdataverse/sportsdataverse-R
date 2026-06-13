@@ -34,7 +34,7 @@
 
     <a class="navbar-brand me-2" href="index.html">sportsdataverse</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -121,20 +121,37 @@
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the released version of <a href="https://r.sportsdataverse.org"><strong><code>sportsdataverse</code></strong></a> from <a href="https://github.com/saiemgilani/sportsdataverse-R" class="external-link">GitHub</a> with:</p>
+<p>You can install the development version of <a href="https://r.sportsdataverse.org"><strong><code>sportsdataverse</code></strong></a> from <a href="https://github.com/sportsdataverse/sportsdataverse-R" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># You can install using the pacman package using the following code:</span></span>
-<span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">'pacman'</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'pacman'</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">'pak'</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'pak'</span><span class="op">)</span></span>
 <span><span class="op">}</span></span>
-<span><span class="fu">pacman</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pacman/man/p_load_current_gh.html" class="external-link">p_load_current_gh</a></span><span class="op">(</span><span class="st">"sportsdataverse/sportsdataverse-R"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"sportsdataverse/sportsdataverse-R"</span><span class="op">)</span></span></code></pre></div>
+<p>or prebuilt from the <a href="https://sportsdataverse.r-universe.dev" class="external-link">SportsDataverse r-universe</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Alternatively, using the devtools package:</span></span>
-<span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">'devtools'</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'devtools'</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span>repo <span class="op">=</span> <span class="st">"sportsdataverse/sportsdataverse-R"</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"sportsdataverse"</span>, repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://sportsdataverse.r-universe.dev"</span>, <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"repos"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h2>
+<p><code><a href="https://github.com/sportsdataverse/sportsdataverse-R" class="external-link">library(sportsdataverse)</a></code> will load the following packages:</p>
+<ul>
+<li>
+<a href="https://billpetti.github.io/baseballr/" class="external-link"><strong><code>baseballr</code></strong></a>, for MLB and college baseball data.</li>
+<li>
+<a href="https://cfbfastR.sportsdataverse.org/" class="external-link"><strong><code>cfbfastR</code></strong></a>, for college football data.</li>
+<li>
+<a href="https://fastRhockey.sportsdataverse.org/" class="external-link"><strong><code>fastRhockey</code></strong></a>, for NHL and PWHL hockey data.</li>
+<li>
+<a href="https://hoopR.sportsdataverse.org/" class="external-link"><strong><code>hoopR</code></strong></a>, for men’s college and professional basketball data.</li>
+<li>
+<a href="https://oddsapiR.sportsdataverse.org/" class="external-link"><strong><code>oddsapiR</code></strong></a>, for sportsbook odds from The Odds API.</li>
+<li>
+<a href="https://sportyR.sportsdataverse.org/" class="external-link"><strong><code>sportyR</code></strong></a>, for drawing regulation playing surfaces.</li>
+<li>
+<a href="https://wehoop.sportsdataverse.org/" class="external-link"><strong><code>wehoop</code></strong></a>, for women’s college and professional basketball data.</li>
+</ul>
+<!-- end list --><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">sportsdataverse</span><span class="fu">::</span><span class="fu"><a href="reference/sportsdataverse_logo.html">sportsdataverse_logo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <center>
 <p><img src="https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/main/data-raw/sportsdataverse-unicode-logo.png" align="center" width="50%" alt="SportsDataverse unicode logo"></p>
@@ -205,22 +222,16 @@
 <p><a href="https://github.com/BillPetti/baseballr" class="external-link"><img src="https://img.shields.io/github/r-package/v/BillPetti/baseballr?label=baseballr&amp;logo=R&amp;style=for-the-badge" alt="Version-Number"></a> <a href="https://github.com/BillPetti/baseballr/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://img.shields.io/github/actions/workflow/status/BillPetti/baseballr/R-CMD-check.yaml?branch=master&amp;label=R-CMD-Check&amp;logo=R&amp;logoColor=white&amp;style=for-the-badge" alt="R-CMD-check"></a> <a href="https://CRAN.R-project.org/package=baseballr" class="external-link"><img src="https://img.shields.io/cran/v/baseballr?color=success&amp;label=CRAN%20Version&amp;logo=R&amp;style=for-the-badge" alt="CRAN Status"></a> <a href="https://CRAN.R-project.org/package=baseballr" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&amp;color=success&amp;label=Downloads&amp;query=%24%5B0%5D.downloads&amp;url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2Fbaseballr" alt="CRAN downloads"></a></p>
 </div>
 <div class="section level3">
-<h3 id="torvik">
-<a href="https://andreweatherman.github.io/toRvik/" class="external-link"><strong><code>toRvik</code></strong></a><a class="anchor" aria-label="anchor" href="#torvik"></a>
-</h3>
-<p><a href="https://github.com/andreweatherman/toRvik" class="external-link"><img src="https://img.shields.io/github/r-package/v/andreweatherman/toRvik?label=toRvik&amp;logo=R&amp;style=for-the-badge" alt="Version-Number"></a> <a href="https://github.com/andreweatherman/toRvik/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://img.shields.io/github/actions/workflow/status/andreweatherman/toRvik/R-CMD-check.yaml?branch=main&amp;label=R-CMD-Check&amp;logo=R&amp;logoColor=white&amp;style=for-the-badge" alt="R-CMD-check"></a> <a href="https://CRAN.R-project.org/package=toRvik" class="external-link"><img src="https://img.shields.io/cran/v/toRvik?color=success&amp;label=CRAN%20Version&amp;logo=R&amp;style=for-the-badge" alt="CRAN Status"></a> <a href="https://CRAN.R-project.org/package=toRvik" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&amp;color=success&amp;label=Downloads&amp;query=%24%5B0%5D.downloads&amp;url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FtoRvik" alt="CRAN downloads"></a></p>
-</div>
-<div class="section level3">
-<h3 id="chessr">
-<a href="https://jaseziv.github.io/chessR/" class="external-link"><strong><code>chessR</code></strong></a><a class="anchor" aria-label="anchor" href="#chessr"></a>
-</h3>
-<p><a href="https://github.com/jaseziv/chessR" class="external-link"><img src="https://img.shields.io/github/r-package/v/jaseziv/chessR?label=chessR&amp;logo=R&amp;style=for-the-badge" alt="Version-Number"></a> <a href="https://github.com/jaseziv/chessR/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://img.shields.io/github/actions/workflow/status/jaseziv/chessR/R-CMD-check.yaml?branch=main&amp;label=R-CMD-Check&amp;logo=R&amp;logoColor=white&amp;style=for-the-badge" alt="R-CMD-check"></a> <a href="https://CRAN.R-project.org/package=chessR" class="external-link"><img src="https://img.shields.io/cran/v/chessR?color=success&amp;label=CRAN%20Version&amp;logo=R&amp;style=for-the-badge" alt="CRAN Status"></a> <a href="https://CRAN.R-project.org/package=chessR" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&amp;color=success&amp;label=Downloads&amp;query=%24%5B0%5D.downloads&amp;url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FchessR" alt="CRAN downloads"></a></p>
-</div>
-<div class="section level3">
 <h3 id="sportyr">
 <a href="https://sportyr.sportsdataverse.org/" class="external-link"><strong><code>sportyR</code></strong></a><a class="anchor" aria-label="anchor" href="#sportyr"></a>
 </h3>
 <p><a href="https://github.com/sportsdataverse/sportyR" class="external-link"><img src="https://img.shields.io/github/r-package/v/sportsdataverse/sportyR?label=sportyR&amp;logo=R&amp;style=for-the-badge" alt="Version-Number"></a> <a href="https://github.com/sportsdataverse/sportyR/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://img.shields.io/github/actions/workflow/status/sportsdataverse/sportyR/R-CMD-check.yaml?branch=main&amp;label=R-CMD-Check&amp;logo=R&amp;logoColor=white&amp;style=for-the-badge" alt="R-CMD-check"></a> <a href="https://CRAN.R-project.org/package=sportyR" class="external-link"><img src="https://img.shields.io/cran/v/sportyR?color=success&amp;label=CRAN%20Version&amp;logo=R&amp;style=for-the-badge" alt="CRAN Status"></a> <a href="https://CRAN.R-project.org/package=sportyR" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&amp;color=success&amp;label=Downloads&amp;query=%24%5B0%5D.downloads&amp;url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FsportyR" alt="CRAN downloads"></a></p>
+</div>
+<div class="section level3">
+<h3 id="oddsapir">
+<a href="https://oddsapiR.sportsdataverse.org/" class="external-link"><strong><code>oddsapiR</code></strong></a><a class="anchor" aria-label="anchor" href="#oddsapir"></a>
+</h3>
+<p><a href="https://github.com/sportsdataverse/oddsapiR" class="external-link"><img src="https://img.shields.io/github/r-package/v/sportsdataverse/oddsapiR?label=oddsapiR&amp;logo=R&amp;style=for-the-badge" alt="Version-Number"></a> <a href="https://github.com/sportsdataverse/oddsapiR/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://img.shields.io/github/actions/workflow/status/sportsdataverse/oddsapiR/R-CMD-check.yaml?branch=main&amp;label=R-CMD-Check&amp;logo=R&amp;logoColor=white&amp;style=for-the-badge" alt="R-CMD-check"></a> <a href="https://CRAN.R-project.org/package=oddsapiR" class="external-link"><img src="https://img.shields.io/cran/v/oddsapiR?color=success&amp;label=CRAN%20Version&amp;logo=R&amp;style=for-the-badge" alt="CRAN Status"></a> <a href="https://CRAN.R-project.org/package=oddsapiR" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&amp;color=success&amp;label=Downloads&amp;query=%24%5B0%5D.downloads&amp;url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FoddsapiR" alt="CRAN downloads"></a></p>
 </div>
 </div>
 </div>
@@ -228,8 +239,8 @@
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/saiemgilani/sportsdataverse-R/" class="external-link">Browse source code</a></li>
-<li><a href="https://github.com/saiemgilani/sportsdataverse-R/issues" class="external-link">Report a bug</a></li>
+<li><a href="https://github.com/sportsdataverse/sportsdataverse-R/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/sportsdataverse/sportsdataverse-R/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 

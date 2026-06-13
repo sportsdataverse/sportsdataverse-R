@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">sportsdataverse</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,14 +72,28 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Changelog</h1>
-      <small>Source: <a href="https://github.com/saiemgilani/sportsdataverse-R/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
+      <small>Source: <a href="https://github.com/sportsdataverse/sportsdataverse-R/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.3.0" id="sportsdataverse-030">sportsdataverse 0.3.0<a class="anchor" aria-label="anchor" href="#sportsdataverse-030"></a></h2>
+<ul><li>Trimmed the meta-package dependencies to mirror the <code>nflverse</code> model: the package now imports only <code>cli</code>, <code>crayon</code>, <code>magrittr</code>, <code>rlang</code>, and <code>rstudioapi</code> alongside the core SportsDataverse packages. <code><a href="../reference/sportsdataverse_deps.html">sportsdataverse_deps()</a></code> and <code><a href="../reference/sportsdataverse_update.html">sportsdataverse_update()</a></code> were rewritten in base R, dropping the <code>dplyr</code>, <code>purrr</code>, and <code>tibble</code> imports.</li>
+<li>
+<code><a href="../reference/sportsdataverse_update.html">sportsdataverse_update()</a></code> gained a <code>devel</code> argument that points at the SportsDataverse r-universe (<a href="https://sportsdataverse.r-universe.dev" class="external-link uri">https://sportsdataverse.r-universe.dev</a>) for prebuilt development binaries, and now reports via <code>cli</code>.</li>
+<li>Bumped the minimum R version to 4.1.0 and added <code>Config/testthat/edition: 3</code>.</li>
+<li>Updated the core package roster to reflect the current CRAN-published SportsDataverse R packages.</li>
+<li>Bumped the minimum versions of imported packages to their current CRAN releases: <code>baseballr</code> (&gt;= 1.6.0), <code>cfbfastR</code> (&gt;= 2.0.0), <code>fastRhockey</code> (&gt;= 0.4.0), <code>hoopR</code> (&gt;= 3.0.0), <code>oddsapiR</code> (&gt;= 0.0.3), <code>sportyR</code> (&gt;= 2.2.3), and <code>wehoop</code> (&gt;= 2.1.0).</li>
+<li>Removed <code>worldfootballR</code> from the SportsDataverse roster (its upstream repository has been archived).</li>
+<li>Dropped the already-commented archived packages (<code>chessR</code>, <code>hockeyR</code>, <code>toRvik</code>) from the README package roster.</li>
+<li>Switched the README installation instructions from <code>pacman</code> to <code>pak</code>.</li>
+<li>Pointed <code>URL</code>/<code>BugReports</code> at the <code>sportsdataverse</code> GitHub organization and added the pkgdown site (<a href="https://r.sportsdataverse.org" class="uri">https://r.sportsdataverse.org</a>).</li>
+</ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.1.0" id="sportsdataverse-010">sportsdataverse 0.1.0<a class="anchor" aria-label="anchor" href="#sportsdataverse-010"></a></h2>
 <ul><li>Added a <code>NEWS.md</code> file to track changes to the package.</li>
 </ul></div>
-  </main></div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside></div>
 
 
     <footer><div class="pkgdown-footer-left">

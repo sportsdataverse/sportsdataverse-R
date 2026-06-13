@@ -10,10 +10,12 @@ This package is designed to make it easy to install and load multiple
 
 Useful links:
 
-- <https://github.com/saiemgilani/sportsdataverse-R>
+- <https://github.com/sportsdataverse/sportsdataverse-R>
+
+- <https://r.sportsdataverse.org>
 
 - Report bugs at
-  <https://github.com/saiemgilani/sportsdataverse-R/issues>
+  <https://github.com/sportsdataverse/sportsdataverse-R/issues>
 
 ## Author
 

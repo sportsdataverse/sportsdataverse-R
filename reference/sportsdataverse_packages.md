@@ -20,5 +20,4 @@ sportsdataverse_packages(include_self = TRUE)
 sportsdataverse_packages()
 #> [1] "baseballr"       "cfbfastR"        "fastRhockey"     "hoopR"          
 #> [5] "oddsapiR"        "sportsdataverse" "sportyR"         "wehoop"         
-#> [9] "worldfootballR" 
 ```

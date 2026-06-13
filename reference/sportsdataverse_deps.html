@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">sportsdataverse</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,7 +72,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>List all sportsdataverse dependencies</h1>
-      <small class="dont-index">Source: <a href="https://github.com/saiemgilani/sportsdataverse-R/blob/main/R/update.R" class="external-link"><code>R/update.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/sportsdataverse/sportsdataverse-R/blob/main/R/update.R" class="external-link"><code>R/update.R</code></a></small>
       <div class="d-none name"><code>sportsdataverse_deps.Rd</code></div>
     </div>
 
@@ -108,46 +108,93 @@ Defaults to <code>getOptions("repos")</code>.</p></dd>
 Defaults to <code>getOptions("repos")</code>.</p></dd>
 
 </dl></div>
+    <div class="section level2">
+    <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
+    <p>A <code>data.frame</code> with one row per dependency and columns <code>package</code>,
+<code>cran</code>, <code>local</code>, and <code>behind</code>.</p>
+    </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span>  <span class="kw"><a href="https://rdrr.io/r/base/try.html" class="external-link">try</a></span><span class="op">(</span><span class="fu">sportsdataverse_deps</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="pipe.html">%&gt;%</a></span> <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |package      |cran      |local     |behind |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |:------------|:---------|:---------|:------|</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |Rcpp         |1.1.1.1.1 |1.1.1.1.1 |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |RcppParallel |5.1.11.2  |5.1.11.2  |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |curl         |7.1.0     |7.1.0     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |data.table   |1.18.4    |1.18.4    |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |dplyr        |1.2.1     |1.2.1     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |ggfittext    |0.10.3    |0.10.3    |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |ggplot2      |4.0.3     |4.0.3     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |glue         |1.8.1     |1.8.1     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |httr         |1.4.8     |1.4.8     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |httr2        |1.2.2     |1.2.2     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |janitor      |2.2.1     |2.2.1     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |jsonlite     |2.0.0     |2.0.0     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |lifecycle    |1.0.5     |1.0.5     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |lubridate    |1.9.5     |1.9.5     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |magrittr     |2.0.5     |2.0.5     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |mgcv         |1.9.4     |1.9.4     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |nnet         |7.3.20    |7.3.20    |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |progress     |1.2.3     |1.2.3     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |progressr    |0.19.0    |0.19.0    |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |purrr        |1.2.2     |1.2.2     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |qdapRegex    |0.7.10    |0.7.10    |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |readr        |2.2.0     |2.2.0     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |rlang        |1.2.0     |1.2.0     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |rvest        |1.0.5     |1.0.5     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |stringi      |1.8.7     |1.8.7     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |stringr      |1.6.0     |1.6.0     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |tibble       |3.3.1     |3.3.1     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |tidyr        |1.3.2     |1.3.2     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |tidyselect   |1.2.1     |1.2.1     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |usethis      |3.2.1     |3.2.1     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |withr        |3.0.2     |3.0.2     |FALSE  |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |xml2         |1.5.2     |1.5.2     |FALSE  |</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span>  <span class="kw"><a href="https://rdrr.io/r/base/try.html" class="external-link">try</a></span><span class="op">(</span><span class="fu">sportsdataverse_deps</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   package      cran     local behind</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Matrix             Matrix     1.7.5     1.7.5  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> R6                     R6     2.6.1     2.6.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> RColorBrewer RColorBrewer     1.1.3     1.1.3  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Rcpp                 Rcpp 1.1.1.1.1 1.1.1.1.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> RcppParallel RcppParallel  5.1.11.2  5.1.11.2  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> S7                     S7     0.2.2     0.2.2  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> askpass           askpass     1.2.1     1.2.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> clipr               clipr     0.8.1     0.8.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> commonmark     commonmark     2.0.0     2.0.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> cpp11               cpp11     0.5.5         0   TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> credentials   credentials     2.0.3     2.0.3  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> curl                 curl     7.1.0     7.1.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> data.table     data.table    1.18.4    1.18.4  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> desc                 desc     1.4.3     1.4.3  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> digest             digest    0.6.39    0.6.39  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> dplyr               dplyr     1.2.1     1.2.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> farver             farver     2.1.2     2.1.2  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> fs                     fs     2.1.0     2.1.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> generics         generics     0.1.4     0.1.4  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gert                 gert     2.3.1     2.3.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ggfittext       ggfittext    0.10.3    0.10.3  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ggplot2           ggplot2     4.0.3     4.0.3  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gh                     gh     1.6.0     1.6.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gitcreds         gitcreds     0.1.2     0.1.2  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> glue                 glue     1.8.1     1.8.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gridtext         gridtext     0.1.6     0.1.6  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gtable             gtable     0.3.6     0.3.6  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> hms                   hms     1.1.4     1.1.4  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> httr                 httr     1.4.8     1.4.8  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> httr2               httr2     1.2.2     1.2.2  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ini                   ini     0.3.1     0.3.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> isoband           isoband     0.3.0     0.3.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> janitor           janitor     2.2.1     2.2.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> jpeg                 jpeg    0.1.11    0.1.11  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> jsonlite         jsonlite     2.0.0     2.0.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> labeling         labeling     0.4.3     0.4.3  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> lattice           lattice    0.22.9    0.22.9  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> lifecycle       lifecycle     1.0.5     1.0.5  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> litedown         litedown       0.9       0.9  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> lubridate       lubridate     1.9.5     1.9.5  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> magrittr         magrittr     2.0.5     2.0.5  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> markdown         markdown       2.0       2.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> mgcv                 mgcv     1.9.4     1.9.4  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> mime                 mime      0.13      0.13  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> nlme                 nlme   3.1.169   3.1.169  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> nnet                 nnet    7.3.20    7.3.20  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> openssl           openssl     2.4.2     2.4.2  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> pillar             pillar    1.11.1    1.11.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> pkgconfig       pkgconfig     2.0.3     2.0.3  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> png                   png     0.1.9     0.1.9  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> progressr       progressr    0.19.0    0.19.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> purrr               purrr     1.2.2     1.2.2  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> rappdirs         rappdirs     0.3.4     0.3.4  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> rlang               rlang     1.2.0     1.2.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> rprojroot       rprojroot     2.1.1     2.1.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> rvest               rvest     1.0.5     1.0.5  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> scales             scales     1.4.0     1.4.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> selectr           selectr     0.5.1     0.5.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> shades             shades     1.4.0     1.4.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> snakecase       snakecase    0.11.1    0.11.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> stringi           stringi     1.8.7     1.8.7  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> stringr           stringr     1.6.0     1.6.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sys                   sys     3.4.3     3.4.3  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> tibble             tibble     3.3.1     3.3.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> tidyr               tidyr     1.3.2     1.3.2  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> tidyselect     tidyselect     1.2.1     1.2.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> timechange     timechange     0.4.0     0.4.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> usethis           usethis     3.2.1     3.2.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> utf8                 utf8     1.2.6     1.2.6  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> vctrs               vctrs     0.7.3     0.7.3  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> viridisLite   viridisLite     0.4.3     0.4.3  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> whisker           whisker     0.4.1     0.4.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> withr               withr     3.0.2     3.0.2  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> xfun                 xfun      0.58      0.58  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> xml2                 xml2     1.5.2     1.5.2  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> yaml                 yaml    2.3.12    2.3.12  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> zip                   zip     3.0.0     3.0.0  FALSE</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
