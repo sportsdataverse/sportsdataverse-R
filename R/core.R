@@ -13,7 +13,7 @@ core <- c(
 
 get_repos <- function(){
   repo_urls <- c(
-    "https://github.com/sportsdataverse/baseballr",
+    "https://github.com/BillPetti/baseballr",
     "https://github.com/sportsdataverse/cfbfastR",
     # "https://github.com/JaseZiv/chessR",
     "https://github.com/sportsdataverse/fastRhockey",

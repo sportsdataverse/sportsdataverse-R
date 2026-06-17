@@ -58,7 +58,7 @@ navbar:
       - text: fastRhockey
         href: https://fastRhockey.sportsdataverse.org/
       - text: baseballr
-        href: https://baseballr.sportsdataverse.org/
+        href: https://billpetti.github.io/baseballr/
       - text: usfootballR
         href: https://usfootballR.sportsdataverse.org/
       - text: oddsapiR
