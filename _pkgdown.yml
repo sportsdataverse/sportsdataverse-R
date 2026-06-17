@@ -57,16 +57,10 @@ navbar:
         href: https://wehoop.sportsdataverse.org/
       - text: fastRhockey
         href: https://fastRhockey.sportsdataverse.org/
-      - text: ggshakeR
-        href: https://abhiamishra.github.io/ggshakeR/
       - text: baseballr
-        href: https://BillPetti.github.io/baseballr/
+        href: https://baseballr.sportsdataverse.org/
       - text: usfootballR
         href: https://usfootballR.sportsdataverse.org/
-      - text: soccerAnimate
-        href: https://github.com/Dato-Futbol/soccerAnimate/
-      - text: chessR
-        href: https://jaseziv.github.io/chessR/
       - text: oddsapiR
         href: https://oddsapiR.sportsdataverse.org/
       - text: sportyR
@@ -83,8 +77,6 @@ navbar:
         href: https://github.com/nwslR/nwslR/
       - text: recruitR
         href: https://recruitR.sportsdataverse.org/
-      - text: puntr
-        href: https://puntalytics.github.io/puntr/
       - text: --------------------------------
       - text: "Python Packages"
       - text: sportsdataverse-py
