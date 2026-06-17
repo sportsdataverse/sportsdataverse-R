@@ -8,7 +8,7 @@ output: github_document
 
 <!-- badges: start -->
 
-[![Version-Number](https://img.shields.io/github/r-package/v/sportsdataverse/sportsdataverse-R?label=sportsdataverse&logo=R&style=for-the-badge)](https://github.com/sportsdataverse/sportsdataverse-R/)  [![R-CMD-check](https://img.shields.io/github/actions/workflow/status/sportsdataverse/sportsdataverse-R/R-CMD-check.yaml?branch=main&label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/sportsdataverse-R/actions/workflows/R-CMD-check.yaml) [![Lifecycle:maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg?style=for-the-badge&logo=github)](https://github.com/sportsdataverse/sportsdataverse-R/) [![Twitter Follow](https://img.shields.io/twitter/follow/sportsdataverse?color=blue&label=%40sportsdataverse&logo=twitter&style=for-the-badge)](https://twitter.com/sportsdataverse)  [![Contributors](https://img.shields.io/github/contributors/sportsdataverse/sportsdataverse-R?style=for-the-badge)](https://github.com/sportsdataverse/sportsdataverse-R/graphs/contributors)
+[![Version-Number](https://img.shields.io/github/r-package/v/sportsdataverse/sportsdataverse-R?label=sportsdataverse&logo=R&style=for-the-badge)](https://github.com/sportsdataverse/sportsdataverse-R/)  [![R-CMD-check](https://img.shields.io/github/actions/workflow/status/sportsdataverse/sportsdataverse-R/R-CMD-check.yaml?branch=main&label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/sportsdataverse-R/actions/workflows/R-CMD-check.yaml) [![Lifecycle:maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg?style=for-the-badge&logo=github)](https://github.com/sportsdataverse/sportsdataverse-R/) [![X Follow](https://img.shields.io/twitter/follow/sportsdataverse?color=blue&label=%40sportsdataverse&logo=x&style=for-the-badge)](https://x.com/sportsdataverse)  [![Contributors](https://img.shields.io/github/contributors/sportsdataverse/sportsdataverse-R?style=for-the-badge)](https://github.com/sportsdataverse/sportsdataverse-R/graphs/contributors)
 [![CRAN Status](https://img.shields.io/cran/v/sportsdataverse?color=success&label=CRAN%20Version&logo=R&style=for-the-badge)](https://CRAN.R-project.org/package=sportsdataverse)
 <!-- badges: end -->
 
@@ -42,7 +42,7 @@ install.packages("sportsdataverse", repos = c("https://sportsdataverse.r-univers
 
 `library(sportsdataverse)` will load the following packages:
 
-* [**`baseballr`**](https://billpetti.github.io/baseballr/), for MLB and college baseball data.
+* [**`baseballr`**](https://baseballr.sportsdataverse.org/), for MLB and college baseball data.
 * [**`cfbfastR`**](https://cfbfastR.sportsdataverse.org/), for college football data.
 * [**`fastRhockey`**](https://fastRhockey.sportsdataverse.org/), for NHL and PWHL hockey data.
 * [**`hoopR`**](https://hoopR.sportsdataverse.org/), for men's college and professional basketball data.
@@ -117,9 +117,9 @@ BibTex Citation
 [![CRAN Status](https://img.shields.io/cran/v/fastRhockey?color=success&label=CRAN%20Version&logo=R&style=for-the-badge)](https://CRAN.R-project.org/package=fastRhockey)
 [![CRAN downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FfastRhockey)](https://CRAN.R-project.org/package=fastRhockey)
 
-### [**`baseballr`**](https://BillPetti.github.io/baseballr/)
+### [**`baseballr`**](https://baseballr.sportsdataverse.org/)
 
-[![Version-Number](https://img.shields.io/github/r-package/v/BillPetti/baseballr?label=baseballr&logo=R&style=for-the-badge)](https://github.com/BillPetti/baseballr) [![R-CMD-check](https://img.shields.io/github/actions/workflow/status/BillPetti/baseballr/R-CMD-check.yaml?branch=master&label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/BillPetti/baseballr/actions/workflows/R-CMD-check.yaml)
+[![Version-Number](https://img.shields.io/github/r-package/v/sportsdataverse/baseballr?label=baseballr&logo=R&style=for-the-badge)](https://github.com/sportsdataverse/baseballr) [![R-CMD-check](https://img.shields.io/github/actions/workflow/status/sportsdataverse/baseballr/R-CMD-check.yaml?branch=main&label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/baseballr/actions/workflows/R-CMD-check.yaml)
 [![CRAN Status](https://img.shields.io/cran/v/baseballr?color=success&label=CRAN%20Version&logo=R&style=for-the-badge)](https://CRAN.R-project.org/package=baseballr)
 [![CRAN downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2Fbaseballr)](https://CRAN.R-project.org/package=baseballr)
 
