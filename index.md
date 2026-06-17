@@ -11,8 +11,15 @@ step. Learn more about the **`sportsdataverse`** at
 
 ## Installation
 
-You can install the development version of
-[**`sportsdataverse`**](https://r.sportsdataverse.org) from
+Install the stable release from
+[CRAN](https://CRAN.R-project.org/package=sportsdataverse):
+
+``` r
+
+install.packages("sportsdataverse")
+```
+
+Or install the development version from
 [GitHub](https://github.com/sportsdataverse/sportsdataverse-R) with:
 
 ``` r
@@ -51,6 +58,15 @@ will load the following packages:
 - [**`wehoop`**](https://wehoop.sportsdataverse.org/), for women’s
   college and professional basketball data.
 
+Additional ecosystem packages —
+[**`cfbplotR`**](https://cfbplotR.sportsdataverse.org/),
+[**`cfb4th`**](https://cfb4th.sportsdataverse.org/),
+[**`recruitR`**](https://recruitR.sportsdataverse.org/),
+[**`softballR`**](https://github.com/sportsdataverse/softballR/), and
+[**`mlbplotR`**](https://camdenk.github.io/mlbplotR/) — are available in
+the SportsDataverse but are not auto-loaded by
+[`library(sportsdataverse)`](https://github.com/sportsdataverse/sportsdataverse-R).
+
 ``` r
 
 sportsdataverse::sportsdataverse_logo()
@@ -59,10 +75,10 @@ sportsdataverse::sportsdataverse_logo()
 ![SportsDataverse unicode
 logo](https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/main/data-raw/sportsdataverse-unicode-logo.png)
 
-## Follow [**`sportsdataverse`**](https://twitter.com/sportsdataverse) on Twitter and star this repo
+## Follow [**`sportsdataverse`**](https://x.com/sportsdataverse) on X and star this repo
 
-[![Twitter
-Follow](https://img.shields.io/twitter/follow/sportsdataverse?color=blue&label=%40sportsdataverse&logo=twitter&style=for-the-badge)](https://twitter.com/sportsdataverse)
+[![X
+Follow](https://img.shields.io/twitter/follow/sportsdataverse?color=blue&label=%40sportsdataverse&logo=x&style=for-the-badge)](https://x.com/sportsdataverse)
 
 [![GitHub
 stars](https://img.shields.io/github/stars/sportsdataverse/sportsdataverse-R.svg?color=eee&logo=github&style=for-the-badge&label=Star%20sportsdataverse&maxAge=2592000)](https://github.com/sportsdataverse/sportsdataverse-R/stargazers/)

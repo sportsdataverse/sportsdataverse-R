@@ -56,11 +56,8 @@
     <li><a class="external-link dropdown-item" href="https://hoopR.sportsdataverse.org/">hoopR</a></li>
     <li><a class="external-link dropdown-item" href="https://wehoop.sportsdataverse.org/">wehoop</a></li>
     <li><a class="external-link dropdown-item" href="https://fastRhockey.sportsdataverse.org/">fastRhockey</a></li>
-    <li><a class="external-link dropdown-item" href="https://abhiamishra.github.io/ggshakeR/">ggshakeR</a></li>
-    <li><a class="external-link dropdown-item" href="https://BillPetti.github.io/baseballr/">baseballr</a></li>
+    <li><a class="external-link dropdown-item" href="https://baseballr.sportsdataverse.org/">baseballr</a></li>
     <li><a class="external-link dropdown-item" href="https://usfootballR.sportsdataverse.org/">usfootballR</a></li>
-    <li><a class="external-link dropdown-item" href="https://github.com/Dato-Futbol/soccerAnimate/">soccerAnimate</a></li>
-    <li><a class="external-link dropdown-item" href="https://jaseziv.github.io/chessR/">chessR</a></li>
     <li><a class="external-link dropdown-item" href="https://oddsapiR.sportsdataverse.org/">oddsapiR</a></li>
     <li><a class="external-link dropdown-item" href="https://sportyR.sportsdataverse.org/">sportyR</a></li>
     <li><a class="external-link dropdown-item" href="https://cfbplotR.sportsdataverse.org/">cfbplotR</a></li>
@@ -69,7 +66,6 @@
     <li><a class="external-link dropdown-item" href="https://cfb4th.sportsdataverse.org/">cfb4th</a></li>
     <li><a class="external-link dropdown-item" href="https://github.com/nwslR/nwslR/">nwslR</a></li>
     <li><a class="external-link dropdown-item" href="https://recruitR.sportsdataverse.org/">recruitR</a></li>
-    <li><a class="external-link dropdown-item" href="https://puntalytics.github.io/puntr/">puntr</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Python Packages</h6></li>
     <li><a class="external-link dropdown-item" href="https://py.sportsdataverse.org/">sportsdataverse-py</a></li>
@@ -119,14 +115,17 @@
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of <a href="https://r.sportsdataverse.org"><strong><code>sportsdataverse</code></strong></a> from <a href="https://github.com/sportsdataverse/sportsdataverse-R" class="external-link">GitHub</a> with:</p>
+<p>Install the stable release from <a href="https://CRAN.R-project.org/package=sportsdataverse" class="external-link">CRAN</a>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"sportsdataverse"</span><span class="op">)</span></span></code></pre></div>
+<p>Or install the development version from <a href="https://github.com/sportsdataverse/sportsdataverse-R" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">'pak'</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'pak'</span><span class="op">)</span></span>
 <span><span class="op">}</span></span>
 <span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"sportsdataverse/sportsdataverse-R"</span><span class="op">)</span></span></code></pre></div>
 <p>or prebuilt from the <a href="https://sportsdataverse.r-universe.dev" class="external-link">SportsDataverse r-universe</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"sportsdataverse"</span>, repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://sportsdataverse.r-universe.dev"</span>, <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"repos"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
@@ -149,16 +148,18 @@
 <li>
 <a href="https://wehoop.sportsdataverse.org/" class="external-link"><strong><code>wehoop</code></strong></a>, for women’s college and professional basketball data.</li>
 </ul>
-<!-- end list --><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<p>Additional ecosystem packages — <a href="https://cfbplotR.sportsdataverse.org/" class="external-link"><strong><code>cfbplotR</code></strong></a>, <a href="https://cfb4th.sportsdataverse.org/" class="external-link"><strong><code>cfb4th</code></strong></a>, <a href="https://recruitR.sportsdataverse.org/" class="external-link"><strong><code>recruitR</code></strong></a>, <a href="https://github.com/sportsdataverse/softballR/" class="external-link"><strong><code>softballR</code></strong></a>, and <a href="https://camdenk.github.io/mlbplotR/" class="external-link"><strong><code>mlbplotR</code></strong></a> — are available in the SportsDataverse but are not auto-loaded by <code><a href="https://github.com/sportsdataverse/sportsdataverse-R" class="external-link">library(sportsdataverse)</a></code>.</p>
+<!-- end list -->
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">sportsdataverse</span><span class="fu">::</span><span class="fu"><a href="reference/sportsdataverse_logo.html">sportsdataverse_logo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <center>
 <p><img src="https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/main/data-raw/sportsdataverse-unicode-logo.png" align="center" width="50%" alt="SportsDataverse unicode logo"></p>
 </center>
 </div>
 <div class="section level2">
-<h2 id="follow-sportsdataverse-on-twitter-and-star-this-repo">Follow <a href="https://twitter.com/sportsdataverse" class="external-link"><strong><code>sportsdataverse</code></strong></a> on Twitter and star this repo<a class="anchor" aria-label="anchor" href="#follow-sportsdataverse-on-twitter-and-star-this-repo"></a>
+<h2 id="follow-sportsdataverse-on-x-and-star-this-repo">Follow <a href="https://x.com/sportsdataverse" class="external-link"><strong><code>sportsdataverse</code></strong></a> on X and star this repo<a class="anchor" aria-label="anchor" href="#follow-sportsdataverse-on-x-and-star-this-repo"></a>
 </h2>
-<p><a href="https://twitter.com/sportsdataverse" class="external-link"><img src="https://img.shields.io/twitter/follow/sportsdataverse?color=blue&amp;label=%40sportsdataverse&amp;logo=twitter&amp;style=for-the-badge" alt="Twitter Follow"></a></p>
+<p><a href="https://x.com/sportsdataverse" class="external-link"><img src="https://img.shields.io/twitter/follow/sportsdataverse?color=blue&amp;label=%40sportsdataverse&amp;logo=x&amp;style=for-the-badge" alt="X Follow"></a></p>
 <p><a href="https://github.com/sportsdataverse/sportsdataverse-R/stargazers/" class="external-link"><img src="https://img.shields.io/github/stars/sportsdataverse/sportsdataverse-R.svg?color=eee&amp;logo=github&amp;style=for-the-badge&amp;label=Star%20sportsdataverse&amp;maxAge=2592000" alt="GitHub stars"></a></p>
 </div>
 <div class="section level2">
@@ -177,12 +178,12 @@
 </h2>
 <p>To cite the <a href="https://r.sportsdataverse.org"><strong><code>sportsdataverse</code></strong></a> R package in publications, use:</p>
 <p>BibTex Citation</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="va">@misc</span>{<span class="ot">saiemgilani2021sdv</span>,</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>  <span class="dt">author</span> = {Gilani, Saiem},</span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>  <span class="dt">title</span> = {sportsdataverse: The Set of R Packages for Sports Data.},</span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>  <span class="dt">url</span> = {https://r.sportsdataverse.org},</span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>  <span class="dt">year</span> = {2021}</span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="va">@misc</span>{<span class="ot">saiemgilani2021sdv</span>,</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="dt">author</span> = {Gilani, Saiem},</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  <span class="dt">title</span> = {sportsdataverse: The Set of R Packages for Sports Data.},</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  <span class="dt">url</span> = {https://r.sportsdataverse.org},</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>  <span class="dt">year</span> = {2021}</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="r-packages-in-the-sportsdataverse">
