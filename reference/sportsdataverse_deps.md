@@ -68,7 +68,7 @@ A `data.frame` with one row per dependency and columns `package`,
 #> gtable             gtable     0.3.6     0.3.6  FALSE
 #> hms                   hms     1.1.4     1.1.4  FALSE
 #> httr                 httr     1.4.8     1.4.8  FALSE
-#> httr2               httr2     1.2.2     1.2.2  FALSE
+#> httr2               httr2     1.2.3     1.2.2   TRUE
 #> ini                   ini     0.3.1     0.3.1  FALSE
 #> isoband           isoband     0.3.0     0.3.0  FALSE
 #> janitor           janitor     2.2.1     2.2.1  FALSE
@@ -96,7 +96,7 @@ A `data.frame` with one row per dependency and columns `package`,
 #> rprojroot       rprojroot     2.1.1     2.1.1  FALSE
 #> rvest               rvest     1.0.5     1.0.5  FALSE
 #> scales             scales     1.4.0     1.4.0  FALSE
-#> selectr           selectr     0.5.1     0.5.1  FALSE
+#> selectr           selectr     0.6.0     0.5.1   TRUE
 #> shades             shades     1.4.0     1.4.0  FALSE
 #> snakecase       snakecase    0.11.1    0.11.1  FALSE
 #> stringi           stringi     1.8.7     1.8.7  FALSE
@@ -111,9 +111,9 @@ A `data.frame` with one row per dependency and columns `package`,
 #> vctrs               vctrs     0.7.3     0.7.3  FALSE
 #> viridisLite   viridisLite     0.4.3     0.4.3  FALSE
 #> whisker           whisker     0.4.1     0.4.1  FALSE
-#> withr               withr     3.0.2     3.0.2  FALSE
-#> xfun                 xfun      0.58      0.58  FALSE
-#> xml2                 xml2     1.5.2     1.5.2  FALSE
+#> withr               withr     3.0.3     3.0.3  FALSE
+#> xfun                 xfun      0.59      0.59  FALSE
+#> xml2                 xml2     1.6.0     1.6.0  FALSE
 #> yaml                 yaml    2.3.12    2.3.12  FALSE
 #> zip                   zip     3.0.0     3.0.0  FALSE
 ```

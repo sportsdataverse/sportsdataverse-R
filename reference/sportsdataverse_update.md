@@ -41,6 +41,10 @@ Returns `NULL` invisibly. Called for its side effects.
 ``` r
 # \donttest{
 try(sportsdataverse_update())
-#> ✔ All sportsdataverse packages are up-to-date!
+#> ℹ The following package is out of date:
+#> • httr2 (1.2.2 -> 1.2.3)
+#> ── Start a clean R session then run ────────────────────────────────────────────
+#> install.packages("httr2")
+#> ────────────────────────────────────────────────────────────────────────────────
 # }
 ```
