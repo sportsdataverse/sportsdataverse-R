@@ -118,10 +118,12 @@ is possible to install development versions without GitHub.</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/try.html" class="external-link">try</a></span><span class="op">(</span><span class="fu">sportsdataverse_update</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> The following package is out of date:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> • httr2 (1.2.2 -&gt; 1.2.3)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> The following packages are out of date:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • Matrix       (1.7.5  -&gt; 1.7.6 )</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • RcppParallel (6.2.0  -&gt; 6.2.1 )</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • nnet         (7.3.20 -&gt; 7.3.21)</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> ── Start a clean R session then run ────────────────────────────────────────────</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">install.packages</span><span style="color: #D7AF00;">(</span><span style="color: #00AFAF;">"httr2"</span><span style="color: #D7AF00;">)</span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">install.packages</span><span style="color: #D7AF00;">(</span><span style="font-weight: bold;">c</span><span style="color: #BBBB00;">(</span><span style="color: #00AFAF;">"Matrix"</span>, <span style="color: #00AFAF;">"RcppParallel"</span>, <span style="color: #00AFAF;">"nnet"</span><span style="color: #BBBB00;">)</span><span style="color: #D7AF00;">)</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> ────────────────────────────────────────────────────────────────────────────────</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
@@ -135,7 +137,7 @@ is possible to install development versions without GitHub.</p></dd>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer></div>
