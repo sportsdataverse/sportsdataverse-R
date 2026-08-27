@@ -16,7 +16,7 @@ hexwall <- function(path="data-raw/samplehex",
                     sticker_row_size = 5,
                     sticker_width = 500,
                     remove_small = TRUE,
-                    total_stickers = 18,
+                    total_stickers = NULL,
                     remove_size = TRUE,
                     coords = NULL,
                     scale_coords = TRUE,
@@ -105,7 +105,19 @@ hexwall <- function(path="data-raw/samplehex",
     # Arrange rows of stickers into images
     sticker_col_size <- ceiling(length(stickers)/(sticker_row_size-0.5))
     row_lens <- rep(c(sticker_row_size,sticker_row_size-1), length.out=sticker_col_size)
-    row_lens[length(row_lens)] <- row_lens[length(row_lens)]  - (length(stickers) - sum(row_lens))
+    # Drop rows that would start past the last sticker, then size the final row
+    # to whatever remains. The previous correction subtracted the overflow from
+    # the last row, which goes NEGATIVE whenever the sticker count does not tile
+    # exactly (23 stickers gave 6 rows summing to 27, so the last row was
+    # widened to 8 and indexed past the end). It only ever worked for counts
+    # that happened to tile, which is why adding a hex broke it.
+    row_lens <- row_lens[cumsum(row_lens) - row_lens < length(stickers)]
+    row_lens[length(row_lens)] <- length(stickers) - sum(utils::head(row_lens, -1))
+    # The canvas height is derived from the row count, so it has to follow the
+    # trim: sticker_col_size still holds the pre-trim ESTIMATE (6 for 23
+    # stickers, where row_lens ends up with 5), which allocated a whole extra
+    # row of blank canvas at the foot of the wall.
+    sticker_col_size <- length(row_lens)
     sticker_rows <- map2(row_lens, cumsum(row_lens),
                          ~ seq(.y-.x+1, by = 1, length.out = .x)) %>%
       map(~ stickers[.x] %>%
