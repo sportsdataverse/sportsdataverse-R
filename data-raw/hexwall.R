@@ -113,6 +113,11 @@ hexwall <- function(path="data-raw/samplehex",
     # that happened to tile, which is why adding a hex broke it.
     row_lens <- row_lens[cumsum(row_lens) - row_lens < length(stickers)]
     row_lens[length(row_lens)] <- length(stickers) - sum(utils::head(row_lens, -1))
+    # The canvas height is derived from the row count, so it has to follow the
+    # trim: sticker_col_size still holds the pre-trim ESTIMATE (6 for 23
+    # stickers, where row_lens ends up with 5), which allocated a whole extra
+    # row of blank canvas at the foot of the wall.
+    sticker_col_size <- length(row_lens)
     sticker_rows <- map2(row_lens, cumsum(row_lens),
                          ~ seq(.y-.x+1, by = 1, length.out = .x)) %>%
       map(~ stickers[.x] %>%
