@@ -24,6 +24,7 @@ any out-of-date packages current."><meta property="og:image" content="https://gi
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown--sdv" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><span class="fa fas fa-project-diagram"></span>  SDV</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown--sdv"><li><a class="external-link dropdown-item" href="https://sportsdataverse.org/">SportsDataverse</a></li>
+    <li><a class="external-link dropdown-item" href="https://sportsdataverse.org/cheatsheets/sportsdataverse-R.pdf">Cheat Sheet (PDF)</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>R Packages</h6></li>
     <li><a class="dropdown-item" href="https://r.sportsdataverse.org/">sportsdataverse-R</a></li>
@@ -119,11 +120,10 @@ is possible to install development versions without GitHub.</p></dd>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/try.html" class="external-link">try</a></span><span class="op">(</span><span class="fu">sportsdataverse_update</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> The following packages are out of date:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> • Matrix       (1.7.5  -&gt; 1.7.6 )</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> • RcppParallel (6.2.0  -&gt; 6.2.1 )</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> • nnet         (7.3.20 -&gt; 7.3.21)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • Matrix (1.7.5  -&gt; 1.7.6 )</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • nnet   (7.3.20 -&gt; 7.3.21)</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> ── Start a clean R session then run ────────────────────────────────────────────</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">install.packages</span><span style="color: #D7AF00;">(</span><span style="font-weight: bold;">c</span><span style="color: #BBBB00;">(</span><span style="color: #00AFAF;">"Matrix"</span>, <span style="color: #00AFAF;">"RcppParallel"</span>, <span style="color: #00AFAF;">"nnet"</span><span style="color: #BBBB00;">)</span><span style="color: #D7AF00;">)</span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">install.packages</span><span style="color: #D7AF00;">(</span><span style="font-weight: bold;">c</span><span style="color: #BBBB00;">(</span><span style="color: #00AFAF;">"Matrix"</span>, <span style="color: #00AFAF;">"nnet"</span><span style="color: #BBBB00;">)</span><span style="color: #D7AF00;">)</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> ────────────────────────────────────────────────────────────────────────────────</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>

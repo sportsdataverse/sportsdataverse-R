@@ -44,7 +44,7 @@ A `data.frame` with one row per dependency and columns `package`,
 #> RColorBrewer RColorBrewer     1.1.3    1.1.3  FALSE
 #> Rcpp                 Rcpp     1.1.2    1.1.2  FALSE
 #> RcppEigen       RcppEigen 0.3.4.0.2        0   TRUE
-#> RcppParallel RcppParallel     6.2.1    6.2.0   TRUE
+#> RcppParallel RcppParallel     6.2.1    6.2.1  FALSE
 #> S7                     S7     0.2.2    0.2.2  FALSE
 #> askpass           askpass     1.2.1    1.2.1  FALSE
 #> codetools       codetools    0.2.20   0.2.20  FALSE
@@ -64,7 +64,7 @@ A `data.frame` with one row per dependency and columns `package`,
 #> gridtext         gridtext     0.1.6    0.1.6  FALSE
 #> gtable             gtable     0.3.6    0.3.6  FALSE
 #> hms                   hms     1.1.4    1.1.4  FALSE
-#> httr                 httr     1.4.8    1.4.8  FALSE
+#> httr                 httr     1.4.9    1.4.9  FALSE
 #> httr2               httr2     1.3.0    1.3.0  FALSE
 #> isoband           isoband     0.3.0    0.3.0  FALSE
 #> iterators       iterators    1.0.14   1.0.14  FALSE
@@ -80,7 +80,7 @@ A `data.frame` with one row per dependency and columns `package`,
 #> markdown         markdown       2.0      2.0  FALSE
 #> mgcv                 mgcv     1.9.4    1.9.4  FALSE
 #> mime                 mime      0.13     0.13  FALSE
-#> nlme                 nlme   3.1.170  3.1.169   TRUE
+#> nlme                 nlme   3.1.171  3.1.169   TRUE
 #> nnet                 nnet    7.3.21   7.3.20   TRUE
 #> openssl           openssl     2.4.2    2.4.2  FALSE
 #> pillar             pillar    1.11.1   1.11.1  FALSE
@@ -98,7 +98,7 @@ A `data.frame` with one row per dependency and columns `package`,
 #> stringdist     stringdist    0.9.17   0.9.17  FALSE
 #> stringi           stringi     1.8.9    1.8.9  FALSE
 #> stringr           stringr     1.6.0    1.6.0  FALSE
-#> survival         survival    3.8.11    3.8.6   TRUE
+#> survival         survival    3.8.12    3.8.6   TRUE
 #> sys                   sys     3.4.3    3.4.3  FALSE
 #> tibble             tibble     3.3.1    3.3.1  FALSE
 #> tidyr               tidyr     1.3.2    1.3.2  FALSE

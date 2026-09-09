@@ -89,6 +89,19 @@ stars](https://img.shields.io/github/stars/sportsdataverse/sportsdataverse-R.svg
   [![@saiemgilani](https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=twitter&style=for-the-badge)](https://twitter.com/saiemgilani)
   [![@saiemgilani](https://img.shields.io/github/followers/saiemgilani?color=eee&logo=Github&style=for-the-badge)](https://github.com/saiemgilani)
 
+## **Cheat sheet**
+
+A printable one-page reference covering **the sportsdataverse
+metapackage** — the function families, the loaders, and what each one
+returns.
+
+📄 **[Download the sportsdataverse-R cheat sheet
+(PDF)](https://sportsdataverse.org/cheatsheets/sportsdataverse-R.pdf)**
+
+Free to download, print and hand out; light and dark, US Letter
+landscape. Every SportsDataverse package has one — browse them all at
+**[sportsdataverse.org/cheatsheets](https://sportsdataverse.org/cheatsheets)**.
+
 ## **Citations**
 
 To cite the [**`sportsdataverse`**](https://r.sportsdataverse.org) R

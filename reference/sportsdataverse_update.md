@@ -42,11 +42,10 @@ Returns `NULL` invisibly. Called for its side effects.
 # \donttest{
 try(sportsdataverse_update())
 #> ℹ The following packages are out of date:
-#> • Matrix       (1.7.5  -> 1.7.6 )
-#> • RcppParallel (6.2.0  -> 6.2.1 )
-#> • nnet         (7.3.20 -> 7.3.21)
+#> • Matrix (1.7.5  -> 1.7.6 )
+#> • nnet   (7.3.20 -> 7.3.21)
 #> ── Start a clean R session then run ────────────────────────────────────────────
-#> install.packages(c("Matrix", "RcppParallel", "nnet"))
+#> install.packages(c("Matrix", "nnet"))
 #> ────────────────────────────────────────────────────────────────────────────────
 # }
 ```
