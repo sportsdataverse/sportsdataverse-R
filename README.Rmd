@@ -96,7 +96,7 @@ BibTex Citation
   author = {Gilani, Saiem},
   title = {sportsdataverse: The Set of R Packages for Sports Data.},
   url = {https://r.sportsdataverse.org},
-  year = {2021}
+  year = {2026}
 }
 ```
 
