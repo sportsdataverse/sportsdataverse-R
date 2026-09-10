@@ -17,5 +17,6 @@ Retrieved from https://r.sportsdataverse.org
       author = {Saiem Gilani},
       title = {sportsdataverse: The Set of R Packages for Sports Data.},
       url = {https://r.sportsdataverse.org},
+      year = {2026},
       note = {R package version 0.3.0},
     }
