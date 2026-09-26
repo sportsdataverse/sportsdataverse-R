@@ -59,7 +59,7 @@ A `data.frame` with one row per dependency and columns `package`,
 #> generics         generics     0.1.4    0.1.4  FALSE
 #> ggfittext       ggfittext    0.10.4   0.10.4  FALSE
 #> ggplot2           ggplot2     4.0.3    4.0.3  FALSE
-#> glmnet             glmnet       5.0      5.0  FALSE
+#> glmnet             glmnet       5.1      5.1  FALSE
 #> glue                 glue     1.8.1    1.8.1  FALSE
 #> gridtext         gridtext     0.1.6    0.1.6  FALSE
 #> gtable             gtable     0.3.6    0.3.6  FALSE
@@ -91,7 +91,7 @@ A `data.frame` with one row per dependency and columns `package`,
 #> rlang               rlang     1.3.0    1.3.0  FALSE
 #> rvest               rvest     1.0.5    1.0.5  FALSE
 #> scales             scales     1.4.0    1.4.0  FALSE
-#> selectr           selectr     0.6.0    0.6.0  FALSE
+#> selectr           selectr     0.7.0    0.7.0  FALSE
 #> shades             shades     1.5.0    1.5.0  FALSE
 #> shape               shape   1.4.6.1  1.4.6.1  FALSE
 #> snakecase       snakecase    0.11.1   0.11.1  FALSE
@@ -108,6 +108,6 @@ A `data.frame` with one row per dependency and columns `package`,
 #> vctrs               vctrs     0.7.3    0.7.3  FALSE
 #> viridisLite   viridisLite     0.4.3    0.4.3  FALSE
 #> withr               withr     3.0.3    3.0.3  FALSE
-#> xfun                 xfun      0.60     0.60  FALSE
+#> xfun                 xfun      0.61     0.61  FALSE
 #> xml2                 xml2     1.6.0    1.6.0  FALSE
 ```
