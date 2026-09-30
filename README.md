@@ -22,7 +22,8 @@ to install and load multiple **`sportsdataverse`** packages in a single
 step. Learn more about the **`sportsdataverse`** at
 [sportsdataverse.org](https://sportsdataverse.org).
 
-Data freshness and pipeline status for every SportsDataverse dataset: [sportsdataverse.org/status](https://sportsdataverse.org/status).
+Data freshness and pipeline status for every SportsDataverse dataset:
+[sportsdataverse.org/status](https://sportsdataverse.org/status).
 
 ## Installation
 
