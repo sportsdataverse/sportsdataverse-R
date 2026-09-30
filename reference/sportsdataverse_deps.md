@@ -91,7 +91,7 @@ A `data.frame` with one row per dependency and columns `package`,
 #> rlang               rlang     1.3.0    1.3.0  FALSE
 #> rvest               rvest     1.0.5    1.0.5  FALSE
 #> scales             scales     1.4.0    1.4.0  FALSE
-#> selectr           selectr     0.7.0    0.7.0  FALSE
+#> selectr           selectr     0.8.0    0.8.0  FALSE
 #> shades             shades     1.5.0    1.5.0  FALSE
 #> shape               shape   1.4.6.1  1.4.6.1  FALSE
 #> snakecase       snakecase    0.11.1   0.11.1  FALSE
