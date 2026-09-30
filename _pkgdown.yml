@@ -43,7 +43,7 @@ authors:
 
 navbar:
   structure:
-    left:  [home, reference, news, network]
+    left:  [home, reference, news, network, status]
     right: [search, twitter, github, lightswitch]
   components:
     news:
@@ -114,6 +114,9 @@ navbar:
       icon: "fas fa-football-ball"
       text: " GP"
       href: http://gameonpaper.com/cfb
+    status:
+      text: "Data status"
+      href: https://sportsdataverse.org/status
     github:
       icon: "fab fa-github fa-lg"
       aria-label: GitHub
