@@ -110,7 +110,9 @@ sportsdataverse_deps <- function(recursive = TRUE,
   available_pkgs <- intersect(pkg_list, rownames(pkgs))
 
   deps <- tools::package_dependencies(available_pkgs, db = pkgs, recursive = recursive)
-  pkg_deps <- unique(sort(unlist(deps)))
+  # package_dependencies() lists a package's dependencies, never the package
+  # itself, so the members have to be added back explicitly.
+  pkg_deps <- sort(unique(c(available_pkgs, unlist(deps))))
 
   base_pkgs <- c(
     "base", "compiler", "datasets", "graphics", "grDevices", "grid",

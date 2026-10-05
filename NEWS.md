@@ -21,6 +21,10 @@
   (>= 3.0.0).
 * `get_core_functions()` now returns the package's single roster vector
   instead of a separately maintained copy.
+* Fixed `sportsdataverse_deps()` leaving out the member packages themselves
+  (it listed only their dependencies), so `sportsdataverse_update()` never
+  flagged an out-of-date member and the "Core packages" section of
+  `sportsdataverse_sitrep()` was always empty.
 * GitHub Actions: workflows moved to `actions/checkout@v6` (Node 24 runtime),
   gained explicit `permissions` and `concurrency` groups, and R CMD check now
   also runs on macOS. The pkgdown build moved off the pinned Ubuntu 22.04
