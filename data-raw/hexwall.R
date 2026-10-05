@@ -126,8 +126,9 @@ hexwall <- function(path="data-raw/samplehex",
     if(!is.null(center_sticker) && center_sticker %in% names(stickers)){
       mid_row <- ceiling(length(row_lens)/2)
       mid <- sum(utils::head(row_lens, mid_row - 1)) + ceiling(row_lens[mid_row]/2)
-      stickers <- append(stickers[names(stickers) != center_sticker],
-                         stickers[center_sticker], after = mid - 1)
+      # move ONE copy: with n_stickers/total_stickers recycling, a file can repeat
+      i <- match(center_sticker, names(stickers))
+      stickers <- append(stickers[-i], stickers[i], after = mid - 1)
     }
     sticker_rows <- map2(row_lens, cumsum(row_lens),
                          ~ seq(.y-.x+1, by = 1, length.out = .x)) %>%
