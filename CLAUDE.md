@@ -28,7 +28,7 @@ DESCRIPTION doesn't declare.
 R-package workflow (roxygen2 / devtools / pkgdown):
 
 ```r
-devtools::document()      # regenerate NAMESPACE + man/ from roxygen (RoxygenNote 7.3.3)
+devtools::document()      # regenerate NAMESPACE + man/ (roxygen2 8.1.0)
 devtools::test()          # testthat edition 3
 devtools::check()         # R CMD check (CRAN gate)
 pkgdown::build_site()     # local site preview (deploy is CI-driven)
@@ -90,11 +90,10 @@ Exported surface (`NAMESPACE`): `%>%`, `get_core_functions`, `sportsdataverse_de
   (this is why archived packages were dropped). r-universe is dev-only, reached via
   `sportsdataverse_update(devel = TRUE)`, not the default install path.
 - **`pak`, not `pacman`** — install docs use `pak` (a `Suggests`, `>= 0.5.0`).
-- **roxygen2 version drift** — the package is documented with roxygen2 7.3.3
-  (`RoxygenNote`). Running `document()` under roxygen2 >= 8 swaps `RoxygenNote` for
-  `Config/roxygen2/version` and rewrites the author block in
-  `man/sportsdataverse-package.Rd`. Document with roxygen2 7.3.3 (install it into a
-  separate library and put that first on `.libPaths()`) unless deliberately upgrading.
+- **roxygen2 8** — documented with roxygen2 8.1.0 (`Config/roxygen2/version`, which
+  replaced `RoxygenNote`), the same as the other SportsDataverse R packages. An older
+  roxygen2 would write `RoxygenNote` back and drop the author list from
+  `man/sportsdataverse-package.Rd`; don't let that churn into a commit.
 - **Not yet on CRAN** — 0.3.0 is the first submission; `cran-comments.md` says "This is
   a new submission" and expects the matching incoming-check NOTE.
 
