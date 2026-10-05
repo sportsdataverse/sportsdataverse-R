@@ -14,8 +14,8 @@ sportsdataverse_deps(
 \item{recursive}{If \code{TRUE}, will also list all dependencies of
 sportsdataverse packages.}
 
-\item{pkg_list}{The list of the package names to check (including the \code{sportsdataverse} package itself)
-Defaults to \code{getOptions("repos")}.}
+\item{pkg_list}{Character vector of the package names to check. Defaults
+to the attached roster, \code{\link[=get_core_functions]{get_core_functions()}}.}
 
 \item{repos}{The repositories to use to check for updates.
 Defaults to \code{getOptions("repos")}.}

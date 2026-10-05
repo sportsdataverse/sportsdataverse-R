@@ -1,20 +1,20 @@
-## Citation year is PINNED to the first-release year (first commit 2021).
-## DESCRIPTION has no Date field, so deriving it from meta$Date yielded an
-## empty year, and a current-date fallback made the same package version
-## cite as a different year every calendar year. Keep this in sync with the
-## bibtex block in README.md.
+## Citation year is PINNED to the release year (2026, the first CRAN
+## release) rather than derived: DESCRIPTION has no Date field, and a
+## current-date fallback made the same package version cite as a different
+## year every calendar year. Keep this in sync with the bibtex block in
+## README.Rmd.
 year <- 2026
 note <- sprintf("R package version %s", meta$Version)
 
-citHeader("To cite the sportsdataverse R package in publications, use:")
-
-citEntry(entry = "Misc",
-         author = c(person("Saiem", "Gilani", comment = c(ORCID = "0000-0002-7194-9067"))),
-         title = "sportsdataverse: The Set of R Packages for Sports Data.",
-         url = c("https://r.sportsdataverse.org"),
-         year = year,
-         note = note,
-         textVersion = paste(
+bibentry(
+  bibtype = "Misc",
+  header = "To cite the sportsdataverse R package in publications, use:",
+  author = person("Saiem", "Gilani", comment = c(ORCID = "0000-0002-7194-9067")),
+  title = "sportsdataverse: The Set of R Packages for Sports Data.",
+  url = "https://r.sportsdataverse.org",
+  year = year,
+  note = note,
+  textVersion = paste(
     "Saiem Gilani. sportsdataverse: The Set of R Packages for Sports Data.",
     "Retrieved from https://r.sportsdataverse.org"
   )

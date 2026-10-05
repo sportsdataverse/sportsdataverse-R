@@ -8,7 +8,7 @@
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-The 'sportsdataverse' is a set of sports data packages that work in harmony because they share common data representations and 'API' design. This package is designed to make it easy to install and load multiple 'sportsdataverse' packages in a single step. Learn more about the 'sportsdataverse' at \url{https://sportsdataverse.org}.
+Installs and loads, in a single step, the set of 'sportsdataverse' sports data packages, which work in harmony because they share common data representations and 'API' design. Also reports and updates the installed versions of those packages. Learn more about the 'sportsdataverse' at \url{https://sportsdataverse.org}.
 }
 \seealso{
 Useful links:
@@ -20,7 +20,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Saiem Gilani \email{saiem.gilani@gmail.com}
+\strong{Maintainer}: Saiem Gilani \email{saiem.gilani@gmail.com} (\href{https://orcid.org/0000-0002-7194-9067}{ORCID}) [copyright holder]
 
 }
 \keyword{internal}

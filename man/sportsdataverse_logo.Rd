@@ -10,6 +10,10 @@ sportsdataverse_logo(unicode = l10n_info()$`UTF-8`)
 \item{unicode}{Whether to use Unicode symbols. Default is \code{TRUE}
 on UTF-8 platforms.}
 }
+\value{
+The logo lines (a character vector of class
+\code{sportsdataverse_logo}), invisibly. Called for its side effect of printing.
+}
 \description{
 Use \code{\link[crayon:strip_style]{crayon::strip_style()}} to get rid of the colors.
 }

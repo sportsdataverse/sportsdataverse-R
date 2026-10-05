@@ -39,17 +39,20 @@ five tooling packages. A member added to one but not the other desyncs the
 banner from the install set, and `tests/testthat/test-reports.R` asserts
 `sportsdataverse_packages() == sort(core)`.
 
-Adding a member means editing **three** places in the same change:
+Adding a member means editing all of these in the same change:
 
 1. the `core` vector in `R/core.R`,
 2. `DESCRIPTION`'s `Imports`, with a `>=` version floor,
-3. `_pkgdown.yml`'s network menu.
+3. an `@importFrom <pkg> <fn>` anchor in `R/sportsdataverse-package.R`,
+4. `_pkgdown.yml`'s network menu,
+5. `README.Rmd`'s "will load" list and its badge section (then re-knit),
+6. `NEWS.md`.
 
 ## Architecture
 
 | File | Role |
 | --- | --- |
-| `R/core.R` | The `core` vector plus `get_repos()` / `get_core_functions()`. Single source of truth for the roster. |
+| `R/core.R` | The `core` vector, returned by the exported `get_core_functions()`. Single source of truth for the roster. |
 | `R/zzz.R` | `.onAttach()` calls `sportsdataverse_attach()`, then prints the banner. Honours `options(sportsdataverse.quiet = TRUE)`. |
 | `R/attach.R` | Attaches each unloaded member via `same_library()` (same lib path it was found in -- the tidyverse pattern) and renders the cli/crayon version banner. |
 | `R/reports.R` | `sportsdataverse_packages()`, derived from `DESCRIPTION` at runtime. |

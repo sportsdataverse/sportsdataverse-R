@@ -11,7 +11,7 @@ the package roster, and the install/update helpers.
 
 ## Member packages (the `core` roster)
 
-The `core` vector in `R/core.R` (mirrored by `get_core_functions()`) lists the
+The `core` vector in `R/core.R` (returned by `get_core_functions()`) lists the
 **9 attached member packages** — these are the canonical roster, also declared in
 `Imports`:
 
@@ -36,8 +36,8 @@ pkgdown::build_site()     # local site preview (deploy is CI-driven)
 
 ## Architecture (attach + roster mechanism)
 
-- **`R/core.R`** — the `core` character vector (the 9 members) + `get_repos()` /
-  `get_core_functions()`. This is the single source of truth for the roster.
+- **`R/core.R`** — the `core` character vector (the 9 members); the exported
+  `get_core_functions()` returns it. This is the single source of truth for the roster.
 - **`R/zzz.R`** — `.onAttach()` fires `sportsdataverse_attach()` for any `core`
   package not already attached, then prints the "Ready to go!" rule. Honors
   `options(sportsdataverse.quiet = TRUE)` to suppress the banner.
@@ -66,9 +66,11 @@ Exported surface (`NAMESPACE`): `%>%`, `get_core_functions`, `sportsdataverse_de
 
 - roxygen2 markdown (`Roxygen: list(markdown = TRUE)`); regenerate `NAMESPACE` +
   `man/` with `devtools::document()` — never hand-edit them.
-- Keep the meta-package thin: no analysis/data code belongs here. New member
-  packages are added to `R/core.R`'s `core` vector AND the DESCRIPTION `Imports`
-  (with a `>=` floor) AND `_pkgdown.yml`'s network menu — keep all three in sync.
+- Keep the meta-package thin: no analysis/data code belongs here. A new member
+  touches, in one change: `R/core.R`'s `core` vector; DESCRIPTION `Imports` (with a
+  `>=` floor); an `@importFrom <pkg> <fn>` anchor in `R/sportsdataverse-package.R`
+  (otherwise R CMD check NOTEs an unused import); `_pkgdown.yml`'s network menu;
+  README.Rmd's "will load" list AND its badge section; and `NEWS.md`.
 - Edit `README.Rmd` (not `README.md`); re-knit to regenerate `README.md`.
 - Update `NEWS.md` for any roster/version change.
 
@@ -91,7 +93,8 @@ Exported surface (`NAMESPACE`): `%>%`, `get_core_functions`, `sportsdataverse_de
 - **roxygen2 version drift** — the package is documented with roxygen2 7.3.3
   (`RoxygenNote`). Running `document()` under roxygen2 >= 8 swaps `RoxygenNote` for
   `Config/roxygen2/version` and rewrites the author block in
-  `man/sportsdataverse-package.Rd`; revert those unless deliberately upgrading.
+  `man/sportsdataverse-package.Rd`. Document with roxygen2 7.3.3 (install it into a
+  separate library and put that first on `.libPaths()`) unless deliberately upgrading.
 - **Not yet on CRAN** — 0.3.0 is the first submission; `cran-comments.md` says "This is
   a new submission" and expects the matching incoming-check NOTE.
 

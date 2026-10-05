@@ -9,6 +9,9 @@ sportsdataverse_packages(include_self = TRUE)
 \arguments{
 \item{include_self}{Include sportsdataverse in the list?}
 }
+\value{
+A sorted character vector of package names.
+}
 \description{
 List all packages in the sportsdataverse
 }
