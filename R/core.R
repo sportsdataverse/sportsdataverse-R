@@ -4,6 +4,7 @@ core <- c(
   "cfbseedR",
   "fastRhockey",
   "hoopR",
+  "mlbplotR",
   "oddsapiR",
   "sportyR",
   "wehoop"
@@ -16,6 +17,7 @@ get_repos <- function(){
     "https://github.com/sportsdataverse/cfbseedR",
     "https://github.com/sportsdataverse/fastRhockey",
     "https://github.com/sportsdataverse/hoopR",
+    "https://github.com/camdenk/mlbplotR",
     "https://github.com/sportsdataverse/oddsapiR",
     "https://github.com/sportsdataverse/sportyR",
     "https://github.com/sportsdataverse/wehoop"

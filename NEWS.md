@@ -12,11 +12,20 @@
 * Updated the core package roster to reflect the current CRAN-published
   SportsDataverse R packages.
 * Added `cfbseedR` (college football season and playoff-seeding simulation)
-  to the core roster; `library(sportsdataverse)` now attaches it.
+  and `mlbplotR` (MLB logos, headshots, and plot themes) to the core roster;
+  `library(sportsdataverse)` now attaches both.
 * Bumped the minimum versions of imported packages to their current CRAN
   releases: `baseballr` (>= 2.0.0), `cfbfastR` (>= 3.0.0), `cfbseedR`
-  (>= 0.2.0), `fastRhockey` (>= 1.0.0), `hoopR` (>= 3.1.0), `oddsapiR`
-  (>= 1.0.1), `sportyR` (>= 2.2.3), and `wehoop` (>= 3.0.0).
+  (>= 0.2.0), `fastRhockey` (>= 1.0.0), `hoopR` (>= 3.1.0), `mlbplotR`
+  (>= 1.2.0), `oddsapiR` (>= 1.0.1), `sportyR` (>= 2.2.3), and `wehoop`
+  (>= 3.0.0).
+* `get_core_functions()` now returns the package's single roster vector
+  instead of a separately maintained copy.
+* GitHub Actions: workflows moved to `actions/checkout@v6` (Node 24 runtime),
+  gained explicit `permissions` and `concurrency` groups, and R CMD check now
+  also runs on macOS. The pkgdown build moved off the pinned Ubuntu 22.04
+  image to `ubuntu-latest` with Posit Public Package Manager binaries, and
+  its dependency list was trimmed to `pkgdown` plus the package itself.
 * Removed `worldfootballR` from the SportsDataverse roster (its upstream
   repository has been archived).
 * Dropped the already-commented archived packages (`chessR`, `hockeyR`,

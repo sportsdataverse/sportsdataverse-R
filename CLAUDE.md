@@ -12,10 +12,10 @@ the package roster, and the install/update helpers.
 ## Member packages (the `core` roster)
 
 The `core` vector in `R/core.R` (mirrored by `get_core_functions()`) lists the
-**8 attached member packages** — these are the canonical roster, also declared in
+**9 attached member packages** — these are the canonical roster, also declared in
 `Imports`:
 
-`baseballr` · `cfbfastR` · `cfbseedR` · `fastRhockey` · `hoopR` · `oddsapiR` · `sportyR` · `wehoop`
+`baseballr` · `cfbfastR` · `cfbseedR` · `fastRhockey` · `hoopR` · `mlbplotR` · `oddsapiR` · `sportyR` · `wehoop`
 
 `chessR`, `hockeyR`, `toRvik`, and `worldfootballR` are intentionally **removed /
 commented out** (archived or dropped upstream) — do not re-add them. Tooling
@@ -36,7 +36,7 @@ pkgdown::build_site()     # local site preview (deploy is CI-driven)
 
 ## Architecture (attach + roster mechanism)
 
-- **`R/core.R`** — the `core` character vector (the 8 members) + `get_repos()` /
+- **`R/core.R`** — the `core` character vector (the 9 members) + `get_repos()` /
   `get_core_functions()`. This is the single source of truth for the roster.
 - **`R/zzz.R`** — `.onAttach()` fires `sportsdataverse_attach()` for any `core`
   package not already attached, then prints the "Ready to go!" rule. Honors
@@ -81,28 +81,38 @@ Exported surface (`NAMESPACE`): `%>%`, `get_core_functions`, `sportsdataverse_de
   `sportsdataverse_packages()` == `sort(core)`.
 - **Member-package version coupling** — `Imports` pins `>=` floors to current CRAN
   releases (`baseballr >= 2.0.0`, `cfbfastR >= 3.0.0`, `cfbseedR >= 0.2.0`,
-  `fastRhockey >= 1.0.0`, `hoopR >= 3.1.0`, `oddsapiR >= 1.0.1`, `sportyR >= 2.2.3`,
-  `wehoop >= 3.0.0`).
+  `fastRhockey >= 1.0.0`, `hoopR >= 3.1.0`, `mlbplotR >= 1.2.0`, `oddsapiR >= 1.0.1`,
+  `sportyR >= 2.2.3`, `wehoop >= 3.0.0`).
   Bumping a member's floor is a deliberate DESCRIPTION + NEWS edit.
 - **CRAN availability constrains the roster** — every `core` member must be on CRAN
   (this is why archived packages were dropped). r-universe is dev-only, reached via
   `sportsdataverse_update(devel = TRUE)`, not the default install path.
 - **`pak`, not `pacman`** — install docs use `pak` (a `Suggests`, `>= 0.5.0`).
+- **roxygen2 version drift** — the package is documented with roxygen2 7.3.3
+  (`RoxygenNote`). Running `document()` under roxygen2 >= 8 swaps `RoxygenNote` for
+  `Config/roxygen2/version` and rewrites the author block in
+  `man/sportsdataverse-package.Rd`; revert those unless deliberately upgrading.
+- **Not yet on CRAN** — 0.3.0 is the first submission; `cran-comments.md` says "This is
+  a new submission" and expects the matching incoming-check NOTE.
 
 ## Testing & CI
 
 - `tests/testthat/` — testthat edition 3, one file (`test-reports.R`, `skip_on_cran()`).
-- `.github/workflows/R-CMD-check.yaml` — windows + ubuntu (release, oldrel-1) via
-  `r-lib/actions`; runs on push/PR to `main`/`master`/`development_branch` + weekly cron.
-- `.github/workflows/pkgdown.yaml` — builds + `pkgdown::deploy_to_branch()` on push
-  to `main`/`master`.
+- `.github/workflows/R-CMD-check.yaml` — macOS + windows (release) and ubuntu (release,
+  oldrel-1) via `r-lib/actions@v2` + `actions/checkout@v6` (Node 24); `contents: read`,
+  per-ref concurrency; runs on push/PR to `main`/`master`/`development_branch` + weekly cron.
+- `.github/workflows/pkgdown.yaml` — `ubuntu-latest` + public P3M binaries; `contents: write`
+  (needed by `pkgdown::deploy_to_branch()`); runs on push to `main`/`master` only, so a
+  pkgdown break first shows up after merge. Deps are `any::pkgdown` + `local::.` — member
+  packages come from DESCRIPTION, do not re-list them there.
 
 ## Reference
 
 - pkgdown: `_pkgdown.yml` (Bootstrap 5, flatly, light-switch) → <https://r.sportsdataverse.org>.
 - Member-package sites: cfbfastR.sportsdataverse.org · cfbseedR.sportsdataverse.org · hoopR.sportsdataverse.org ·
   wehoop.sportsdataverse.org · fastRhockey.sportsdataverse.org · oddsapiR.sportsdataverse.org ·
-  sportyR.sportsdataverse.org · baseballr (billpetti.github.io/baseballr).
+  sportyR.sportsdataverse.org · baseballr (billpetti.github.io/baseballr) ·
+  mlbplotR (camdenk.github.io/mlbplotR).
 
 ## Commit Convention
 

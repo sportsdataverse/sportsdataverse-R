@@ -25,6 +25,7 @@ Imports:
     fastRhockey (>= 1.0.0),
     hoopR (>= 3.1.0),
     magrittr (>= 2.0.0),
+    mlbplotR (>= 1.2.0),
     oddsapiR (>= 1.0.1),
     rlang (>= 0.4.10),
     rstudioapi (>= 0.13),

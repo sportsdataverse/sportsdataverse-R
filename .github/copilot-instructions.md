@@ -20,10 +20,10 @@ here; it belongs in the member package.
 
 ## The roster
 
-`R/core.R`'s `core` vector lists the **8 attached member packages**, which are
+`R/core.R`'s `core` vector lists the **9 attached member packages**, which are
 also declared in `DESCRIPTION`'s `Imports`:
 
-`baseballr` · `cfbfastR` · `cfbseedR` · `fastRhockey` · `hoopR` · `oddsapiR` · `sportyR` · `wehoop`
+`baseballr` · `cfbfastR` · `cfbseedR` · `fastRhockey` · `hoopR` · `mlbplotR` · `oddsapiR` · `sportyR` · `wehoop`
 
 - `chessR`, `hockeyR`, `toRvik` and `worldfootballR` are **intentionally removed
   or commented out** (archived or dropped upstream). Do not re-add them.
@@ -89,7 +89,7 @@ Exported surface: `%>%`, `get_core_functions`, `sportsdataverse_deps`,
 
 `devtools::test()` -- testthat edition 3, one file
 (`tests/testthat/test-reports.R`, `skip_on_cran()`). Run `devtools::check()`
-before opening a PR; CI runs windows + ubuntu (release, oldrel-1).
+before opening a PR; CI runs macOS + windows (release) and ubuntu (release, oldrel-1).
 
 ## Commits
 

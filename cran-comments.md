@@ -1,14 +1,26 @@
-Release summary
-This release updates the SportsDataverse package roster to match the current
-CRAN-published packages (adding `cfbseedR`), bumps the imported-package version
-requirements to their current CRAN releases, and removes the now-archived
-`worldfootballR` dependency.
+## Submission summary
 
-R CMD check results
-0 errors | 0 warnings | 0 notes
+This is a new submission.
 
-revdepcheck results
-We checked 0 reverse dependencies, comparing R CMD check results across CRAN and dev versions of this package.
+`sportsdataverse` is a meta-package in the style of `tidyverse` and
+`nflverse`: it installs and attaches the CRAN-published SportsDataverse R
+packages (`baseballr`, `cfbfastR`, `cfbseedR`, `fastRhockey`, `hoopR`,
+`mlbplotR`, `oddsapiR`, `sportyR`, `wehoop`) in one step and provides
+helpers to report and update their versions. Every imported package is on
+CRAN, and each `Imports` floor is that package's current CRAN release.
 
-We saw 0 new problems
-We failed to check 0 packages
+## Test environments
+
+* local: Ubuntu 24.04, R 4.6.1
+* GitHub Actions: macOS-latest (release), windows-latest (release),
+  ubuntu-latest (release, oldrel-1)
+
+## R CMD check results
+
+0 errors | 0 warnings | 1 note
+
+* This is a new submission.
+
+## Reverse dependencies
+
+There are currently no reverse dependencies, as this is a new package.
