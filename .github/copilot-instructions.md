@@ -12,7 +12,7 @@ installs, attaches and re-exports the family of SportsDataverse R packages in
 one step. It ships almost no data logic of its own -- its job is the attach
 banner, the package roster, and the install/update helpers.
 
-CRAN-published, MIT, `Depends: R (>= 4.1.0)`. pkgdown site:
+Targets CRAN (0.3.0 is the first submission), MIT, `Depends: R (>= 4.1.0)`. pkgdown site:
 <https://r.sportsdataverse.org>.
 
 **Keep the meta-package thin.** Analysis or data-access code does not belong
@@ -20,10 +20,10 @@ here; it belongs in the member package.
 
 ## The roster
 
-`R/core.R`'s `core` vector lists the **7 attached member packages**, which are
+`R/core.R`'s `core` vector lists the **8 attached member packages**, which are
 also declared in `DESCRIPTION`'s `Imports`:
 
-`baseballr` · `cfbfastR` · `fastRhockey` · `hoopR` · `oddsapiR` · `sportyR` · `wehoop`
+`baseballr` · `cfbfastR` · `cfbseedR` · `fastRhockey` · `hoopR` · `oddsapiR` · `sportyR` · `wehoop`
 
 - `chessR`, `hockeyR`, `toRvik` and `worldfootballR` are **intentionally removed
   or commented out** (archived or dropped upstream). Do not re-add them.

@@ -4,6 +4,7 @@
 # Suppress R CMD check note
 #' @importFrom baseballr most_recent_mlb_season
 #' @importFrom cfbfastR load_cfb_pbp
+#' @importFrom cfbseedR cfb_playoff_seeds
 #' @importFrom fastRhockey most_recent_nhl_season
 #' @importFrom hoopR login
 #' @importFrom wehoop load_wbb_pbp

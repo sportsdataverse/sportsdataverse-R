@@ -46,6 +46,7 @@ install.packages("sportsdataverse", repos = c("https://sportsdataverse.r-univers
 
 * [**`baseballr`**](https://billpetti.github.io/baseballr/), for MLB and college baseball data.
 * [**`cfbfastR`**](https://cfbfastR.sportsdataverse.org/), for college football data.
+* [**`cfbseedR`**](https://cfbseedR.sportsdataverse.org/), for simulating college football seasons and playoff seeding.
 * [**`fastRhockey`**](https://fastRhockey.sportsdataverse.org/), for NHL and PWHL hockey data.
 * [**`hoopR`**](https://hoopR.sportsdataverse.org/), for men's college and professional basketball data.
 * [**`oddsapiR`**](https://oddsapiR.sportsdataverse.org/), for sportsbook odds from The Odds API.
@@ -111,6 +112,12 @@ BibTex Citation
 [![Version-Number](https://img.shields.io/github/r-package/v/sportsdataverse/cfbfastR?label=cfbfastR&logo=R&style=for-the-badge)](https://github.com/sportsdataverse/cfbfastR) [![R-CMD-check](https://img.shields.io/github/actions/workflow/status/sportsdataverse/cfbfastR/R-CMD-check.yaml?branch=main&label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/cfbfastR/actions/workflows/R-CMD-check.yaml)
 [![CRAN Status](https://img.shields.io/cran/v/cfbfastR?color=success&label=CRAN%20Version&logo=R&style=for-the-badge)](https://CRAN.R-project.org/package=cfbfastR)
 [![CRAN downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FcfbfastR)](https://CRAN.R-project.org/package=cfbfastR)
+
+### [**`cfbseedR`**](https://cfbseedR.sportsdataverse.org/)
+
+[![Version-Number](https://img.shields.io/github/r-package/v/sportsdataverse/cfbseedR?label=cfbseedR&logo=R&style=for-the-badge)](https://github.com/sportsdataverse/cfbseedR) [![R-CMD-check](https://img.shields.io/github/actions/workflow/status/sportsdataverse/cfbseedR/R-CMD-check.yaml?branch=main&label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/cfbseedR/actions/workflows/R-CMD-check.yaml)
+[![CRAN Status](https://img.shields.io/cran/v/cfbseedR?color=success&label=CRAN%20Version&logo=R&style=for-the-badge)](https://CRAN.R-project.org/package=cfbseedR)
+[![CRAN downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FcfbseedR)](https://CRAN.R-project.org/package=cfbseedR)
 
 ### [**`hoopR`**](https://hoopr.sportsdataverse.org/)
 

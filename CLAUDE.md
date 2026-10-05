@@ -5,17 +5,17 @@ it installs, attaches, and re-exports the family of SportsDataverse R packages i
 one step. It ships almost no data logic of its own — its job is the attach banner,
 the package roster, and the install/update helpers.
 
-- **CRAN-published**, MIT licensed. Version 0.3.0. `Depends: R (>= 4.1.0)`.
+- Targets **CRAN** (not yet accepted — 0.3.0 is the first submission), MIT licensed. Version 0.3.0. `Depends: R (>= 4.1.0)`.
 - Docs: <https://sportsdataverse.org> · pkgdown site <https://r.sportsdataverse.org>.
 - Maintainer: Saiem Gilani.
 
 ## Member packages (the `core` roster)
 
 The `core` vector in `R/core.R` (mirrored by `get_core_functions()`) lists the
-**7 attached member packages** — these are the canonical roster, also declared in
+**8 attached member packages** — these are the canonical roster, also declared in
 `Imports`:
 
-`baseballr` · `cfbfastR` · `fastRhockey` · `hoopR` · `oddsapiR` · `sportyR` · `wehoop`
+`baseballr` · `cfbfastR` · `cfbseedR` · `fastRhockey` · `hoopR` · `oddsapiR` · `sportyR` · `wehoop`
 
 `chessR`, `hockeyR`, `toRvik`, and `worldfootballR` are intentionally **removed /
 commented out** (archived or dropped upstream) — do not re-add them. Tooling
@@ -36,7 +36,7 @@ pkgdown::build_site()     # local site preview (deploy is CI-driven)
 
 ## Architecture (attach + roster mechanism)
 
-- **`R/core.R`** — the `core` character vector (the 7 members) + `get_repos()` /
+- **`R/core.R`** — the `core` character vector (the 8 members) + `get_repos()` /
   `get_core_functions()`. This is the single source of truth for the roster.
 - **`R/zzz.R`** — `.onAttach()` fires `sportsdataverse_attach()` for any `core`
   package not already attached, then prints the "Ready to go!" rule. Honors
@@ -80,8 +80,9 @@ Exported surface (`NAMESPACE`): `%>%`, `get_core_functions`, `sportsdataverse_de
   the banner from the install set. `test-reports.R` asserts
   `sportsdataverse_packages()` == `sort(core)`.
 - **Member-package version coupling** — `Imports` pins `>=` floors to current CRAN
-  releases (`baseballr >= 1.6.0`, `cfbfastR >= 2.0.0`, `fastRhockey >= 0.4.0`,
-  `hoopR >= 3.0.0`, `oddsapiR >= 0.0.3`, `sportyR >= 2.2.3`, `wehoop >= 2.1.0`).
+  releases (`baseballr >= 2.0.0`, `cfbfastR >= 3.0.0`, `cfbseedR >= 0.2.0`,
+  `fastRhockey >= 1.0.0`, `hoopR >= 3.1.0`, `oddsapiR >= 1.0.1`, `sportyR >= 2.2.3`,
+  `wehoop >= 3.0.0`).
   Bumping a member's floor is a deliberate DESCRIPTION + NEWS edit.
 - **CRAN availability constrains the roster** — every `core` member must be on CRAN
   (this is why archived packages were dropped). r-universe is dev-only, reached via
@@ -99,7 +100,7 @@ Exported surface (`NAMESPACE`): `%>%`, `get_core_functions`, `sportsdataverse_de
 ## Reference
 
 - pkgdown: `_pkgdown.yml` (Bootstrap 5, flatly, light-switch) → <https://r.sportsdataverse.org>.
-- Member-package sites: cfbfastR.sportsdataverse.org · hoopR.sportsdataverse.org ·
+- Member-package sites: cfbfastR.sportsdataverse.org · cfbseedR.sportsdataverse.org · hoopR.sportsdataverse.org ·
   wehoop.sportsdataverse.org · fastRhockey.sportsdataverse.org · oddsapiR.sportsdataverse.org ·
   sportyR.sportsdataverse.org · baseballr (billpetti.github.io/baseballr).
 

@@ -11,10 +11,12 @@
 * Bumped the minimum R version to 4.1.0 and added `Config/testthat/edition: 3`.
 * Updated the core package roster to reflect the current CRAN-published
   SportsDataverse R packages.
+* Added `cfbseedR` (college football season and playoff-seeding simulation)
+  to the core roster; `library(sportsdataverse)` now attaches it.
 * Bumped the minimum versions of imported packages to their current CRAN
-  releases: `baseballr` (>= 1.6.0), `cfbfastR` (>= 2.0.0), `fastRhockey`
-  (>= 0.4.0), `hoopR` (>= 3.0.0), `oddsapiR` (>= 0.0.3), `sportyR` (>= 2.2.3),
-  and `wehoop` (>= 2.1.0).
+  releases: `baseballr` (>= 2.0.0), `cfbfastR` (>= 3.0.0), `cfbseedR`
+  (>= 0.2.0), `fastRhockey` (>= 1.0.0), `hoopR` (>= 3.1.0), `oddsapiR`
+  (>= 1.0.1), `sportyR` (>= 2.2.3), and `wehoop` (>= 3.0.0).
 * Removed `worldfootballR` from the SportsDataverse roster (its upstream
   repository has been archived).
 * Dropped the already-commented archived packages (`chessR`, `hockeyR`,

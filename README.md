@@ -55,31 +55,31 @@ install.packages("sportsdataverse", repos = c("https://sportsdataverse.r-univers
 
 `library(sportsdataverse)` will load the following packages:
 
-  - [**`baseballr`**](https://billpetti.github.io/baseballr/), for MLB
-    and college baseball data.
-  - [**`cfbfastR`**](https://cfbfastR.sportsdataverse.org/), for college
-    football data.
-  - [**`fastRhockey`**](https://fastRhockey.sportsdataverse.org/), for
-    NHL and PWHL hockey data.
-  - [**`hoopR`**](https://hoopR.sportsdataverse.org/), for men’s college
-    and professional basketball data.
-  - [**`oddsapiR`**](https://oddsapiR.sportsdataverse.org/), for
-    sportsbook odds from The Odds API.
-  - [**`sportyR`**](https://sportyR.sportsdataverse.org/), for drawing
-    regulation playing surfaces.
-  - [**`wehoop`**](https://wehoop.sportsdataverse.org/), for women’s
-    college and professional basketball data.
+- [**`baseballr`**](https://billpetti.github.io/baseballr/), for MLB and
+  college baseball data.
+- [**`cfbfastR`**](https://cfbfastR.sportsdataverse.org/), for college
+  football data.
+- [**`cfbseedR`**](https://cfbseedR.sportsdataverse.org/), for
+  simulating college football seasons and playoff seeding.
+- [**`fastRhockey`**](https://fastRhockey.sportsdataverse.org/), for NHL
+  and PWHL hockey data.
+- [**`hoopR`**](https://hoopR.sportsdataverse.org/), for men’s college
+  and professional basketball data.
+- [**`oddsapiR`**](https://oddsapiR.sportsdataverse.org/), for
+  sportsbook odds from The Odds API.
+- [**`sportyR`**](https://sportyR.sportsdataverse.org/), for drawing
+  regulation playing surfaces.
+- [**`wehoop`**](https://wehoop.sportsdataverse.org/), for women’s
+  college and professional basketball data.
 
 Additional ecosystem packages —
 [**`cfbplotR`**](https://cfbplotR.sportsdataverse.org/),
 [**`cfb4th`**](https://cfb4th.sportsdataverse.org/),
 [**`recruitR`**](https://recruitR.sportsdataverse.org/),
 [**`softballR`**](https://github.com/sportsdataverse/softballR/), and
-[**`mlbplotR`**](https://camdenk.github.io/mlbplotR/) — are available
-in the SportsDataverse but are not auto-loaded by
+[**`mlbplotR`**](https://camdenk.github.io/mlbplotR/) — are available in
+the SportsDataverse but are not auto-loaded by
 `library(sportsdataverse)`.
-
-<!-- end list -->
 
 ``` r
 sportsdataverse::sportsdataverse_logo()
@@ -101,19 +101,23 @@ stars](https://img.shields.io/github/stars/sportsdataverse/sportsdataverse-R.svg
 
 ## **Our Authors**
 
-  - [Saiem Gilani](https://twitter.com/saiemgilani)  
-    <a href="https://twitter.com/saiemgilani" target="blank"><img src="https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=twitter&style=for-the-badge" alt="@saiemgilani" /></a>
-    <a href="https://github.com/saiemgilani" target="blank"><img src="https://img.shields.io/github/followers/saiemgilani?color=eee&logo=Github&style=for-the-badge" alt="@saiemgilani" /></a>
+- [Saiem Gilani](https://twitter.com/saiemgilani)  
+  <a href="https://twitter.com/saiemgilani" target="blank"><img src="https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=twitter&style=for-the-badge" alt="@saiemgilani" /></a>
+  <a href="https://github.com/saiemgilani" target="blank"><img src="https://img.shields.io/github/followers/saiemgilani?color=eee&logo=Github&style=for-the-badge" alt="@saiemgilani" /></a>
 
 <!-- cheatsheet-section -->
+
 ## **Cheat sheet**
 
-A printable one-page reference covering **the sportsdataverse metapackage** — the function families, the loaders, and what each one returns.
+A printable one-page reference covering **the sportsdataverse
+metapackage** — the function families, the loaders, and what each one
+returns.
 
-📄 **[Download the sportsdataverse-R cheat sheet (PDF)](https://sportsdataverse.org/cheatsheets/sportsdataverse-R.pdf)**
+📄 **[Download the sportsdataverse-R cheat sheet
+(PDF)](https://sportsdataverse.org/cheatsheets/sportsdataverse-R.pdf)**
 
-Free to download, print and hand out; light and dark, US Letter landscape.
-Every SportsDataverse package has one — browse them all at
+Free to download, print and hand out; light and dark, US Letter
+landscape. Every SportsDataverse package has one — browse them all at
 **[sportsdataverse.org/cheatsheets](https://sportsdataverse.org/cheatsheets)**.
 
 ## **Citations**
@@ -144,6 +148,15 @@ BibTex Citation
 Status](https://img.shields.io/cran/v/cfbfastR?color=success&label=CRAN%20Version&logo=R&style=for-the-badge)](https://CRAN.R-project.org/package=cfbfastR)
 [![CRAN
 downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FcfbfastR)](https://CRAN.R-project.org/package=cfbfastR)
+
+### [**`cfbseedR`**](https://cfbseedR.sportsdataverse.org/)
+
+[![Version-Number](https://img.shields.io/github/r-package/v/sportsdataverse/cfbseedR?label=cfbseedR&logo=R&style=for-the-badge)](https://github.com/sportsdataverse/cfbseedR)
+[![R-CMD-check](https://img.shields.io/github/actions/workflow/status/sportsdataverse/cfbseedR/R-CMD-check.yaml?branch=main&label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/cfbseedR/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+Status](https://img.shields.io/cran/v/cfbseedR?color=success&label=CRAN%20Version&logo=R&style=for-the-badge)](https://CRAN.R-project.org/package=cfbseedR)
+[![CRAN
+downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FcfbseedR)](https://CRAN.R-project.org/package=cfbseedR)
 
 ### [**`hoopR`**](https://hoopr.sportsdataverse.org/)
 

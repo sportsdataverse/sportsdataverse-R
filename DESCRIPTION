@@ -17,18 +17,19 @@ BugReports: https://github.com/sportsdataverse/sportsdataverse-R/issues
 Depends:
     R (>= 4.1.0)
 Imports:
-    baseballr (>= 1.6.0),
-    cfbfastR (>= 2.0.0),
+    baseballr (>= 2.0.0),
+    cfbfastR (>= 3.0.0),
+    cfbseedR (>= 0.2.0),
     cli (>= 3.0.0),
     crayon (>= 1.4.0),
-    fastRhockey (>= 0.4.0),
-    hoopR (>= 3.0.0),
+    fastRhockey (>= 1.0.0),
+    hoopR (>= 3.1.0),
     magrittr (>= 2.0.0),
-    oddsapiR (>= 0.0.3),
+    oddsapiR (>= 1.0.1),
     rlang (>= 0.4.10),
     rstudioapi (>= 0.13),
     sportyR (>= 2.2.3),
-    wehoop (>= 2.1.0)
+    wehoop (>= 3.0.0)
 Roxygen: list(markdown = TRUE)
 Suggests:
     knitr,

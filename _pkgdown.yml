@@ -68,6 +68,8 @@ navbar:
         href: https://r.sportsdataverse.org/
       - text: cfbfastR
         href: https://cfbfastR.sportsdataverse.org/
+      - text: cfbseedR
+        href: https://cfbseedR.sportsdataverse.org/
       - text: hoopR
         href: https://hoopR.sportsdataverse.org/
       - text: wehoop
