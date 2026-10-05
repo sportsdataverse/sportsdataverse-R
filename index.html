@@ -58,6 +58,7 @@
     <li><h6 class="dropdown-header" data-toc-skip>R Packages</h6></li>
     <li><a class="dropdown-item" href="https://r.sportsdataverse.org/">sportsdataverse-R</a></li>
     <li><a class="external-link dropdown-item" href="https://cfbfastR.sportsdataverse.org/">cfbfastR</a></li>
+    <li><a class="external-link dropdown-item" href="https://cfbseedR.sportsdataverse.org/">cfbseedR</a></li>
     <li><a class="external-link dropdown-item" href="https://hoopR.sportsdataverse.org/">hoopR</a></li>
     <li><a class="external-link dropdown-item" href="https://wehoop.sportsdataverse.org/">wehoop</a></li>
     <li><a class="external-link dropdown-item" href="https://fastRhockey.sportsdataverse.org/">fastRhockey</a></li>
@@ -145,9 +146,13 @@
 <li>
 <a href="https://cfbfastR.sportsdataverse.org/" class="external-link"><strong><code>cfbfastR</code></strong></a>, for college football data.</li>
 <li>
+<a href="https://cfbseedR.sportsdataverse.org/" class="external-link"><strong><code>cfbseedR</code></strong></a>, for simulating college football seasons and playoff seeding.</li>
+<li>
 <a href="https://fastRhockey.sportsdataverse.org/" class="external-link"><strong><code>fastRhockey</code></strong></a>, for NHL and PWHL hockey data.</li>
 <li>
 <a href="https://hoopR.sportsdataverse.org/" class="external-link"><strong><code>hoopR</code></strong></a>, for men’s college and professional basketball data.</li>
+<li>
+<a href="https://camdenk.github.io/mlbplotR/" class="external-link"><strong><code>mlbplotR</code></strong></a>, for MLB team and player logos, headshots, and plot themes.</li>
 <li>
 <a href="https://oddsapiR.sportsdataverse.org/" class="external-link"><strong><code>oddsapiR</code></strong></a>, for sportsbook odds from The Odds API.</li>
 <li>
@@ -155,8 +160,7 @@
 <li>
 <a href="https://wehoop.sportsdataverse.org/" class="external-link"><strong><code>wehoop</code></strong></a>, for women’s college and professional basketball data.</li>
 </ul>
-<p>Additional ecosystem packages — <a href="https://cfbplotR.sportsdataverse.org/" class="external-link"><strong><code>cfbplotR</code></strong></a>, <a href="https://cfb4th.sportsdataverse.org/" class="external-link"><strong><code>cfb4th</code></strong></a>, <a href="https://recruitR.sportsdataverse.org/" class="external-link"><strong><code>recruitR</code></strong></a>, <a href="https://github.com/sportsdataverse/softballR/" class="external-link"><strong><code>softballR</code></strong></a>, and <a href="https://camdenk.github.io/mlbplotR/" class="external-link"><strong><code>mlbplotR</code></strong></a> — are available in the SportsDataverse but are not auto-loaded by <code><a href="https://github.com/sportsdataverse/sportsdataverse-R" class="external-link">library(sportsdataverse)</a></code>.</p>
-<!-- end list -->
+<p>Additional ecosystem packages — <a href="https://cfbplotR.sportsdataverse.org/" class="external-link"><strong><code>cfbplotR</code></strong></a>, <a href="https://cfb4th.sportsdataverse.org/" class="external-link"><strong><code>cfb4th</code></strong></a>, <a href="https://recruitR.sportsdataverse.org/" class="external-link"><strong><code>recruitR</code></strong></a>, and <a href="https://github.com/sportsdataverse/softballR/" class="external-link"><strong><code>softballR</code></strong></a> — are available in the SportsDataverse but are not auto-loaded by <code><a href="https://github.com/sportsdataverse/sportsdataverse-R" class="external-link">library(sportsdataverse)</a></code>.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">sportsdataverse</span><span class="fu">::</span><span class="fu"><a href="reference/sportsdataverse_logo.html">sportsdataverse_logo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <center>
@@ -167,7 +171,7 @@
 <h2 id="follow-sportsdataverse-on-x-and-star-this-repo">Follow <a href="https://x.com/sportsdataverse" class="external-link"><strong><code>sportsdataverse</code></strong></a> on X and star this repo<a class="anchor" aria-label="anchor" href="#follow-sportsdataverse-on-x-and-star-this-repo"></a>
 </h2>
 <p><a href="https://x.com/sportsdataverse" class="external-link"><img src="https://img.shields.io/twitter/follow/sportsdataverse?color=blue&amp;label=%40sportsdataverse&amp;logo=x&amp;style=for-the-badge" alt="X Follow"></a></p>
-<p><a href="https://github.com/sportsdataverse/sportsdataverse-R/stargazers/" class="external-link"><img src="https://img.shields.io/github/stars/sportsdataverse/sportsdataverse-R.svg?color=eee&amp;logo=github&amp;style=for-the-badge&amp;label=Star%20sportsdataverse&amp;maxAge=2592000" alt="GitHub stars"></a></p>
+<p><a href="https://github.com/sportsdataverse/sportsdataverse-R" class="external-link"><img src="https://img.shields.io/github/stars/sportsdataverse/sportsdataverse-R.svg?color=eee&amp;logo=github&amp;style=for-the-badge&amp;label=Star%20sportsdataverse&amp;maxAge=2592000" alt="GitHub stars"></a></p>
 </div>
 <div class="section level2">
 <h2 id="our-authors">
@@ -213,6 +217,12 @@
 <p><a href="https://github.com/sportsdataverse/cfbfastR" class="external-link"><img src="https://img.shields.io/github/r-package/v/sportsdataverse/cfbfastR?label=cfbfastR&amp;logo=R&amp;style=for-the-badge" alt="Version-Number"></a> <a href="https://github.com/sportsdataverse/cfbfastR/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://img.shields.io/github/actions/workflow/status/sportsdataverse/cfbfastR/R-CMD-check.yaml?branch=main&amp;label=R-CMD-Check&amp;logo=R&amp;logoColor=white&amp;style=for-the-badge" alt="R-CMD-check"></a> <a href="https://CRAN.R-project.org/package=cfbfastR" class="external-link"><img src="https://img.shields.io/cran/v/cfbfastR?color=success&amp;label=CRAN%20Version&amp;logo=R&amp;style=for-the-badge" alt="CRAN Status"></a> <a href="https://CRAN.R-project.org/package=cfbfastR" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&amp;color=success&amp;label=Downloads&amp;query=%24%5B0%5D.downloads&amp;url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FcfbfastR" alt="CRAN downloads"></a></p>
 </div>
 <div class="section level3">
+<h3 id="cfbseedr">
+<a href="https://cfbseedR.sportsdataverse.org/" class="external-link"><strong><code>cfbseedR</code></strong></a><a class="anchor" aria-label="anchor" href="#cfbseedr"></a>
+</h3>
+<p><a href="https://github.com/sportsdataverse/cfbseedR" class="external-link"><img src="https://img.shields.io/github/r-package/v/sportsdataverse/cfbseedR?label=cfbseedR&amp;logo=R&amp;style=for-the-badge" alt="Version-Number"></a> <a href="https://github.com/sportsdataverse/cfbseedR/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://img.shields.io/github/actions/workflow/status/sportsdataverse/cfbseedR/R-CMD-check.yaml?branch=main&amp;label=R-CMD-Check&amp;logo=R&amp;logoColor=white&amp;style=for-the-badge" alt="R-CMD-check"></a> <a href="https://CRAN.R-project.org/package=cfbseedR" class="external-link"><img src="https://img.shields.io/cran/v/cfbseedR?color=success&amp;label=CRAN%20Version&amp;logo=R&amp;style=for-the-badge" alt="CRAN Status"></a> <a href="https://CRAN.R-project.org/package=cfbseedR" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&amp;color=success&amp;label=Downloads&amp;query=%24%5B0%5D.downloads&amp;url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FcfbseedR" alt="CRAN downloads"></a></p>
+</div>
+<div class="section level3">
 <h3 id="hoopr">
 <a href="https://hoopr.sportsdataverse.org/" class="external-link"><strong><code>hoopR</code></strong></a><a class="anchor" aria-label="anchor" href="#hoopr"></a>
 </h3>
@@ -235,6 +245,12 @@
 <a href="https://billpetti.github.io/baseballr/" class="external-link"><strong><code>baseballr</code></strong></a><a class="anchor" aria-label="anchor" href="#baseballr"></a>
 </h3>
 <p><a href="https://github.com/BillPetti/baseballr" class="external-link"><img src="https://img.shields.io/github/r-package/v/BillPetti/baseballr?label=baseballr&amp;logo=R&amp;style=for-the-badge" alt="Version-Number"></a> <a href="https://github.com/BillPetti/baseballr/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://img.shields.io/github/actions/workflow/status/BillPetti/baseballr/R-CMD-check.yaml?branch=master&amp;label=R-CMD-Check&amp;logo=R&amp;logoColor=white&amp;style=for-the-badge" alt="R-CMD-check"></a> <a href="https://CRAN.R-project.org/package=baseballr" class="external-link"><img src="https://img.shields.io/cran/v/baseballr?color=success&amp;label=CRAN%20Version&amp;logo=R&amp;style=for-the-badge" alt="CRAN Status"></a> <a href="https://CRAN.R-project.org/package=baseballr" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&amp;color=success&amp;label=Downloads&amp;query=%24%5B0%5D.downloads&amp;url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2Fbaseballr" alt="CRAN downloads"></a></p>
+</div>
+<div class="section level3">
+<h3 id="mlbplotr">
+<a href="https://camdenk.github.io/mlbplotR/" class="external-link"><strong><code>mlbplotR</code></strong></a><a class="anchor" aria-label="anchor" href="#mlbplotr"></a>
+</h3>
+<p><a href="https://github.com/camdenk/mlbplotR" class="external-link"><img src="https://img.shields.io/github/r-package/v/camdenk/mlbplotR?label=mlbplotR&amp;logo=R&amp;style=for-the-badge" alt="Version-Number"></a> <a href="https://github.com/camdenk/mlbplotR/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://img.shields.io/github/actions/workflow/status/camdenk/mlbplotR/R-CMD-check.yaml?branch=main&amp;label=R-CMD-Check&amp;logo=R&amp;logoColor=white&amp;style=for-the-badge" alt="R-CMD-check"></a> <a href="https://CRAN.R-project.org/package=mlbplotR" class="external-link"><img src="https://img.shields.io/cran/v/mlbplotR?color=success&amp;label=CRAN%20Version&amp;logo=R&amp;style=for-the-badge" alt="CRAN Status"></a> <a href="https://CRAN.R-project.org/package=mlbplotR" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&amp;color=success&amp;label=Downloads&amp;query=%24%5B0%5D.downloads&amp;url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FmlbplotR" alt="CRAN downloads"></a></p>
 </div>
 <div class="section level3">
 <h3 id="sportyr">
@@ -279,7 +295,7 @@
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>
-<a href="https://x.com/saiemgilani" class="external-link">Saiem Gilani</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7194-9067" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
+<a href="https://x.com/saiemgilani" class="external-link">Saiem Gilani</a> <br><small class="roles"> Author, maintainer, copyright holder </small> <a href="https://orcid.org/0000-0002-7194-9067" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
 </ul>
 </div>
 

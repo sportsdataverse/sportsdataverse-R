@@ -14,19 +14,19 @@ SportsDataverse R packages in one step. It ships almost no data logic of
 its own – its job is the attach banner, the package roster, and the
 install/update helpers.
 
-CRAN-published, MIT, `Depends: R (>= 4.1.0)`. pkgdown site:
-<https://r.sportsdataverse.org>.
+Targets CRAN (0.3.0 is the first submission), MIT,
+`Depends: R (>= 4.1.0)`. pkgdown site: <https://r.sportsdataverse.org>.
 
 **Keep the meta-package thin.** Analysis or data-access code does not
 belong here; it belongs in the member package.
 
 ## The roster
 
-`R/core.R`’s `core` vector lists the **7 attached member packages**,
+`R/core.R`’s `core` vector lists the **9 attached member packages**,
 which are also declared in `DESCRIPTION`’s `Imports`:
 
-`baseballr` · `cfbfastR` · `fastRhockey` · `hoopR` · `oddsapiR` ·
-`sportyR` · `wehoop`
+`baseballr` · `cfbfastR` · `cfbseedR` · `fastRhockey` · `hoopR` ·
+`mlbplotR` · `oddsapiR` · `sportyR` · `wehoop`
 
 - `chessR`, `hockeyR`, `toRvik` and `worldfootballR` are **intentionally
   removed or commented out** (archived or dropped upstream). Do not
@@ -46,17 +46,21 @@ other desyncs the banner from the install set, and
 `tests/testthat/test-reports.R` asserts
 `sportsdataverse_packages() == sort(core)`.
 
-Adding a member means editing **three** places in the same change:
+Adding a member means editing all of these in the same change:
 
 1.  the `core` vector in `R/core.R`,
 2.  `DESCRIPTION`’s `Imports`, with a `>=` version floor,
-3.  `_pkgdown.yml`’s network menu.
+3.  an `@importFrom <pkg> <fn>` anchor in `R/sportsdataverse-package.R`,
+4.  `_pkgdown.yml`’s network menu,
+5.  `README.Rmd`’s “will load” list and its badge section (then
+    re-knit),
+6.  `NEWS.md`.
 
 ## Architecture
 
 | File | Role |
 |----|----|
-| `R/core.R` | The `core` vector plus `get_repos()` / [`get_core_functions()`](https://r.sportsdataverse.org/reference/get_core_functions.md). Single source of truth for the roster. |
+| `R/core.R` | The `core` vector, returned by the exported [`get_core_functions()`](https://r.sportsdataverse.org/reference/get_core_functions.md). Single source of truth for the roster. |
 | `R/zzz.R` | `.onAttach()` calls `sportsdataverse_attach()`, then prints the banner. Honours `options(sportsdataverse.quiet = TRUE)`. |
 | `R/attach.R` | Attaches each unloaded member via `same_library()` (same lib path it was found in – the tidyverse pattern) and renders the cli/crayon version banner. |
 | `R/reports.R` | [`sportsdataverse_packages()`](https://r.sportsdataverse.org/reference/sportsdataverse_packages.md), derived from `DESCRIPTION` at runtime. |
@@ -99,8 +103,8 @@ Exported surface: `%>%`, `get_core_functions`, `sportsdataverse_deps`,
 
 `devtools::test()` – testthat edition 3, one file
 (`tests/testthat/test-reports.R`, `skip_on_cran()`). Run
-`devtools::check()` before opening a PR; CI runs windows + ubuntu
-(release, oldrel-1).
+`devtools::check()` before opening a PR; CI runs macOS + windows
+(release) and ubuntu (release, oldrel-1).
 
 ## Commits
 

@@ -7,3 +7,7 @@ See `magrittr::%>%` for details.
 ``` r
 lhs %>% rhs
 ```
+
+## Value
+
+The result of calling `rhs(lhs)`.

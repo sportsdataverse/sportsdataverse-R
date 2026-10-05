@@ -28,6 +28,7 @@
     <li><h6 class="dropdown-header" data-toc-skip>R Packages</h6></li>
     <li><a class="dropdown-item" href="https://r.sportsdataverse.org/">sportsdataverse-R</a></li>
     <li><a class="external-link dropdown-item" href="https://cfbfastR.sportsdataverse.org/">cfbfastR</a></li>
+    <li><a class="external-link dropdown-item" href="https://cfbseedR.sportsdataverse.org/">cfbseedR</a></li>
     <li><a class="external-link dropdown-item" href="https://hoopR.sportsdataverse.org/">hoopR</a></li>
     <li><a class="external-link dropdown-item" href="https://wehoop.sportsdataverse.org/">wehoop</a></li>
     <li><a class="external-link dropdown-item" href="https://fastRhockey.sportsdataverse.org/">fastRhockey</a></li>
@@ -80,13 +81,13 @@
 <div class="section level2">
 <h2 id="package-summary">Package summary<a class="anchor" aria-label="anchor" href="#package-summary"></a></h2>
 <p><code>sportsdataverse</code> is an <strong>umbrella meta-package</strong> in the tidyverse mould: it installs, attaches and re-exports the family of SportsDataverse R packages in one step. It ships almost no data logic of its own – its job is the attach banner, the package roster, and the install/update helpers.</p>
-<p>CRAN-published, MIT, <code>Depends: R (&gt;= 4.1.0)</code>. pkgdown site: <a href="https://r.sportsdataverse.org" class="uri">https://r.sportsdataverse.org</a>.</p>
+<p>Targets CRAN (0.3.0 is the first submission), MIT, <code>Depends: R (&gt;= 4.1.0)</code>. pkgdown site: <a href="https://r.sportsdataverse.org" class="uri">https://r.sportsdataverse.org</a>.</p>
 <p><strong>Keep the meta-package thin.</strong> Analysis or data-access code does not belong here; it belongs in the member package.</p>
 </div>
 <div class="section level2">
 <h2 id="the-roster">The roster<a class="anchor" aria-label="anchor" href="#the-roster"></a></h2>
-<p><code>R/core.R</code>’s <code>core</code> vector lists the <strong>7 attached member packages</strong>, which are also declared in <code>DESCRIPTION</code>’s <code>Imports</code>:</p>
-<p><code>baseballr</code> · <code>cfbfastR</code> · <code>fastRhockey</code> · <code>hoopR</code> · <code>oddsapiR</code> · <code>sportyR</code> · <code>wehoop</code></p>
+<p><code>R/core.R</code>’s <code>core</code> vector lists the <strong>9 attached member packages</strong>, which are also declared in <code>DESCRIPTION</code>’s <code>Imports</code>:</p>
+<p><code>baseballr</code> · <code>cfbfastR</code> · <code>cfbseedR</code> · <code>fastRhockey</code> · <code>hoopR</code> · <code>mlbplotR</code> · <code>oddsapiR</code> · <code>sportyR</code> · <code>wehoop</code></p>
 <ul><li>
 <code>chessR</code>, <code>hockeyR</code>, <code>toRvik</code> and <code>worldfootballR</code> are <strong>intentionally removed or commented out</strong> (archived or dropped upstream). Do not re-add them.</li>
 <li>Tooling <code>Imports</code> (<code>cli</code>, <code>crayon</code>, <code>magrittr</code>, <code>rlang</code>, <code>rstudioapi</code>) are NOT members and are excluded from <code><a href="reference/sportsdataverse_packages.html">sportsdataverse_packages()</a></code>.</li>
@@ -95,19 +96,24 @@
 <div class="section level2">
 <h2 id="the-roster-lives-in-two-places--the-main-gotcha">The roster lives in two places – the main gotcha<a class="anchor" aria-label="anchor" href="#the-roster-lives-in-two-places--the-main-gotcha"></a></h2>
 <p>The attach path reads the <code>core</code> vector; <code><a href="reference/sportsdataverse_packages.html">sportsdataverse_packages()</a></code> derives the roster at runtime by parsing <code>DESCRIPTION</code>’s <code>Imports</code> and subtracting the five tooling packages. A member added to one but not the other desyncs the banner from the install set, and <code>tests/testthat/test-reports.R</code> asserts <code>sportsdataverse_packages() == sort(core)</code>.</p>
-<p>Adding a member means editing <strong>three</strong> places in the same change:</p>
+<p>Adding a member means editing all of these in the same change:</p>
 <ol style="list-style-type: decimal"><li>the <code>core</code> vector in <code>R/core.R</code>,</li>
 <li>
 <code>DESCRIPTION</code>’s <code>Imports</code>, with a <code>&gt;=</code> version floor,</li>
+<li>an <code>@importFrom &lt;pkg&gt; &lt;fn&gt;</code> anchor in <code>R/sportsdataverse-package.R</code>,</li>
 <li>
-<code>_pkgdown.yml</code>’s network menu.</li>
+<code>_pkgdown.yml</code>’s network menu,</li>
+<li>
+<code>README.Rmd</code>’s “will load” list and its badge section (then re-knit),</li>
+<li>
+<code>NEWS.md</code>.</li>
 </ol></div>
 <div class="section level2">
 <h2 id="architecture">Architecture<a class="anchor" aria-label="anchor" href="#architecture"></a></h2>
 <table class="table"><colgroup><col width="50%"><col width="50%"></colgroup><thead><tr><th>File</th>
 <th>Role</th>
 </tr></thead><tbody><tr><td><code>R/core.R</code></td>
-<td>The <code>core</code> vector plus <code>get_repos()</code> / <code><a href="reference/get_core_functions.html">get_core_functions()</a></code>. Single source of truth for the roster.</td>
+<td>The <code>core</code> vector, returned by the exported <code><a href="reference/get_core_functions.html">get_core_functions()</a></code>. Single source of truth for the roster.</td>
 </tr><tr><td><code>R/zzz.R</code></td>
 <td>
 <code>.onAttach()</code> calls <code>sportsdataverse_attach()</code>, then prints the banner. Honours <code>options(sportsdataverse.quiet = TRUE)</code>.</td>
@@ -145,7 +151,7 @@
 </ul></div>
 <div class="section level2">
 <h2 id="testing">Testing<a class="anchor" aria-label="anchor" href="#testing"></a></h2>
-<p><code>devtools::test()</code> – testthat edition 3, one file (<code>tests/testthat/test-reports.R</code>, <code>skip_on_cran()</code>). Run <code>devtools::check()</code> before opening a PR; CI runs windows + ubuntu (release, oldrel-1).</p>
+<p><code>devtools::test()</code> – testthat edition 3, one file (<code>tests/testthat/test-reports.R</code>, <code>skip_on_cran()</code>). Run <code>devtools::check()</code> before opening a PR; CI runs macOS + windows (release) and ubuntu (release, oldrel-1).</p>
 </div>
 <div class="section level2">
 <h2 id="commits">Commits<a class="anchor" aria-label="anchor" href="#commits"></a></h2>

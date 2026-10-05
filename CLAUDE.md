@@ -6,21 +6,21 @@ SportsDataverse R packages in one step. It ships almost no data logic of
 its own — its job is the attach banner, the package roster, and the
 install/update helpers.
 
-- **CRAN-published**, MIT licensed. Version 0.3.0.
-  `Depends: R (>= 4.1.0)`.
+- Targets **CRAN** (not yet accepted — 0.3.0 is the first submission),
+  MIT licensed. Version 0.3.0. `Depends: R (>= 4.1.0)`.
 - Docs: <https://sportsdataverse.org> · pkgdown site
   <https://r.sportsdataverse.org>.
 - Maintainer: Saiem Gilani.
 
 ## Member packages (the `core` roster)
 
-The `core` vector in `R/core.R` (mirrored by
+The `core` vector in `R/core.R` (returned by
 [`get_core_functions()`](https://r.sportsdataverse.org/reference/get_core_functions.md))
-lists the **7 attached member packages** — these are the canonical
+lists the **9 attached member packages** — these are the canonical
 roster, also declared in `Imports`:
 
-`baseballr` · `cfbfastR` · `fastRhockey` · `hoopR` · `oddsapiR` ·
-`sportyR` · `wehoop`
+`baseballr` · `cfbfastR` · `cfbseedR` · `fastRhockey` · `hoopR` ·
+`mlbplotR` · `oddsapiR` · `sportyR` · `wehoop`
 
 `chessR`, `hockeyR`, `toRvik`, and `worldfootballR` are intentionally
 **removed / commented out** (archived or dropped upstream) — do not
@@ -35,7 +35,7 @@ R-package workflow (roxygen2 / devtools / pkgdown):
 
 ``` r
 
-devtools::document()      # regenerate NAMESPACE + man/ from roxygen (RoxygenNote 7.3.3)
+devtools::document()      # regenerate NAMESPACE + man/ (roxygen2 8.1.0)
 devtools::test()          # testthat edition 3
 devtools::check()         # R CMD check (CRAN gate)
 pkgdown::build_site()     # local site preview (deploy is CI-driven)
@@ -43,10 +43,10 @@ pkgdown::build_site()     # local site preview (deploy is CI-driven)
 
 ## Architecture (attach + roster mechanism)
 
-- **`R/core.R`** — the `core` character vector (the 7 members) +
-  `get_repos()` /
-  [`get_core_functions()`](https://r.sportsdataverse.org/reference/get_core_functions.md).
-  This is the single source of truth for the roster.
+- **`R/core.R`** — the `core` character vector (the 9 members); the
+  exported
+  [`get_core_functions()`](https://r.sportsdataverse.org/reference/get_core_functions.md)
+  returns it. This is the single source of truth for the roster.
 - **`R/zzz.R`** — `.onAttach()` fires `sportsdataverse_attach()` for any
   `core` package not already attached, then prints the “Ready to go!”
   rule. Honors `options(sportsdataverse.quiet = TRUE)` to suppress the
@@ -86,10 +86,12 @@ Exported surface (`NAMESPACE`): `%>%`, `get_core_functions`,
 - roxygen2 markdown (`Roxygen: list(markdown = TRUE)`); regenerate
   `NAMESPACE` + `man/` with `devtools::document()` — never hand-edit
   them.
-- Keep the meta-package thin: no analysis/data code belongs here. New
-  member packages are added to `R/core.R`’s `core` vector AND the
-  DESCRIPTION `Imports` (with a `>=` floor) AND `_pkgdown.yml`’s network
-  menu — keep all three in sync.
+- Keep the meta-package thin: no analysis/data code belongs here. A new
+  member touches, in one change: `R/core.R`’s `core` vector; DESCRIPTION
+  `Imports` (with a `>=` floor); an `@importFrom <pkg> <fn>` anchor in
+  `R/sportsdataverse-package.R` (otherwise R CMD check NOTEs an unused
+  import); `_pkgdown.yml`’s network menu; README.Rmd’s “will load” list
+  AND its badge section; and `NEWS.md`.
 - Edit `README.Rmd` (not `README.md`); re-knit to regenerate
   `README.md`.
 - Update `NEWS.md` for any roster/version change.
@@ -105,37 +107,52 @@ Exported surface (`NAMESPACE`): `%>%`, `get_core_functions`,
   [`sportsdataverse_packages()`](https://r.sportsdataverse.org/reference/sportsdataverse_packages.md)
   == `sort(core)`.
 - **Member-package version coupling** — `Imports` pins `>=` floors to
-  current CRAN releases (`baseballr >= 1.6.0`, `cfbfastR >= 2.0.0`,
-  `fastRhockey >= 0.4.0`, `hoopR >= 3.0.0`, `oddsapiR >= 0.0.3`,
-  `sportyR >= 2.2.3`, `wehoop >= 2.1.0`). Bumping a member’s floor is a
-  deliberate DESCRIPTION + NEWS edit.
+  current CRAN releases (`baseballr >= 2.0.0`, `cfbfastR >= 3.0.0`,
+  `cfbseedR >= 0.2.0`, `fastRhockey >= 1.0.0`, `hoopR >= 3.1.0`,
+  `mlbplotR >= 1.2.0`, `oddsapiR >= 1.0.1`, `sportyR >= 2.2.3`,
+  `wehoop >= 3.0.0`). Bumping a member’s floor is a deliberate
+  DESCRIPTION + NEWS edit.
 - **CRAN availability constrains the roster** — every `core` member must
   be on CRAN (this is why archived packages were dropped). r-universe is
   dev-only, reached via `sportsdataverse_update(devel = TRUE)`, not the
   default install path.
 - **`pak`, not `pacman`** — install docs use `pak` (a `Suggests`,
   `>= 0.5.0`).
+- **roxygen2 8** — documented with roxygen2 8.1.0
+  (`Config/roxygen2/version`, which replaced `RoxygenNote`), the same as
+  the other SportsDataverse R packages. An older roxygen2 would write
+  `RoxygenNote` back and drop the author list from
+  `man/sportsdataverse-package.Rd`; don’t let that churn into a commit.
+- **Not yet on CRAN** — 0.3.0 is the first submission;
+  `cran-comments.md` says “This is a new submission” and expects the
+  matching incoming-check NOTE.
 
 ## Testing & CI
 
 - `tests/testthat/` — testthat edition 3, one file (`test-reports.R`,
   `skip_on_cran()`).
-- `.github/workflows/R-CMD-check.yaml` — windows + ubuntu (release,
-  oldrel-1) via `r-lib/actions`; runs on push/PR to
-  `main`/`master`/`development_branch` + weekly cron.
-- `.github/workflows/pkgdown.yaml` — builds +
-  [`pkgdown::deploy_to_branch()`](https://pkgdown.r-lib.org/reference/deploy_to_branch.html)
-  on push to `main`/`master`.
+- `.github/workflows/R-CMD-check.yaml` — macOS + windows (release) and
+  ubuntu (release, oldrel-1) via `r-lib/actions@v2` +
+  `actions/checkout@v6` (Node 24); `contents: read`, per-ref
+  concurrency; runs on push/PR to `main`/`master`/`development_branch` +
+  weekly cron.
+- `.github/workflows/pkgdown.yaml` — `ubuntu-latest` + public P3M
+  binaries; `contents: write` (needed by
+  [`pkgdown::deploy_to_branch()`](https://pkgdown.r-lib.org/reference/deploy_to_branch.html));
+  runs on push to `main`/`master` only, so a pkgdown break first shows
+  up after merge. Deps are `any::pkgdown` + `local::.` — member packages
+  come from DESCRIPTION, do not re-list them there.
 
 ## Reference
 
 - pkgdown: `_pkgdown.yml` (Bootstrap 5, flatly, light-switch) →
   <https://r.sportsdataverse.org>.
 - Member-package sites: cfbfastR.sportsdataverse.org ·
-  hoopR.sportsdataverse.org · wehoop.sportsdataverse.org ·
-  fastRhockey.sportsdataverse.org · oddsapiR.sportsdataverse.org ·
-  sportyR.sportsdataverse.org · baseballr
-  (billpetti.github.io/baseballr).
+  cfbseedR.sportsdataverse.org · hoopR.sportsdataverse.org ·
+  wehoop.sportsdataverse.org · fastRhockey.sportsdataverse.org ·
+  oddsapiR.sportsdataverse.org · sportyR.sportsdataverse.org · baseballr
+  (billpetti.github.io/baseballr) · mlbplotR
+  (camdenk.github.io/mlbplotR).
 
 ## Commit Convention
 

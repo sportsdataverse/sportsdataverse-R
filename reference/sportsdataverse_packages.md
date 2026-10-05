@@ -14,10 +14,15 @@ sportsdataverse_packages(include_self = TRUE)
 
   Include sportsdataverse in the list?
 
+## Value
+
+A sorted character vector of package names.
+
 ## Examples
 
 ``` r
 sportsdataverse_packages()
-#> [1] "baseballr"       "cfbfastR"        "fastRhockey"     "hoopR"          
-#> [5] "oddsapiR"        "sportsdataverse" "sportyR"         "wehoop"         
+#>  [1] "baseballr"       "cfbfastR"        "cfbseedR"        "fastRhockey"    
+#>  [5] "hoopR"           "mlbplotR"        "oddsapiR"        "sportsdataverse"
+#>  [9] "sportyR"         "wehoop"         
 ```

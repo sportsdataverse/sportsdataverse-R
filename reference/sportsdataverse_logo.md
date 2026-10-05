@@ -16,6 +16,11 @@ sportsdataverse_logo(unicode = l10n_info()$`UTF-8`)
 
   Whether to use Unicode symbols. Default is `TRUE` on UTF-8 platforms.
 
+## Value
+
+The logo lines (a character vector of class `sportsdataverse_logo`),
+invisibly. Called for its side effect of printing.
+
 ## Examples
 
 ``` r

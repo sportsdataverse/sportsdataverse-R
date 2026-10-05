@@ -34,6 +34,7 @@ a problem."><meta property="og:image" content="https://github.com/sportsdatavers
     <li><h6 class="dropdown-header" data-toc-skip>R Packages</h6></li>
     <li><a class="dropdown-item" href="https://r.sportsdataverse.org/">sportsdataverse-R</a></li>
     <li><a class="external-link dropdown-item" href="https://cfbfastR.sportsdataverse.org/">cfbfastR</a></li>
+    <li><a class="external-link dropdown-item" href="https://cfbseedR.sportsdataverse.org/">cfbseedR</a></li>
     <li><a class="external-link dropdown-item" href="https://hoopR.sportsdataverse.org/">hoopR</a></li>
     <li><a class="external-link dropdown-item" href="https://wehoop.sportsdataverse.org/">wehoop</a></li>
     <li><a class="external-link dropdown-item" href="https://fastRhockey.sportsdataverse.org/">fastRhockey</a></li>
@@ -93,8 +94,136 @@ a problem.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">sportsdataverse_sitrep</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
     </div>
 
+    <div class="section level2">
+    <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
+    <p>Called for its side effect of printing the report; returns <code>NULL</code>
+invisibly.</p>
+    </div>
 
-  </main></div>
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/try.html" class="external-link">try</a></span><span class="op">(</span><span class="fu">sportsdataverse_sitrep</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ── R &amp; RStudio ─────────────────────────────────────────────────────────────────</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • R: 4.6.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ── Core packages ───────────────────────────────────────────────────────────────</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • baseballr    (2.0.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • cfbfastR     (3.0.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • cfbseedR     (0.2.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • fastRhockey  (1.0.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • hoopR        (3.1.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • mlbplotR     (1.2.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • oddsapiR     (1.0.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • sportyR      (2.2.3)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • wehoop       (3.0.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ── Non-core packages ───────────────────────────────────────────────────────────</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • <span style="color: #BBBB00; font-weight: bold;">Matrix      </span> (1.7.5 &lt; 1.7.6)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • R6           (2.6.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • RColorBrewer (1.1.3)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • Rcpp         (1.1.2)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • <span style="color: #BBBB00; font-weight: bold;">RcppEigen   </span> (0 &lt; 0.3.4.0.2)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • RcppParallel (6.2.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • S7           (0.2.2)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • V8           (8.2.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • askpass      (1.2.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • base64enc    (0.1.6)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • bigD         (0.3.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • bitops       (1.1.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • bslib        (0.12.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • cachem       (1.1.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • codetools    (0.2.20)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • commonmark   (2.0.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • <span style="color: #BBBB00; font-weight: bold;">cpp11       </span> (0 &lt; 0.5.5)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • curl         (8.0.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • data.table   (1.18.6.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • digest       (0.6.39)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • dplyr        (1.2.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • evaluate     (1.0.5)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • farver       (2.1.2)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • fastmap      (1.2.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • fontawesome  (0.5.3)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • foreach      (1.5.2)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • fs           (2.1.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • furrr        (0.4.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • future       (1.76.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • generics     (0.1.4)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • ggfittext    (0.10.4)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • ggplot2      (4.0.3)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • glmnet       (5.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • globals      (0.19.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • glue         (1.8.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • gridtext     (0.1.6)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • gt           (1.3.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • gtable       (0.3.6)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • highr        (0.12)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • hms          (1.1.4)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • htmltools    (0.5.9)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • htmlwidgets  (1.6.4)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • httr         (1.4.9)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • httr2        (1.3.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • isoband      (0.3.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • iterators    (1.0.14)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • janitor      (2.2.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • jpeg         (0.1.11)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • jquerylib    (0.1.4)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • jsonlite     (2.0.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • juicyjuice   (0.1.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • knitr        (1.52)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • labeling     (0.4.3)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • <span style="color: #BBBB00; font-weight: bold;">lattice     </span> (0.22.9 &lt; 0.23.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • lifecycle    (1.0.5)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • listenv      (1.1.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • litedown     (0.11)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • lubridate    (1.9.5)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • magick       (2.9.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • magrittr     (2.0.5)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • markdown     (2.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • memoise      (2.0.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • mgcv         (1.9.4)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • mime         (0.13)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • <span style="color: #BBBB00; font-weight: bold;">nlme        </span> (3.1.169 &lt; 3.1.171)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • <span style="color: #BBBB00; font-weight: bold;">nnet        </span> (7.3.20 &lt; 7.3.21)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • openssl      (2.4.2)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • parallelly   (1.48.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • pillar       (1.11.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • pkgconfig    (2.0.3)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • png          (0.1.9)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • progressr    (1.0.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • purrr        (1.2.2)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • rappdirs     (0.3.4)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • reactR       (0.6.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • reactable    (0.4.5)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • rlang        (1.3.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • rmarkdown    (2.32)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • rvest        (1.0.5)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • sass         (0.4.10)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • scales       (1.4.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • selectr      (0.8.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • shades       (1.5.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • shape        (1.4.6.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • snakecase    (0.11.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • stringdist   (0.9.17)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • stringi      (1.8.9)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • stringr      (1.6.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • <span style="color: #BBBB00; font-weight: bold;">survival    </span> (3.8.6 &lt; 3.8.12)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • sys          (3.4.3)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • tibble       (3.3.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • tidyr        (1.3.2)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • tidyselect   (1.2.1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • timechange   (0.4.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • tinytex      (0.61)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • utf8         (1.2.6)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • vctrs        (0.7.3)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • viridisLite  (0.4.3)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • withr        (3.0.3)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • xfun         (0.61)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • xml2         (1.6.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> • yaml         (2.3.12)</span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
+</code></pre></div>
+    </div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside></div>
 
 
     <footer><div class="pkgdown-footer-left">

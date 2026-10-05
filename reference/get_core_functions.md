@@ -10,4 +10,14 @@ get_core_functions()
 
 ## Value
 
-Returns a vector of the CRAN packages in the SportsDataverse
+A character vector of the CRAN packages that
+[`library(sportsdataverse)`](https://github.com/sportsdataverse/sportsdataverse-R)
+attaches.
+
+## Examples
+
+``` r
+get_core_functions()
+#> [1] "baseballr"   "cfbfastR"    "cfbseedR"    "fastRhockey" "hoopR"      
+#> [6] "mlbplotR"    "oddsapiR"    "sportyR"     "wehoop"     
+```

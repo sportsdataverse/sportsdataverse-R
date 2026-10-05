@@ -50,10 +50,14 @@ will load the following packages:
   college baseball data.
 - [**`cfbfastR`**](https://cfbfastR.sportsdataverse.org/), for college
   football data.
+- [**`cfbseedR`**](https://cfbseedR.sportsdataverse.org/), for
+  simulating college football seasons and playoff seeding.
 - [**`fastRhockey`**](https://fastRhockey.sportsdataverse.org/), for NHL
   and PWHL hockey data.
 - [**`hoopR`**](https://hoopR.sportsdataverse.org/), for men’s college
   and professional basketball data.
+- [**`mlbplotR`**](https://camdenk.github.io/mlbplotR/), for MLB team
+  and player logos, headshots, and plot themes.
 - [**`oddsapiR`**](https://oddsapiR.sportsdataverse.org/), for
   sportsbook odds from The Odds API.
 - [**`sportyR`**](https://sportyR.sportsdataverse.org/), for drawing
@@ -64,10 +68,9 @@ will load the following packages:
 Additional ecosystem packages —
 [**`cfbplotR`**](https://cfbplotR.sportsdataverse.org/),
 [**`cfb4th`**](https://cfb4th.sportsdataverse.org/),
-[**`recruitR`**](https://recruitR.sportsdataverse.org/),
-[**`softballR`**](https://github.com/sportsdataverse/softballR/), and
-[**`mlbplotR`**](https://camdenk.github.io/mlbplotR/) — are available in
-the SportsDataverse but are not auto-loaded by
+[**`recruitR`**](https://recruitR.sportsdataverse.org/), and
+[**`softballR`**](https://github.com/sportsdataverse/softballR/) — are
+available in the SportsDataverse but are not auto-loaded by
 [`library(sportsdataverse)`](https://github.com/sportsdataverse/sportsdataverse-R).
 
 ``` r
@@ -84,7 +87,7 @@ logo](https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/main/d
 Follow](https://img.shields.io/twitter/follow/sportsdataverse?color=blue&label=%40sportsdataverse&logo=x&style=for-the-badge)](https://x.com/sportsdataverse)
 
 [![GitHub
-stars](https://img.shields.io/github/stars/sportsdataverse/sportsdataverse-R.svg?color=eee&logo=github&style=for-the-badge&label=Star%20sportsdataverse&maxAge=2592000)](https://github.com/sportsdataverse/sportsdataverse-R/stargazers/)
+stars](https://img.shields.io/github/stars/sportsdataverse/sportsdataverse-R.svg?color=eee&logo=github&style=for-the-badge&label=Star%20sportsdataverse&maxAge=2592000)](https://github.com/sportsdataverse/sportsdataverse-R)
 
 ## **Our Authors**
 
@@ -135,6 +138,15 @@ Status](https://img.shields.io/cran/v/cfbfastR?color=success&label=CRAN%20Versio
 [![CRAN
 downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FcfbfastR)](https://CRAN.R-project.org/package=cfbfastR)
 
+### [**`cfbseedR`**](https://cfbseedR.sportsdataverse.org/)
+
+[![Version-Number](https://img.shields.io/github/r-package/v/sportsdataverse/cfbseedR?label=cfbseedR&logo=R&style=for-the-badge)](https://github.com/sportsdataverse/cfbseedR)
+[![R-CMD-check](https://img.shields.io/github/actions/workflow/status/sportsdataverse/cfbseedR/R-CMD-check.yaml?branch=main&label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/cfbseedR/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+Status](https://img.shields.io/cran/v/cfbseedR?color=success&label=CRAN%20Version&logo=R&style=for-the-badge)](https://CRAN.R-project.org/package=cfbseedR)
+[![CRAN
+downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FcfbseedR)](https://CRAN.R-project.org/package=cfbseedR)
+
 ### [**`hoopR`**](https://hoopr.sportsdataverse.org/)
 
 [![Version-Number](https://img.shields.io/github/r-package/v/sportsdataverse/hoopR?label=hoopR&logo=R&style=for-the-badge)](https://github.com/sportsdataverse/hoopR)
@@ -170,6 +182,15 @@ downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=s
 Status](https://img.shields.io/cran/v/baseballr?color=success&label=CRAN%20Version&logo=R&style=for-the-badge)](https://CRAN.R-project.org/package=baseballr)
 [![CRAN
 downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2Fbaseballr)](https://CRAN.R-project.org/package=baseballr)
+
+### [**`mlbplotR`**](https://camdenk.github.io/mlbplotR/)
+
+[![Version-Number](https://img.shields.io/github/r-package/v/camdenk/mlbplotR?label=mlbplotR&logo=R&style=for-the-badge)](https://github.com/camdenk/mlbplotR)
+[![R-CMD-check](https://img.shields.io/github/actions/workflow/status/camdenk/mlbplotR/R-CMD-check.yaml?branch=main&label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/camdenk/mlbplotR/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+Status](https://img.shields.io/cran/v/mlbplotR?color=success&label=CRAN%20Version&logo=R&style=for-the-badge)](https://CRAN.R-project.org/package=mlbplotR)
+[![CRAN
+downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FmlbplotR)](https://CRAN.R-project.org/package=mlbplotR)
 
 ### [**`sportyR`**](https://sportyr.sportsdataverse.org/)
 

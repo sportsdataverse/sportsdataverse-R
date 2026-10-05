@@ -28,6 +28,7 @@
     <li><h6 class="dropdown-header" data-toc-skip>R Packages</h6></li>
     <li><a class="dropdown-item" href="https://r.sportsdataverse.org/">sportsdataverse-R</a></li>
     <li><a class="external-link dropdown-item" href="https://cfbfastR.sportsdataverse.org/">cfbfastR</a></li>
+    <li><a class="external-link dropdown-item" href="https://cfbseedR.sportsdataverse.org/">cfbseedR</a></li>
     <li><a class="external-link dropdown-item" href="https://hoopR.sportsdataverse.org/">hoopR</a></li>
     <li><a class="external-link dropdown-item" href="https://wehoop.sportsdataverse.org/">wehoop</a></li>
     <li><a class="external-link dropdown-item" href="https://fastRhockey.sportsdataverse.org/">fastRhockey</a></li>
@@ -81,7 +82,12 @@
 <code><a href="../reference/sportsdataverse_update.html">sportsdataverse_update()</a></code> gained a <code>devel</code> argument that points at the SportsDataverse r-universe (<a href="https://sportsdataverse.r-universe.dev" class="external-link uri">https://sportsdataverse.r-universe.dev</a>) for prebuilt development binaries, and now reports via <code>cli</code>.</li>
 <li>Bumped the minimum R version to 4.1.0 and added <code>Config/testthat/edition: 3</code>.</li>
 <li>Updated the core package roster to reflect the current CRAN-published SportsDataverse R packages.</li>
-<li>Bumped the minimum versions of imported packages to their current CRAN releases: <code>baseballr</code> (&gt;= 1.6.0), <code>cfbfastR</code> (&gt;= 2.0.0), <code>fastRhockey</code> (&gt;= 0.4.0), <code>hoopR</code> (&gt;= 3.0.0), <code>oddsapiR</code> (&gt;= 0.0.3), <code>sportyR</code> (&gt;= 2.2.3), and <code>wehoop</code> (&gt;= 2.1.0).</li>
+<li>Added <code>cfbseedR</code> (college football season and playoff-seeding simulation) and <code>mlbplotR</code> (MLB logos, headshots, and plot themes) to the core roster; <code><a href="https://github.com/sportsdataverse/sportsdataverse-R" class="external-link">library(sportsdataverse)</a></code> now attaches both.</li>
+<li>Bumped the minimum versions of imported packages to their current CRAN releases: <code>baseballr</code> (&gt;= 2.0.0), <code>cfbfastR</code> (&gt;= 3.0.0), <code>cfbseedR</code> (&gt;= 0.2.0), <code>fastRhockey</code> (&gt;= 1.0.0), <code>hoopR</code> (&gt;= 3.1.0), <code>mlbplotR</code> (&gt;= 1.2.0), <code>oddsapiR</code> (&gt;= 1.0.1), <code>sportyR</code> (&gt;= 2.2.3), and <code>wehoop</code> (&gt;= 3.0.0).</li>
+<li>
+<code><a href="../reference/get_core_functions.html">get_core_functions()</a></code> now returns the package’s single roster vector instead of a separately maintained copy.</li>
+<li>Fixed <code><a href="../reference/sportsdataverse_deps.html">sportsdataverse_deps()</a></code> leaving out the member packages themselves (it listed only their dependencies), so <code><a href="../reference/sportsdataverse_update.html">sportsdataverse_update()</a></code> never flagged an out-of-date member and the “Core packages” section of <code><a href="../reference/sportsdataverse_sitrep.html">sportsdataverse_sitrep()</a></code> was always empty.</li>
+<li>GitHub Actions: workflows moved to <code>actions/checkout@v6</code> (Node 24 runtime), gained explicit <code>permissions</code> and <code>concurrency</code> groups, and R CMD check now also runs on macOS. The pkgdown build moved off the pinned Ubuntu 22.04 image to <code>ubuntu-latest</code> with Posit Public Package Manager binaries, and its dependency list was trimmed to <code>pkgdown</code> plus the package itself.</li>
 <li>Removed <code>worldfootballR</code> from the SportsDataverse roster (its upstream repository has been archived).</li>
 <li>Dropped the already-commented archived packages (<code>chessR</code>, <code>hockeyR</code>, <code>toRvik</code>) from the README package roster.</li>
 <li>Switched the README installation instructions from <code>pacman</code> to <code>pak</code>.</li>

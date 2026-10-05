@@ -28,6 +28,7 @@
     <li><h6 class="dropdown-header" data-toc-skip>R Packages</h6></li>
     <li><a class="dropdown-item" href="https://r.sportsdataverse.org/">sportsdataverse-R</a></li>
     <li><a class="external-link dropdown-item" href="https://cfbfastR.sportsdataverse.org/">cfbfastR</a></li>
+    <li><a class="external-link dropdown-item" href="https://cfbseedR.sportsdataverse.org/">cfbseedR</a></li>
     <li><a class="external-link dropdown-item" href="https://hoopR.sportsdataverse.org/">hoopR</a></li>
     <li><a class="external-link dropdown-item" href="https://wehoop.sportsdataverse.org/">wehoop</a></li>
     <li><a class="external-link dropdown-item" href="https://fastRhockey.sportsdataverse.org/">fastRhockey</a></li>
@@ -98,8 +99,8 @@ sportsdataverse packages.</p></dd>
 
 
 <dt id="arg-pkg-list">pkg_list<a class="anchor" aria-label="anchor" href="#arg-pkg-list"></a></dt>
-<dd><p>The list of the package names to check (including the <code>sportsdataverse</code> package itself)
-Defaults to <code>getOptions("repos")</code>.</p></dd>
+<dd><p>Character vector of the package names to check. Defaults
+to the attached roster, <code><a href="get_core_functions.html">get_core_functions()</a></code>.</p></dd>
 
 
 <dt id="arg-repos">repos<a class="anchor" aria-label="anchor" href="#arg-repos"></a></dt>
@@ -124,7 +125,16 @@ Defaults to <code>getOptions("repos")</code>.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> RcppEigen       RcppEigen 0.3.4.0.2        0   TRUE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> RcppParallel RcppParallel     6.2.1    6.2.1  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> S7                     S7     0.2.2    0.2.2  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> V8                     V8     8.2.0    8.2.0  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> askpass           askpass     1.2.1    1.2.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> base64enc       base64enc     0.1.6    0.1.6  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> baseballr       baseballr     2.0.0    2.0.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bigD                 bigD     0.3.1    0.3.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bitops             bitops     1.1.0    1.1.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> bslib               bslib    0.12.0   0.12.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> cachem             cachem     1.1.0    1.1.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> cfbfastR         cfbfastR     3.0.0    3.0.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> cfbseedR         cfbseedR     0.2.0    0.2.0  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> codetools       codetools    0.2.20   0.2.20  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> commonmark     commonmark     2.0.0    2.0.0  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> cpp11               cpp11     0.5.5        0   TRUE</span>
@@ -132,47 +142,75 @@ Defaults to <code>getOptions("repos")</code>.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> data.table     data.table  1.18.6.1 1.18.6.1  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> digest             digest    0.6.39   0.6.39  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> dplyr               dplyr     1.2.1    1.2.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> evaluate         evaluate     1.0.5    1.0.5  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> farver             farver     2.1.2    2.1.2  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> fastRhockey   fastRhockey     1.0.0    1.0.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> fastmap           fastmap     1.2.0    1.2.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> fontawesome   fontawesome     0.5.3    0.5.3  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> foreach           foreach     1.5.2    1.5.2  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> fs                     fs     2.1.0    2.1.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> furrr               furrr     0.4.0    0.4.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> future             future    1.76.0   1.76.0  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> generics         generics     0.1.4    0.1.4  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ggfittext       ggfittext    0.10.4   0.10.4  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ggplot2           ggplot2     4.0.3    4.0.3  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> glmnet             glmnet       5.1      5.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> globals           globals    0.19.1   0.19.1  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> glue                 glue     1.8.1    1.8.1  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> gridtext         gridtext     0.1.6    0.1.6  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gt                     gt     1.3.0    1.3.0  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> gtable             gtable     0.3.6    0.3.6  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> highr               highr      0.12     0.12  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> hms                   hms     1.1.4    1.1.4  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> hoopR               hoopR     3.1.0    3.1.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> htmltools       htmltools     0.5.9    0.5.9  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> htmlwidgets   htmlwidgets     1.6.4    1.6.4  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> httr                 httr     1.4.9    1.4.9  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> httr2               httr2     1.3.0    1.3.0  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> isoband           isoband     0.3.0    0.3.0  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> iterators       iterators    1.0.14   1.0.14  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> janitor           janitor     2.2.1    2.2.1  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> jpeg                 jpeg    0.1.11   0.1.11  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> jquerylib       jquerylib     0.1.4    0.1.4  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> jsonlite         jsonlite     2.0.0    2.0.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> juicyjuice     juicyjuice     0.1.0    0.1.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> knitr               knitr      1.52     1.52  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> labeling         labeling     0.4.3    0.4.3  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> lattice           lattice    0.23.1   0.22.9   TRUE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> lifecycle       lifecycle     1.0.5    1.0.5  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> listenv           listenv     1.1.0    1.1.0  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> litedown         litedown      0.11     0.11  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> lubridate       lubridate     1.9.5    1.9.5  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> magick             magick     2.9.1    2.9.1  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> magrittr         magrittr     2.0.5    2.0.5  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> markdown         markdown       2.0      2.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> memoise           memoise     2.0.1    2.0.1  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mgcv                 mgcv     1.9.4    1.9.4  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mime                 mime      0.13     0.13  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> mlbplotR         mlbplotR     1.2.0    1.2.0  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> nlme                 nlme   3.1.171  3.1.169   TRUE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> nnet                 nnet    7.3.21   7.3.20   TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> oddsapiR         oddsapiR     1.0.1    1.0.1  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> openssl           openssl     2.4.2    2.4.2  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> parallelly     parallelly    1.48.0   1.48.0  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> pillar             pillar    1.11.1   1.11.1  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> pkgconfig       pkgconfig     2.0.3    2.0.3  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> png                   png     0.1.9    0.1.9  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> progressr       progressr     1.0.0    1.0.0  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> purrr               purrr     1.2.2    1.2.2  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> rappdirs         rappdirs     0.3.4    0.3.4  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> reactR             reactR     0.6.1    0.6.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> reactable       reactable     0.4.5    0.4.5  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> rlang               rlang     1.3.0    1.3.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> rmarkdown       rmarkdown      2.32     2.32  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> rvest               rvest     1.0.5    1.0.5  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sass                 sass    0.4.10   0.4.10  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> scales             scales     1.4.0    1.4.0  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> selectr           selectr     0.8.0    0.8.0  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> shades             shades     1.5.0    1.5.0  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> shape               shape   1.4.6.1  1.4.6.1  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> snakecase       snakecase    0.11.1   0.11.1  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sportyR           sportyR     2.2.3    2.2.3  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> stringdist     stringdist    0.9.17   0.9.17  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> stringi           stringi     1.8.9    1.8.9  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> stringr           stringr     1.6.0    1.6.0  FALSE</span>
@@ -182,12 +220,15 @@ Defaults to <code>getOptions("repos")</code>.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> tidyr               tidyr     1.3.2    1.3.2  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> tidyselect     tidyselect     1.2.1    1.2.1  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> timechange     timechange     0.4.0    0.4.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> tinytex           tinytex      0.61     0.61  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> utf8                 utf8     1.2.6    1.2.6  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> vctrs               vctrs     0.7.3    0.7.3  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> viridisLite   viridisLite     0.4.3    0.4.3  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> wehoop             wehoop     3.0.0    3.0.0  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> withr               withr     3.0.3    3.0.3  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> xfun                 xfun      0.61     0.61  FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> xml2                 xml2     1.6.0    1.6.0  FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> yaml                 yaml    2.3.12   2.3.12  FALSE</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>

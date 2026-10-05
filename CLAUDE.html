@@ -28,6 +28,7 @@
     <li><h6 class="dropdown-header" data-toc-skip>R Packages</h6></li>
     <li><a class="dropdown-item" href="https://r.sportsdataverse.org/">sportsdataverse-R</a></li>
     <li><a class="external-link dropdown-item" href="https://cfbfastR.sportsdataverse.org/">cfbfastR</a></li>
+    <li><a class="external-link dropdown-item" href="https://cfbseedR.sportsdataverse.org/">cfbseedR</a></li>
     <li><a class="external-link dropdown-item" href="https://hoopR.sportsdataverse.org/">hoopR</a></li>
     <li><a class="external-link dropdown-item" href="https://wehoop.sportsdataverse.org/">wehoop</a></li>
     <li><a class="external-link dropdown-item" href="https://fastRhockey.sportsdataverse.org/">fastRhockey</a></li>
@@ -77,21 +78,20 @@
 <div id="claudemd--sportsdataverse-r" class="section level1">
 
 <p>The <code>sportsdataverse</code> R package is an <strong>umbrella meta-package</strong> (tidyverse-style): it installs, attaches, and re-exports the family of SportsDataverse R packages in one step. It ships almost no data logic of its own — its job is the attach banner, the package roster, and the install/update helpers.</p>
-<ul><li>
-<strong>CRAN-published</strong>, MIT licensed. Version 0.3.0. <code>Depends: R (&gt;= 4.1.0)</code>.</li>
+<ul><li>Targets <strong>CRAN</strong> (not yet accepted — 0.3.0 is the first submission), MIT licensed. Version 0.3.0. <code>Depends: R (&gt;= 4.1.0)</code>.</li>
 <li>Docs: <a href="https://sportsdataverse.org" class="external-link uri">https://sportsdataverse.org</a> · pkgdown site <a href="https://r.sportsdataverse.org" class="uri">https://r.sportsdataverse.org</a>.</li>
 <li>Maintainer: Saiem Gilani.</li>
 </ul><div class="section level2">
 <h2 id="member-packages-the-core-roster">Member packages (the <code>core</code> roster)<a class="anchor" aria-label="anchor" href="#member-packages-the-core-roster"></a></h2>
-<p>The <code>core</code> vector in <code>R/core.R</code> (mirrored by <code><a href="reference/get_core_functions.html">get_core_functions()</a></code>) lists the <strong>7 attached member packages</strong> — these are the canonical roster, also declared in <code>Imports</code>:</p>
-<p><code>baseballr</code> · <code>cfbfastR</code> · <code>fastRhockey</code> · <code>hoopR</code> · <code>oddsapiR</code> · <code>sportyR</code> · <code>wehoop</code></p>
+<p>The <code>core</code> vector in <code>R/core.R</code> (returned by <code><a href="reference/get_core_functions.html">get_core_functions()</a></code>) lists the <strong>9 attached member packages</strong> — these are the canonical roster, also declared in <code>Imports</code>:</p>
+<p><code>baseballr</code> · <code>cfbfastR</code> · <code>cfbseedR</code> · <code>fastRhockey</code> · <code>hoopR</code> · <code>mlbplotR</code> · <code>oddsapiR</code> · <code>sportyR</code> · <code>wehoop</code></p>
 <p><code>chessR</code>, <code>hockeyR</code>, <code>toRvik</code>, and <code>worldfootballR</code> are intentionally <strong>removed / commented out</strong> (archived or dropped upstream) — do not re-add them. Tooling <code>Imports</code> (<code>cli</code>, <code>crayon</code>, <code>magrittr</code>, <code>rlang</code>, <code>rstudioapi</code>) are NOT members and are excluded from <code><a href="reference/sportsdataverse_packages.html">sportsdataverse_packages()</a></code>. NEVER list a member package the DESCRIPTION doesn’t declare.</p>
 </div>
 <div class="section level2">
 <h2 id="commands">Commands<a class="anchor" aria-label="anchor" href="#commands"></a></h2>
 <p>R-package workflow (roxygen2 / devtools / pkgdown):</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">document</span><span class="op">(</span><span class="op">)</span>      <span class="co"># regenerate NAMESPACE + man/ from roxygen (RoxygenNote 7.3.3)</span></span>
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">document</span><span class="op">(</span><span class="op">)</span>      <span class="co"># regenerate NAMESPACE + man/ (roxygen2 8.1.0)</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">test</span><span class="op">(</span><span class="op">)</span>          <span class="co"># testthat edition 3</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">check</span><span class="op">(</span><span class="op">)</span>         <span class="co"># R CMD check (CRAN gate)</span></span>
 <span><span class="fu">pkgdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">build_site</a></span><span class="op">(</span><span class="op">)</span>     <span class="co"># local site preview (deploy is CI-driven)</span></span></code></pre></div>
@@ -99,7 +99,7 @@
 <div class="section level2">
 <h2 id="architecture-attach--roster-mechanism">Architecture (attach + roster mechanism)<a class="anchor" aria-label="anchor" href="#architecture-attach--roster-mechanism"></a></h2>
 <ul><li>
-<strong><code>R/core.R</code></strong> — the <code>core</code> character vector (the 7 members) + <code>get_repos()</code> / <code><a href="reference/get_core_functions.html">get_core_functions()</a></code>. This is the single source of truth for the roster.</li>
+<strong><code>R/core.R</code></strong> — the <code>core</code> character vector (the 9 members); the exported <code><a href="reference/get_core_functions.html">get_core_functions()</a></code> returns it. This is the single source of truth for the roster.</li>
 <li>
 <strong><code>R/zzz.R</code></strong> — <code>.onAttach()</code> fires <code>sportsdataverse_attach()</code> for any <code>core</code> package not already attached, then prints the “Ready to go!” rule. Honors <code>options(sportsdataverse.quiet = TRUE)</code> to suppress the banner.</li>
 <li>
@@ -115,7 +115,7 @@
 <div class="section level2">
 <h2 id="conventions">Conventions<a class="anchor" aria-label="anchor" href="#conventions"></a></h2>
 <ul><li>roxygen2 markdown (<code>Roxygen: list(markdown = TRUE)</code>); regenerate <code>NAMESPACE</code> + <code>man/</code> with <code>devtools::document()</code> — never hand-edit them.</li>
-<li>Keep the meta-package thin: no analysis/data code belongs here. New member packages are added to <code>R/core.R</code>’s <code>core</code> vector AND the DESCRIPTION <code>Imports</code> (with a <code>&gt;=</code> floor) AND <code>_pkgdown.yml</code>’s network menu — keep all three in sync.</li>
+<li>Keep the meta-package thin: no analysis/data code belongs here. A new member touches, in one change: <code>R/core.R</code>’s <code>core</code> vector; DESCRIPTION <code>Imports</code> (with a <code>&gt;=</code> floor); an <code>@importFrom &lt;pkg&gt; &lt;fn&gt;</code> anchor in <code>R/sportsdataverse-package.R</code> (otherwise R CMD check NOTEs an unused import); <code>_pkgdown.yml</code>’s network menu; README.Rmd’s “will load” list AND its badge section; and <code>NEWS.md</code>.</li>
 <li>Edit <code>README.Rmd</code> (not <code>README.md</code>); re-knit to regenerate <code>README.md</code>.</li>
 <li>Update <code>NEWS.md</code> for any roster/version change.</li>
 </ul></div>
@@ -124,25 +124,29 @@
 <ul><li>
 <strong>Roster lives in two places</strong> — the <code>core</code> vector (<code>R/core.R</code>) and the <code>Imports</code> floor (DESCRIPTION). <code><a href="reference/sportsdataverse_packages.html">sportsdataverse_packages()</a></code> reads DESCRIPTION; the attach path reads <code>core</code>. A member added to one but not the other desyncs the banner from the install set. <code>test-reports.R</code> asserts <code><a href="reference/sportsdataverse_packages.html">sportsdataverse_packages()</a></code> == <code>sort(core)</code>.</li>
 <li>
-<strong>Member-package version coupling</strong> — <code>Imports</code> pins <code>&gt;=</code> floors to current CRAN releases (<code>baseballr &gt;= 1.6.0</code>, <code>cfbfastR &gt;= 2.0.0</code>, <code>fastRhockey &gt;= 0.4.0</code>, <code>hoopR &gt;= 3.0.0</code>, <code>oddsapiR &gt;= 0.0.3</code>, <code>sportyR &gt;= 2.2.3</code>, <code>wehoop &gt;= 2.1.0</code>). Bumping a member’s floor is a deliberate DESCRIPTION + NEWS edit.</li>
+<strong>Member-package version coupling</strong> — <code>Imports</code> pins <code>&gt;=</code> floors to current CRAN releases (<code>baseballr &gt;= 2.0.0</code>, <code>cfbfastR &gt;= 3.0.0</code>, <code>cfbseedR &gt;= 0.2.0</code>, <code>fastRhockey &gt;= 1.0.0</code>, <code>hoopR &gt;= 3.1.0</code>, <code>mlbplotR &gt;= 1.2.0</code>, <code>oddsapiR &gt;= 1.0.1</code>, <code>sportyR &gt;= 2.2.3</code>, <code>wehoop &gt;= 3.0.0</code>). Bumping a member’s floor is a deliberate DESCRIPTION + NEWS edit.</li>
 <li>
 <strong>CRAN availability constrains the roster</strong> — every <code>core</code> member must be on CRAN (this is why archived packages were dropped). r-universe is dev-only, reached via <code>sportsdataverse_update(devel = TRUE)</code>, not the default install path.</li>
 <li>
 <strong><code>pak</code>, not <code>pacman</code></strong> — install docs use <code>pak</code> (a <code>Suggests</code>, <code>&gt;= 0.5.0</code>).</li>
+<li>
+<strong>roxygen2 8</strong> — documented with roxygen2 8.1.0 (<code>Config/roxygen2/version</code>, which replaced <code>RoxygenNote</code>), the same as the other SportsDataverse R packages. An older roxygen2 would write <code>RoxygenNote</code> back and drop the author list from <code>man/sportsdataverse-package.Rd</code>; don’t let that churn into a commit.</li>
+<li>
+<strong>Not yet on CRAN</strong> — 0.3.0 is the first submission; <code>cran-comments.md</code> says “This is a new submission” and expects the matching incoming-check NOTE.</li>
 </ul></div>
 <div class="section level2">
 <h2 id="testing--ci">Testing &amp; CI<a class="anchor" aria-label="anchor" href="#testing--ci"></a></h2>
 <ul><li>
 <code>tests/testthat/</code> — testthat edition 3, one file (<code>test-reports.R</code>, <code>skip_on_cran()</code>).</li>
 <li>
-<code>.github/workflows/R-CMD-check.yaml</code> — windows + ubuntu (release, oldrel-1) via <code>r-lib/actions</code>; runs on push/PR to <code>main</code>/<code>master</code>/<code>development_branch</code> + weekly cron.</li>
+<code>.github/workflows/R-CMD-check.yaml</code> — macOS + windows (release) and ubuntu (release, oldrel-1) via <code>r-lib/actions@v2</code> + <code>actions/checkout@v6</code> (Node 24); <code>contents: read</code>, per-ref concurrency; runs on push/PR to <code>main</code>/<code>master</code>/<code>development_branch</code> + weekly cron.</li>
 <li>
-<code>.github/workflows/pkgdown.yaml</code> — builds + <code><a href="https://pkgdown.r-lib.org/reference/deploy_to_branch.html" class="external-link">pkgdown::deploy_to_branch()</a></code> on push to <code>main</code>/<code>master</code>.</li>
+<code>.github/workflows/pkgdown.yaml</code> — <code>ubuntu-latest</code> + public P3M binaries; <code>contents: write</code> (needed by <code><a href="https://pkgdown.r-lib.org/reference/deploy_to_branch.html" class="external-link">pkgdown::deploy_to_branch()</a></code>); runs on push to <code>main</code>/<code>master</code> only, so a pkgdown break first shows up after merge. Deps are <code>any::pkgdown</code> + <code>local::.</code> — member packages come from DESCRIPTION, do not re-list them there.</li>
 </ul></div>
 <div class="section level2">
 <h2 id="reference">Reference<a class="anchor" aria-label="anchor" href="#reference"></a></h2>
 <ul><li>pkgdown: <code>_pkgdown.yml</code> (Bootstrap 5, flatly, light-switch) → <a href="https://r.sportsdataverse.org" class="uri">https://r.sportsdataverse.org</a>.</li>
-<li>Member-package sites: cfbfastR.sportsdataverse.org · hoopR.sportsdataverse.org · wehoop.sportsdataverse.org · fastRhockey.sportsdataverse.org · oddsapiR.sportsdataverse.org · sportyR.sportsdataverse.org · baseballr (billpetti.github.io/baseballr).</li>
+<li>Member-package sites: cfbfastR.sportsdataverse.org · cfbseedR.sportsdataverse.org · hoopR.sportsdataverse.org · wehoop.sportsdataverse.org · fastRhockey.sportsdataverse.org · oddsapiR.sportsdataverse.org · sportyR.sportsdataverse.org · baseballr (billpetti.github.io/baseballr) · mlbplotR (camdenk.github.io/mlbplotR).</li>
 </ul></div>
 <div class="section level2">
 <h2 id="commit-convention">Commit Convention<a class="anchor" aria-label="anchor" href="#commit-convention"></a></h2>
