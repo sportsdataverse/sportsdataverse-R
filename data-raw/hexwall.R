@@ -12,6 +12,7 @@ library(purrr)
 # sort_mode:        How should the files be sorted?
 # background_color: The colour of the background canvas
 # n_stickers:       The number of hexagons to produce. Recycled in file order.
+# center_sticker:   File name of a sticker to place in the middle of the wall
 hexwall <- function(path="data-raw/samplehex",
                     sticker_row_size = 5,
                     sticker_width = 500,
@@ -22,7 +23,8 @@ hexwall <- function(path="data-raw/samplehex",
                     scale_coords = TRUE,
                     sort_mode = c("filename", "random", "color", "colour"),
                     background_color = 'transparent',
-                    n_stickers = NULL){
+                    n_stickers = NULL,
+                    center_sticker = NULL){
   sort_mode <- match.arg(sort_mode)
 
   # Load stickers
@@ -80,7 +82,9 @@ hexwall <- function(path="data-raw/samplehex",
     map(image_resize, paste0(sticker_width, "x", sticker_height, "!"))
 
   # Repeat stickers sorted by file name
-  stickers <- rep_len(stickers, total_stickers)
+  # rep_len() drops names; keep them, center_sticker looks stickers up by file name
+  stickers <- stats::setNames(rep_len(stickers, total_stickers),
+                              rep_len(names(stickers), total_stickers))
 
   if(sort_mode == "random"){
     # Randomly arrange stickers
@@ -118,19 +122,36 @@ hexwall <- function(path="data-raw/samplehex",
     # stickers, where row_lens ends up with 5), which allocated a whole extra
     # row of blank canvas at the foot of the wall.
     sticker_col_size <- length(row_lens)
+    # Move the chosen sticker to the middle slot of the middle row.
+    if(!is.null(center_sticker) && center_sticker %in% names(stickers)){
+      mid_row <- ceiling(length(row_lens)/2)
+      mid <- sum(utils::head(row_lens, mid_row - 1)) + ceiling(row_lens[mid_row]/2)
+      # move ONE copy: with n_stickers/total_stickers recycling, a file can repeat
+      i <- match(center_sticker, names(stickers))
+      stickers <- append(stickers[-i], stickers[i], after = mid - 1)
+    }
     sticker_rows <- map2(row_lens, cumsum(row_lens),
                          ~ seq(.y-.x+1, by = 1, length.out = .x)) %>%
       map(~ stickers[.x] %>%
             invoke(c, .) %>%
             image_append)
 
-    # Add stickers to canvas
+    # Add stickers to canvas. The background used to be hard-coded "white",
+    # which ignored background_color and showed as a white box in dark mode.
     canvas <- image_blank(sticker_row_size*sticker_width,
-                          sticker_height + (sticker_col_size-1)*sticker_height/1.33526, "white")
+                          sticker_height + (sticker_col_size-1)*sticker_height/1.33526, background_color)
+    # Odd rows are offset half a sticker to interlock; a short row is also
+    # shifted by whole stickers so it sits centred under the rows above it.
+    row_x <- function(i){
+      parity <- (i-1)%%2
+      parity*sticker_width/2 + floor((sticker_row_size - parity - row_lens[i])/2)*sticker_width
+    }
     reduce2(sticker_rows, seq_along(sticker_rows),
+            # "over", not the default "atop": atop keeps the canvas alpha, so on a
+            # transparent canvas nothing would be drawn at all
             ~ image_composite(
-              ..1, ..2,
-              offset = paste0("+", ((..3-1)%%2)*sticker_width/2, "+", round((..3-1)*sticker_height/1.33526))
+              ..1, ..2, operator = "over",
+              offset = paste0("+", row_x(..3), "+", round((..3-1)*sticker_height/1.33526))
             ),
             .init = canvas)
   }
@@ -154,11 +175,11 @@ hexwall <- function(path="data-raw/samplehex",
                           max(sticker_pos$y) + sticker_height, background_color)
     reduce2(stickers, sticker_pos%>%split(1:NROW(.)),
             ~ image_composite(
-              ..1, ..2,
+              ..1, ..2, operator = "over",
               offset = paste0("+", ..3$x, "+", ..3$y)
             ),
             .init = canvas)
   }
 }
-png <- hexwall()
-magick::image_write(magick::image_scale(png,geometry="1000"), path = "man/figures/sdv-wall.png", format = "png")
+png <- hexwall(center_sticker = "sportsdataverse.png")
+magick::image_write(magick::image_scale(png,geometry="1000"), path = "man/figures/sdv-wall.png", format = "png", depth = 8)
