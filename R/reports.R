@@ -1,6 +1,7 @@
 #' List all packages in the sportsdataverse
 #'
 #' @param include_self Include sportsdataverse in the list?
+#' @return A sorted character vector of package names.
 #' @export
 #' @examples
 #' sportsdataverse_packages()

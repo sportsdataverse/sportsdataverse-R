@@ -7,8 +7,12 @@
 get_core_functions()
 }
 \value{
-Returns a vector of the CRAN packages in the SportsDataverse
+A character vector of the CRAN packages that
+\code{library(sportsdataverse)} attaches.
 }
 \description{
 List of all packages in the SportsDataverse
+}
+\examples{
+get_core_functions()
 }

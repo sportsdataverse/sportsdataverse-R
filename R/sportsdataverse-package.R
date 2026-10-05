@@ -4,8 +4,10 @@
 # Suppress R CMD check note
 #' @importFrom baseballr most_recent_mlb_season
 #' @importFrom cfbfastR load_cfb_pbp
+#' @importFrom cfbseedR cfb_playoff_seeds
 #' @importFrom fastRhockey most_recent_nhl_season
 #' @importFrom hoopR login
+#' @importFrom mlbplotR geom_mlb_logos
 #' @importFrom wehoop load_wbb_pbp
 #' @importFrom sportyR geom_basketball
 #' @importFrom oddsapiR toa_sports

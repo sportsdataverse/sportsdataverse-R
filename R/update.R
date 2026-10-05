@@ -60,7 +60,13 @@ sportsdataverse_update <- function(recursive = FALSE,
 #' a quick idea of what's going on when you're helping someone else debug
 #' a problem.
 #'
+#' @returns Called for its side effect of printing the report; returns `NULL`
+#'   invisibly.
 #' @export
+#' @examples
+#' \donttest{
+#' try(sportsdataverse_sitrep())
+#' }
 sportsdataverse_sitrep <- function() {
   cli::cat_rule("R & RStudio")
   if (rstudioapi::isAvailable()) {
@@ -86,8 +92,8 @@ sportsdataverse_sitrep <- function() {
 #'
 #' @param recursive If \code{TRUE}, will also list all dependencies of
 #'   sportsdataverse packages.
-#' @param pkg_list The list of the package names to check (including the `sportsdataverse` package itself)
-#'   Defaults to \code{getOptions("repos")}.
+#' @param pkg_list Character vector of the package names to check. Defaults
+#'   to the attached roster, [get_core_functions()].
 #' @param repos The repositories to use to check for updates.
 #'   Defaults to \code{getOptions("repos")}.
 #' @returns A `data.frame` with one row per dependency and columns `package`,
@@ -104,7 +110,9 @@ sportsdataverse_deps <- function(recursive = TRUE,
   available_pkgs <- intersect(pkg_list, rownames(pkgs))
 
   deps <- tools::package_dependencies(available_pkgs, db = pkgs, recursive = recursive)
-  pkg_deps <- unique(sort(unlist(deps)))
+  # package_dependencies() lists a package's dependencies, never the package
+  # itself, so the members have to be added back explicitly.
+  pkg_deps <- sort(unique(c(available_pkgs, unlist(deps))))
 
   base_pkgs <- c(
     "base", "compiler", "datasets", "graphics", "grDevices", "grid",
@@ -153,6 +161,8 @@ packageVersion <- function(pkg) {
 #' @param unicode Whether to use Unicode symbols. Default is `TRUE`
 #'   on UTF-8 platforms.
 #'
+#' @returns The logo lines (a character vector of class
+#'   `sportsdataverse_logo`), invisibly. Called for its side effect of printing.
 #' @md
 #' @export
 #' @examples
