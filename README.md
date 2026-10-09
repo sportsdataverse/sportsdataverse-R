@@ -126,7 +126,7 @@ landscape. Every SportsDataverse package has one — browse them all at
 To cite the [**`sportsdataverse`**](https://r.sportsdataverse.org) R
 package in publications, use:
 
-BibTex Citation
+BibTeX Citation
 
 ``` bibtex
 @misc{saiemgilani2021sdv,
