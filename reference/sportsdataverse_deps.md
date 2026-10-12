@@ -77,7 +77,7 @@ A `data.frame` with one row per dependency and columns `package`,
 #> ggfittext       ggfittext    0.10.4   0.10.4  FALSE
 #> ggplot2           ggplot2     4.0.3    4.0.3  FALSE
 #> glmnet             glmnet       5.1      5.1  FALSE
-#> globals           globals    0.19.1   0.19.1  FALSE
+#> globals           globals    0.20.0   0.20.0  FALSE
 #> glue                 glue     1.8.1    1.8.1  FALSE
 #> gridtext         gridtext     0.1.6    0.1.6  FALSE
 #> gt                     gt     1.3.0    1.3.0  FALSE
