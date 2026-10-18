@@ -60,7 +60,7 @@ A `data.frame` with one row per dependency and columns `package`,
 #> codetools       codetools    0.2.20   0.2.20  FALSE
 #> commonmark     commonmark     2.0.0    2.0.0  FALSE
 #> cpp11               cpp11     0.5.5        0   TRUE
-#> curl                 curl     8.0.0    8.0.0  FALSE
+#> curl                 curl     8.1.0    8.1.0  FALSE
 #> data.table     data.table  1.18.6.1 1.18.6.1  FALSE
 #> digest             digest    0.6.39   0.6.39  FALSE
 #> dplyr               dplyr     1.2.1    1.2.1  FALSE
@@ -72,7 +72,7 @@ A `data.frame` with one row per dependency and columns `package`,
 #> foreach           foreach     1.5.2    1.5.2  FALSE
 #> fs                     fs     2.1.0    2.1.0  FALSE
 #> furrr               furrr     0.4.0    0.4.0  FALSE
-#> future             future    1.76.0   1.76.0  FALSE
+#> future             future    1.80.0   1.80.0  FALSE
 #> generics         generics     0.1.4    0.1.4  FALSE
 #> ggfittext       ggfittext    0.10.4   0.10.4  FALSE
 #> ggplot2           ggplot2     4.0.3    4.0.3  FALSE
@@ -80,7 +80,7 @@ A `data.frame` with one row per dependency and columns `package`,
 #> globals           globals    0.20.0   0.20.0  FALSE
 #> glue                 glue     1.8.1    1.8.1  FALSE
 #> gridtext         gridtext     0.1.6    0.1.6  FALSE
-#> gt                     gt     1.3.0    1.3.0  FALSE
+#> gt                     gt     1.4.0    1.4.0  FALSE
 #> gtable             gtable     0.3.6    0.3.6  FALSE
 #> highr               highr      0.12     0.12  FALSE
 #> hms                   hms     1.1.4    1.1.4  FALSE
@@ -148,7 +148,7 @@ A `data.frame` with one row per dependency and columns `package`,
 #> viridisLite   viridisLite     0.4.3    0.4.3  FALSE
 #> wehoop             wehoop     3.0.0    3.0.0  FALSE
 #> withr               withr     3.0.3    3.0.3  FALSE
-#> xfun                 xfun      0.61     0.61  FALSE
+#> xfun                 xfun      0.62     0.62  FALSE
 #> xml2                 xml2     1.6.0    1.6.0  FALSE
 #> yaml                 yaml    2.3.12   2.3.12  FALSE
 ```
