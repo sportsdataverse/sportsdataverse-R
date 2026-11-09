@@ -190,6 +190,17 @@ See the full ecosystem at [sportsdataverse.org](https://sportsdataverse.org/).
 <a href="https://github.com/saiemgilani" target="blank"><img src="https://img.shields.io/github/followers/saiemgilani?color=eee&logo=Github&style=for-the-badge" alt="@saiemgilani" /></a>
 
 
+<!-- cheatsheet-section -->
+## **Cheat sheet**
+
+A printable one-page reference for **`sportsdataverse`** — the metapackage, its loaders, and the packages it attaches.
+
+📄 **[Download the sportsdataverse-R cheat sheet (PDF)](https://sportsdataverse.org/cheatsheets/sportsdataverse-R.pdf)**
+
+Free to download, print and hand out; light and dark, US Letter landscape.
+Every SportsDataverse package has one — browse them all at
+**[sportsdataverse.org/cheatsheets](https://sportsdataverse.org/cheatsheets)**.
+
 ## **Citations**
 
 To cite the [**`sportsdataverse`**](https://r.sportsdataverse.org) R package in publications, use:
