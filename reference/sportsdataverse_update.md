@@ -41,11 +41,10 @@ Returns `NULL` invisibly. Called for its side effects.
 ``` r
 # \donttest{
 try(sportsdataverse_update())
-#> ℹ The following packages are out of date:
-#> • Matrix (1.7.5  -> 1.7.6 )
-#> • nnet   (7.3.20 -> 7.3.21)
+#> ℹ The following package is out of date:
+#> • mgcv (1.9.4 -> 1.9.5)
 #> ── Start a clean R session then run ────────────────────────────────────────────
-#> install.packages(c("Matrix", "nnet"))
+#> install.packages("mgcv")
 #> ────────────────────────────────────────────────────────────────────────────────
 # }
 ```

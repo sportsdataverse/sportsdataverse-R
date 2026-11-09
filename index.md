@@ -1,6 +1,4 @@
-# 
-
-# sportsdataverse
+# **sportsdataverse**
 
 The [**`sportsdataverse`**](https://r.sportsdataverse.org) is a set of
 sports data packages that work in harmony because they share common data
@@ -12,36 +10,42 @@ step. Learn more about the **`sportsdataverse`** at
 Data freshness and pipeline status for every SportsDataverse dataset:
 [sportsdataverse.org/status](https://sportsdataverse.org/status).
 
-## Installation
+## **Installation**
 
-Install the stable release from
-[CRAN](https://CRAN.R-project.org/package=sportsdataverse):
-
-``` r
-
-install.packages("sportsdataverse")
-```
-
-Or install the development version from
-[GitHub](https://github.com/sportsdataverse/sportsdataverse-R) with:
-
-``` r
-
-if (!requireNamespace('pak', quietly = TRUE)){
-  install.packages('pak')
-}
-pak::pak("sportsdataverse/sportsdataverse-R")
-```
-
-or prebuilt from the [SportsDataverse
-r-universe](https://sportsdataverse.r-universe.dev) with:
+You can install the latest build from
+[R-universe](https://sportsdataverse.r-universe.dev/sportsdataverse)
+with:
 
 ``` r
 
 install.packages("sportsdataverse", repos = c("https://sportsdataverse.r-universe.dev", getOption("repos")))
 ```
 
-## Usage
+You can install the development version of
+[**`sportsdataverse`**](https://github.com/sportsdataverse/sportsdataverse-R/)
+from GitHub with:
+
+``` r
+
+if (!requireNamespace("pak", quietly = TRUE)) install.packages("pak")
+pak::pak("sportsdataverse/sportsdataverse-R")
+# or, with remotes:
+# if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")
+# remotes::install_github("sportsdataverse/sportsdataverse-R")
+```
+
+## **Quick start**
+
+``` r
+
+library(sportsdataverse)
+
+# Report the installed versions of the SportsDataverse packages
+sportsdataverse_sitrep()
+
+# Check for out-of-date SportsDataverse packages and print the install command
+sportsdataverse_update()
+```
 
 [`library(sportsdataverse)`](https://github.com/sportsdataverse/sportsdataverse-R)
 will load the following packages:
@@ -80,52 +84,6 @@ sportsdataverse::sportsdataverse_logo()
 
 ![SportsDataverse unicode
 logo](https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/main/data-raw/sportsdataverse-unicode-logo.png)
-
-## Follow [**`sportsdataverse`**](https://x.com/sportsdataverse) on X and star this repo
-
-[![X
-Follow](https://img.shields.io/twitter/follow/sportsdataverse?color=blue&label=%40sportsdataverse&logo=x&style=for-the-badge)](https://x.com/sportsdataverse)
-
-[![GitHub
-stars](https://img.shields.io/github/stars/sportsdataverse/sportsdataverse-R.svg?color=eee&logo=github&style=for-the-badge&label=Star%20sportsdataverse&maxAge=2592000)](https://github.com/sportsdataverse/sportsdataverse-R)
-
-[![Star history of
-sportsdataverse/sportsdataverse-R](https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/star-history/star-history.png)](https://github.com/sportsdataverse/sportsdataverse-R/stargazers)
-
-## **Our Authors**
-
-- [Saiem Gilani](https://twitter.com/saiemgilani)  
-  [![@saiemgilani](https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=twitter&style=for-the-badge)](https://twitter.com/saiemgilani)
-  [![@saiemgilani](https://img.shields.io/github/followers/saiemgilani?color=eee&logo=Github&style=for-the-badge)](https://github.com/saiemgilani)
-
-## **Cheat sheet**
-
-A printable one-page reference covering **the sportsdataverse
-metapackage** — the function families, the loaders, and what each one
-returns.
-
-📄 **[Download the sportsdataverse-R cheat sheet
-(PDF)](https://sportsdataverse.org/cheatsheets/sportsdataverse-R.pdf)**
-
-Free to download, print and hand out; light and dark, US Letter
-landscape. Every SportsDataverse package has one — browse them all at
-**[sportsdataverse.org/cheatsheets](https://sportsdataverse.org/cheatsheets)**.
-
-## **Citations**
-
-To cite the [**`sportsdataverse`**](https://r.sportsdataverse.org) R
-package in publications, use:
-
-BibTeX Citation
-
-``` bibtex
-@misc{saiemgilani2021sdv,
-  author = {Gilani, Saiem},
-  title = {sportsdataverse: The Set of R Packages for Sports Data.},
-  url = {https://r.sportsdataverse.org},
-  year = {2026}
-}
-```
 
 ## **R Packages in the SportsDataverse**
 
@@ -212,3 +170,102 @@ downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=s
 Status](https://img.shields.io/cran/v/oddsapiR?color=success&label=CRAN%20Version&logo=R&style=for-the-badge)](https://CRAN.R-project.org/package=oddsapiR)
 [![CRAN
 downloads](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Downloads&query=%24%5B0%5D.downloads&url=https%3A%2F%2Fcranlogs.r-pkg.org%2Fdownloads%2Ftotal%2F2021-10-26%3Alast-day%2FoddsapiR)](https://CRAN.R-project.org/package=oddsapiR)
+
+## **Documentation**
+
+- [Documentation website](https://r.sportsdataverse.org/)
+- [Function
+  reference](https://r.sportsdataverse.org/reference/index.html)
+- [News and release
+  notes](https://r.sportsdataverse.org/news/index.html)
+- [sportsdataverse-R cheat sheet
+  (PDF)](https://sportsdataverse.org/cheatsheets/sportsdataverse-R.pdf):
+  a printable one-page reference covering the metapackage. Every
+  SportsDataverse package has one — browse them all at
+  [sportsdataverse.org/cheatsheets](https://sportsdataverse.org/cheatsheets).
+
+## **Companion packages**
+
+- [**`cfbplotR`**](https://cfbplotR.sportsdataverse.org/), for college
+  football logo plots in `ggplot2`.
+- [**`sdvplotR`**](https://sdvplotR.sportsdataverse.org/), for team logo
+  plots in `ggplot2`, `gt` and `reactable` across the SportsDataverse
+  leagues.
+- [**`sdvmodels`**](https://sdvmodels.sportsdataverse.org/), for the
+  fitted college football models that `cfbfastR` scores with.
+
+## **The SportsDataverse**
+
+[**`sportsdataverse`**](https://r.sportsdataverse.org/) is part of the
+[SportsDataverse](https://sportsdataverse.org/), a set of open-source
+packages for sports data.
+
+| Package | Sport / Scope |
+|----|----|
+| [**cfbfastR**](https://cfbfastR.sportsdataverse.org/) | College football |
+| [**hoopR**](https://hoopR.sportsdataverse.org/) | Men’s basketball (NBA and NCAA) |
+| [**wehoop**](https://wehoop.sportsdataverse.org/) | Women’s basketball (WNBA and NCAA) |
+| [**fastRhockey**](https://fastRhockey.sportsdataverse.org/) | Hockey (NHL and PWHL) |
+| [**baseballr**](https://billpetti.github.io/baseballr/) | Baseball (MLB, MiLB, NCAA) |
+| [**softballR**](https://github.com/sportsdataverse/softballR) | College softball |
+| [**oddsapiR**](https://oddsapiR.sportsdataverse.org/) | Sports betting odds |
+| [**recruitR**](https://recruitR.sportsdataverse.org/) | College football recruiting |
+| [**usfootballR**](https://usfootballR.sportsdataverse.org/) | US soccer |
+| [**cfbseedR**](https://cfbseedR.sportsdataverse.org/) · [**cfb4th**](https://cfb4th.sportsdataverse.org/) | CFB playoff simulation · fourth-down decisions |
+| [**cfbplotR**](https://cfbplotR.sportsdataverse.org/) · [**sdvplotR**](https://sdvplotR.sportsdataverse.org/) · [**sportyR**](https://sportyR.sportsdataverse.org/) | Logos, colors, tables · playing surfaces |
+| [**sportsdataverse-R**](https://r.sportsdataverse.org/) | Umbrella R metapackage |
+| [**sportsdataverse-py**](https://py.sportsdataverse.org/) · [**sportsdataverse.js**](https://js.sportsdataverse.org/) | Python and Node.js |
+
+See the full ecosystem at
+[sportsdataverse.org](https://sportsdataverse.org/).
+
+## **Follow the [SportsDataverse](https://x.com/SportsDataverse) on X and star this repo**
+
+[![X
+Follow](https://img.shields.io/twitter/follow/sportsdataverse?color=blue&label=%40sportsdataverse&logo=x&style=for-the-badge)](https://x.com/sportsdataverse)
+
+[![GitHub
+stars](https://img.shields.io/github/stars/sportsdataverse/sportsdataverse-R.svg?color=eee&logo=github&style=for-the-badge&label=Star%20sportsdataverse&maxAge=2592000)](https://github.com/sportsdataverse/sportsdataverse-R)
+
+[![Star history of
+sportsdataverse/sportsdataverse-R](https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/star-history/star-history.png)](https://github.com/sportsdataverse/sportsdataverse-R)
+
+## **Our Authors**
+
+- [Saiem Gilani](https://x.com/saiemgilani)  
+  [![@saiemgilani](https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=x&style=for-the-badge)](https://x.com/saiemgilani)
+  [![@saiemgilani](https://img.shields.io/github/followers/saiemgilani?color=eee&logo=Github&style=for-the-badge)](https://github.com/saiemgilani)
+
+## **Cheat sheet**
+
+A printable one-page reference for **`sportsdataverse`** — the
+metapackage, its loaders, and the packages it attaches.
+
+📄 **[Download the sportsdataverse-R cheat sheet
+(PDF)](https://sportsdataverse.org/cheatsheets/sportsdataverse-R.pdf)**
+
+Free to download, print and hand out; light and dark, US Letter
+landscape. Every SportsDataverse package has one — browse them all at
+**[sportsdataverse.org/cheatsheets](https://sportsdataverse.org/cheatsheets)**.
+
+## **Citations**
+
+To cite the [**`sportsdataverse`**](https://r.sportsdataverse.org) R
+package in publications, use:
+
+BibTeX Citation
+
+``` bibtex
+@misc{saiemgilani2021sdv,
+  author = {Gilani, Saiem},
+  title = {sportsdataverse: The Set of R Packages for Sports Data.},
+  url = {https://r.sportsdataverse.org},
+  year = {2026}
+}
+```
+
+## **License**
+
+[MIT](https://github.com/sportsdataverse/sportsdataverse-R/blob/main/LICENSE.md)
+© Saiem Gilani. See
+[LICENSE.md](https://github.com/sportsdataverse/sportsdataverse-R/blob/main/LICENSE.md).

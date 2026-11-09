@@ -2,9 +2,10 @@
 
 These instructions tell GitHub Copilot (and other AI coding assistants)
 how to write code that fits the `sportsdataverse` R meta-package. They
-mirror the fuller [`CLAUDE.md`](https://r.sportsdataverse.org/CLAUDE.md)
-development guide – when the two differ, treat `CLAUDE.md` and the
-current tests as authoritative.
+mirror the fuller
+[`CLAUDE.md`](https://r.sportsdataverse.org/../CLAUDE.md) development
+guide – when the two differ, treat `CLAUDE.md` and the current tests as
+authoritative.
 
 ## Package summary
 
