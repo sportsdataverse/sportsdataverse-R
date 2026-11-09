@@ -13,7 +13,7 @@ output: github_document
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=for-the-badge&logo=github)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://github.com/sportsdataverse/sportsdataverse-R/blob/main/LICENSE.md)
 [![Contributors](https://img.shields.io/github/contributors/sportsdataverse/sportsdataverse-R?style=for-the-badge)](https://github.com/sportsdataverse/sportsdataverse-R/graphs/contributors)
-[![GitHub stars](https://img.shields.io/github/stars/sportsdataverse/sportsdataverse-R?style=for-the-badge&logo=github)](https://github.com/sportsdataverse/sportsdataverse-R/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/sportsdataverse/sportsdataverse-R?style=for-the-badge&logo=github)](https://github.com/sportsdataverse/sportsdataverse-R)
 [![X Follow](https://img.shields.io/twitter/follow/SportsDataverse?color=blue&label=%40SportsDataverse&logo=x&style=for-the-badge)](https://x.com/SportsDataverse)
 <!-- badges: end -->
 
@@ -35,7 +35,9 @@ You can install the development version of [**`sportsdataverse`**](https://githu
 ```r
 if (!requireNamespace("pak", quietly = TRUE)) install.packages("pak")
 pak::pak("sportsdataverse/sportsdataverse-R")
-# or: remotes::install_github("sportsdataverse/sportsdataverse-R")
+# or, with remotes:
+# if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")
+# remotes::install_github("sportsdataverse/sportsdataverse-R")
 ```
 
 ## **Quick start**
@@ -175,7 +177,7 @@ See the full ecosystem at [sportsdataverse.org](https://sportsdataverse.org/).
 
 [![GitHub stars](https://img.shields.io/github/stars/sportsdataverse/sportsdataverse-R.svg?color=eee&logo=github&style=for-the-badge&label=Star%20sportsdataverse&maxAge=2592000)](https://github.com/sportsdataverse/sportsdataverse-R)
 
-<a href="https://github.com/sportsdataverse/sportsdataverse-R/stargazers">
+<a href="https://github.com/sportsdataverse/sportsdataverse-R">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/star-history/star-history-dark.svg">
     <img alt="Star history of sportsdataverse/sportsdataverse-R" src="https://raw.githubusercontent.com/sportsdataverse/sportsdataverse-R/star-history/star-history.png" width="600">
