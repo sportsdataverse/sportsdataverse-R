@@ -179,7 +179,7 @@ sportsdataverse_logo <- function(unicode = l10n_info()$`UTF-8`) {
     "   / __  / __ `/ __/ __ `/",
     "  / /_/ / /_/ / /_/ /_/ /",
     " _\\_____\\_____\\___\\_____\\ ",
-    "| | / / _ \ /`__/ ___/ _ \\ ",
+    "| | / / _ \\ /`__/ ___/ _ \\ ",
     "| |/ /  __/ / (__  /  __/",
     "|___/\\___/_/ /____/\\___/"
   )
@@ -199,7 +199,7 @@ sportsdataverse_logo <- function(unicode = l10n_info()$`UTF-8`) {
   # }
 
 
-  print.sportsdataverse_logo(logo)
+  print(structure(logo, class = "sportsdataverse_logo"))
 }
 
 #' @export
