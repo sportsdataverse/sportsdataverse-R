@@ -39,6 +39,17 @@
   never flagged an out-of-date member and the “Core packages” section of
   [`sportsdataverse_sitrep()`](https://r.sportsdataverse.org/reference/sportsdataverse_sitrep.md)
   was always empty.
+- [`sportsdataverse_logo()`](https://r.sportsdataverse.org/reference/sportsdataverse_logo.md)
+  now returns a `sportsdataverse_logo` object, as documented, and draws
+  the backslash that an unescaped `"\ "` dropped from the fourth line of
+  the “verse” lettering.
+- Tests: the attach banner, `.onAttach()`, the RStudio theme colouring,
+  [`sportsdataverse_update()`](https://r.sportsdataverse.org/reference/sportsdataverse_update.md),
+  [`sportsdataverse_sitrep()`](https://r.sportsdataverse.org/reference/sportsdataverse_sitrep.md)
+  and the logo are now tested, and
+  [`sportsdataverse_deps()`](https://r.sportsdataverse.org/reference/sportsdataverse_deps.md)
+  is tested offline against a local CRAN-like repository. Coverage is
+  100%.
 - GitHub Actions: workflows moved to `actions/checkout@v6` (Node 24
   runtime), gained explicit `permissions` and `concurrency` groups, and
   R CMD check now also runs on macOS. The pkgdown build moved off the

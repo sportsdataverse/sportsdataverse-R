@@ -144,7 +144,7 @@
 <div class="section level2">
 <h2 id="testing--ci">Testing &amp; CI<a class="anchor" aria-label="anchor" href="#testing--ci"></a></h2>
 <ul><li>
-<code>tests/testthat/</code> — testthat edition 3, one file (<code>test-reports.R</code>, <code>skip_on_cran()</code>).</li>
+<code>tests/testthat/</code> — testthat edition 3: <code>test-attach.R</code>, <code>test-reports.R</code>, <code>test-update.R</code>, <code>test-utils.R</code>, each test <code>skip_on_cran()</code>. Network-free except one live CRAN check in <code>test-update.R</code>; <code><a href="reference/sportsdataverse_deps.html">sportsdataverse_deps()</a></code> is tested against a local <code>file://</code> repo.</li>
 <li>
 <code>.github/workflows/R-CMD-check.yaml</code> — macOS + windows (release) and ubuntu (release, oldrel-1) via <code>r-lib/actions@v2</code> + <code>actions/checkout@v6</code> (Node 24); <code>contents: read</code>, per-ref concurrency; runs on push/PR to <code>main</code>/<code>master</code>/<code>development_branch</code> + weekly cron.</li>
 <li>

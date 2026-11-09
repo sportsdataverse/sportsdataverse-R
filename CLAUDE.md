@@ -129,8 +129,12 @@ Exported surface (`NAMESPACE`): `%>%`, `get_core_functions`,
 
 ## Testing & CI
 
-- `tests/testthat/` — testthat edition 3, one file (`test-reports.R`,
-  `skip_on_cran()`).
+- `tests/testthat/` — testthat edition 3: `test-attach.R`,
+  `test-reports.R`, `test-update.R`, `test-utils.R`, each test
+  `skip_on_cran()`. Network-free except one live CRAN check in
+  `test-update.R`;
+  [`sportsdataverse_deps()`](https://r.sportsdataverse.org/reference/sportsdataverse_deps.md)
+  is tested against a local `file://` repo.
 - `.github/workflows/R-CMD-check.yaml` — macOS + windows (release) and
   ubuntu (release, oldrel-1) via `r-lib/actions@v2` +
   `actions/checkout@v6` (Node 24); `contents: read`, per-ref
