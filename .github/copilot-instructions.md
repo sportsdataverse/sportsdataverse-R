@@ -92,7 +92,7 @@ Exported surface: `%>%`, `get_core_functions`, `sportsdataverse_deps`,
 
 `devtools::test()` -- testthat edition 3, four files (`test-attach.R`,
 `test-reports.R`, `test-update.R`, `test-utils.R`), each test `skip_on_cran()`. Run `devtools::check()`
-before opening a PR; CI runs macOS + windows (release) and ubuntu (release, oldrel-1).
+before opening a PR; CI runs macOS + ubuntu (release) on push/PR; the weekly cron and manual dispatch add windows (release) and ubuntu (devel).
 
 ## Commits
 
